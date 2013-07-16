@@ -53,7 +53,7 @@ def testDelicious():
     delusers = initializeUserDict('programming')
     fillItems(delusers)
 
-    user = delusers.keys()[random.randint(0, len(delusers))]
+    user = delusers.keys()[random.randint(0, len(delusers) - 1)]
     print user
     print recommendations.topMatches(delusers, user, similarity=recommendations.sim_euclidean)
     recUrls = recommendations.getRecommendations(delusers, user, similarity=recommendations.sim_euclidean)[0:10]

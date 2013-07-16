@@ -16,7 +16,7 @@ def sim_euclidean(prefs, person1, person2):
     if n == 0:
         return 0
     else:
-        return 1 / (1 + (sum_of_square))
+        return 1 / (1 + sum_of_square)
 
 
 # Returns the Pearson correlation coefficient for person1 and person2
@@ -141,3 +141,28 @@ def getRecommendedItems(prefs, itemMatches, user):
     rankings.sort()
     rankings.reverse()
     return rankings
+
+
+def testRecommendations():
+    from criticData import critics
+
+    print critics['Lisa Rose']
+    print
+
+    print sim_euclidean(critics, 'Lisa Rose', 'Gene Seymour')
+    print sim_pearson(critics, 'Lisa Rose', 'Gene Seymour')
+    print
+
+    print topMatches(critics, 'Toby', n=3)
+    print getRecommendations(critics, 'Toby')
+    print getRecommendations(critics, 'Toby', similarity=sim_euclidean)
+    print
+
+    movies = transformPrefs(critics)
+    print topMatches(movies, 'Superman Returns')
+    print getRecommendations(movies, 'Just My Luck')
+    print
+
+    itemMatches = calculateSimilarItems(critics)
+    print itemMatches
+    print getRecommendedItems(critics, itemMatches, 'Toby')
