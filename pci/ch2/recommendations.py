@@ -16,7 +16,7 @@ def sim_euclidean(prefs, person1, person2):
     if n == 0:
         return 0
     else:
-        return 1 / (1 + sqrt(sum_of_square))
+        return 1 / (1 + (sum_of_square))
 
 
 # Returns the Pearson correlation coefficient for person1 and person2
@@ -80,6 +80,7 @@ def getRecommendations(prefs, person, similarity=sim_pearson):
                     simSums.setdefault(item, 0)
                     simSums[item] += sim
 
+    # Create the normalized list
     rankings = [(score / simSums[item], item)
                 for (item, score) in scores.items()]
 
@@ -98,3 +99,45 @@ def transformPrefs(prefs):
             result[item][person] = prefs[person][item]
 
     return result
+
+
+# Create a dictionary of items showing which other items they are most similar to.
+def calculateSimilarItems(prefs, n=10):
+    result = {}
+    c = 0
+    itemPrefs = transformPrefs(prefs)
+
+    for item in itemPrefs:
+        result[item] = topMatches(itemPrefs, item, n, sim_euclidean)
+
+        # Status updates for large datasets
+        c += 1
+        if c % 100 == 0:
+            print "%d / %d" % (c, len(itemPrefs))
+
+    return result
+
+
+def getRecommendedItems(prefs, itemMatches, user):
+    userScores = prefs[user]
+    scores = {}
+    simSums = {}
+
+    for (item1, rating) in userScores.items():
+        for (similarity, item2) in itemMatches[item1]:
+
+            # Ignore if this user has already rated this item
+            if item2 not in userScores:
+                scores.setdefault(item2, 0)
+                scores[item2] += similarity * rating
+
+                simSums.setdefault(item2, 0)
+                simSums[item2] += similarity
+
+    # Create the normalized list
+    rankings = [(score / simSums[item], item)
+                for (item, score) in scores.items()]
+
+    rankings.sort()
+    rankings.reverse()
+    return rankings
