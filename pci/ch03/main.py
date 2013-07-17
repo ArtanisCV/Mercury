@@ -4,6 +4,11 @@ __author__ = 'Artanis'
 
 
 (blogNames, words, data) = clusters.readFile('blogData.txt')
-clust = clusters.hcluster(data)
-clusters.printClust(clust, blogNames, 0)
-clusters.drawDendrogram(clust, blogNames, 'blogClusters.jpg')
+
+blogClust = clusters.hcluster(data)
+clusters.printClust(blogClust, blogNames, 0)
+clusters.drawDendrogram(blogClust, blogNames, 'blogClusters.jpg')
+
+wordClust = clusters.hcluster(clusters.rotateMatrix(data))
+clusters.drawDendrogram(wordClust, words, 'wordClusters.jpg')
+

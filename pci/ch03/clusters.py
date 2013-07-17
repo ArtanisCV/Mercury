@@ -8,7 +8,7 @@ def readFile(filename):
     lines = [line for line in file(filename)]
 
     # First line is the column titles
-    colNames = line[0].strip().split('\t')[1:]
+    colNames = lines[0].strip().split('\t')[1:]
 
     rowNames = []
     data = []
@@ -191,3 +191,17 @@ def drawDendrogram(clust, labels, jpeg='clusters.jpg'):
     drawNode(draw, clust, 10, (h / 2), scaling, labels)
 
     img.save(jpeg, 'JPEG')
+
+
+def rotateMatrix(data):
+    if len(data) == 0:
+        return None
+
+    nRow = len(data)
+    nCol = len(data[0])
+    newData = []
+
+    for i in range(nCol):
+        newData.append([data[j][i] for j in range(nRow)])
+
+    return newData
