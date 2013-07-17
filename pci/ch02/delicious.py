@@ -1,5 +1,4 @@
 from pydelicious import get_popular, get_userposts, get_urlposts
-import recommendations
 import random
 import time
 
@@ -50,13 +49,15 @@ def fillItems(user_dict):
 
 
 def testDelicious():
+    import recommendations
+
     delusers = initializeUserDict('programming')
     fillItems(delusers)
 
     user = delusers.keys()[random.randint(0, len(delusers) - 1)]
     print user
-    print recommendations.topMatches(delusers, user, similarity=recommendations.sim_euclidean)
-    recUrls = recommendations.getRecommendations(delusers, user, similarity=recommendations.sim_euclidean)[0:10]
+    print recommendations.topMatches(delusers, user, similarity=recommendations.simEuclidean)
+    recUrls = recommendations.getRecommendations(delusers, user, similarity=recommendations.simEuclidean)[0:10]
     print recUrls
 
     url = recUrls[0][1]

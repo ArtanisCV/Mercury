@@ -1,11 +1,10 @@
 import zipfile
 import time
-import recommendations
 
 __author__ = 'Artanis'
 
 
-def loadMovieLens(path='data\MovieLens\ml-100k.zip'):
+def loadMovieLens(path='..\data\MovieLens\ml-100k.zip'):
     movies = {}
     prefs = {}
     file = zipfile.ZipFile(path)
@@ -23,6 +22,8 @@ def loadMovieLens(path='data\MovieLens\ml-100k.zip'):
 
 
 def testMovieLens():
+    import recommendations
+
     prefs = loadMovieLens()
 
     userId = '87'

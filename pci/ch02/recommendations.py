@@ -4,7 +4,7 @@ __author__ = 'Artanis'
 
 
 # Returns an euclidean-distance-based similarity score for person1 and person2
-def sim_euclidean(prefs, person1, person2):
+def simEuclidean(prefs, person1, person2):
     n = sum_of_square = 0
 
     for item in prefs[person1]:
@@ -20,7 +20,7 @@ def sim_euclidean(prefs, person1, person2):
 
 
 # Returns the Pearson correlation coefficient for person1 and person2
-def sim_pearson(prefs, person1, person2):
+def simPearson(prefs, person1, person2):
     n = sum1 = sum2 = sumSq1 = sumSq2 = pSum = 0
 
     for item in prefs[person1]:
@@ -47,7 +47,7 @@ def sim_pearson(prefs, person1, person2):
 
 # Returns the best matches for person from the prefs dictionary.
 # Number of results and similarity function are optional params.
-def topMatches(prefs, person, n=5, similarity=sim_pearson):
+def topMatches(prefs, person, n=5, similarity=simPearson):
     scores = [(similarity(prefs, person, other), other)
               for other in prefs if other != person]
 
@@ -58,7 +58,7 @@ def topMatches(prefs, person, n=5, similarity=sim_pearson):
 
 # Gets recommendations for a person by using a weighted average
 # of every other user's rankings
-def getRecommendations(prefs, person, similarity=sim_pearson):
+def getRecommendations(prefs, person, similarity=simPearson):
     scores = {}
     simSums = {}
 
@@ -108,7 +108,7 @@ def calculateSimilarItems(prefs, n=10):
     itemPrefs = transformPrefs(prefs)
 
     for item in itemPrefs:
-        result[item] = topMatches(itemPrefs, item, n, sim_euclidean)
+        result[item] = topMatches(itemPrefs, item, n, simEuclidean)
 
         # Status updates for large datasets
         c += 1
@@ -149,13 +149,13 @@ def testRecommendations():
     print critics['Lisa Rose']
     print
 
-    print sim_euclidean(critics, 'Lisa Rose', 'Gene Seymour')
-    print sim_pearson(critics, 'Lisa Rose', 'Gene Seymour')
+    print simEuclidean(critics, 'Lisa Rose', 'Gene Seymour')
+    print simPearson(critics, 'Lisa Rose', 'Gene Seymour')
     print
 
     print topMatches(critics, 'Toby', n=3)
     print getRecommendations(critics, 'Toby')
-    print getRecommendations(critics, 'Toby', similarity=sim_euclidean)
+    print getRecommendations(critics, 'Toby', similarity=simEuclidean)
     print
 
     movies = transformPrefs(critics)
