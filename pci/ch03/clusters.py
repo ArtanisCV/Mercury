@@ -30,7 +30,7 @@ def pearson(v1, v2):
     n = len(v1)
 
     if len(v2) != n:
-        return 0
+        return 1
 
     sum1 = sum(v1)
     sum2 = sum(v2)
@@ -50,6 +50,24 @@ def pearson(v1, v2):
         return 1 - num / den
 
 
+def tanamoto(v1, v2):
+    n = len(v1)
+    nUnion = nInter = 0
+
+    if len(v2) != n:
+        return 1
+
+    for i in range(n):
+        if v1[i] != 0:
+            nUnion += 1
+            if v2[i] != 0:
+                nInter += 1
+        elif v2[i] != 0:
+            nUnion += 1
+
+    return 1.0 - float(nInter) / nUnion
+
+
 class BiCluster:
     def __init__(self, vec, left=None, right=None, distance=0.0, id=None):
         self.vec = vec
@@ -64,7 +82,7 @@ def hCluster(vecs, distance=pearson):
     if len(vecs) == 0:
         return None
 
-    n = len(vecs[0])
+    cols = len(vecs[0])
     distances = {}
     currentClustId = -1
 
@@ -91,7 +109,7 @@ def hCluster(vecs, distance=pearson):
 
         # calculate the average of the two clusters
         mergeVec = [(clust[lowestIdxPair[0]].vec[i] + clust[lowestIdxPair[1]].vec[i]) / 2.0
-                    for i in range(n)]
+                    for i in range(cols)]
 
         # create the new cluster
         newClust = BiCluster(vec=mergeVec, left=clust[lowestIdxPair[0]], right=clust[lowestIdxPair[1]],
@@ -107,9 +125,9 @@ def hCluster(vecs, distance=pearson):
     return clust[0]
 
 
-def printClust(clust, labels=None, n=0):
+def printClust(clust, labels=None, nIndent=0):
     # indent to make a hierarchy layout
-    for i in range(n):
+    for i in range(nIndent):
         print ' ',
 
     if clust.id < 0:
@@ -124,9 +142,9 @@ def printClust(clust, labels=None, n=0):
 
     # now print the right and left branches
     if clust.left is not None:
-        printClust(clust.left, labels, n + 1)
+        printClust(clust.left, labels, nIndent + 1)
     if clust.right is not None:
-        printClust(clust.right, labels, n + 1)
+        printClust(clust.right, labels, nIndent + 1)
 
 
 def getHeight(clust):
@@ -213,14 +231,14 @@ def kCluster(vecs, k=4, distance=pearson):
     if len(vecs) == 0:
         return None
 
-    n = len(vecs[0])
+    cols = len(vecs[0])
 
     # Determine the minimum and maximum values for each column
     ranges = [(min([vec[i] for vec in vecs]), max([vec[i] for vec in vecs]))
-              for i in range(n)]
+              for i in range(cols)]
 
     # Create k randomly placed centroids
-    centroids = [[random.random() * (ranges[i][1] - ranges[i][0]) + ranges[i][0] for i in range(n)]
+    centroids = [[random.random() * (ranges[i][1] - ranges[i][0]) + ranges[i][0] for i in range(cols)]
                  for j in range(k)]
 
     lastMatches = None
@@ -254,7 +272,49 @@ def kCluster(vecs, k=4, distance=pearson):
             nMatches = len(bestMatches[i])
 
             if nMatches > 0:
-                centroids[i] = [sum([vecs[idx][j] for idx in bestMatches[i]]) / nMatches
-                                for j in range(n)]
+                centroids[i] = [sum([vecs[idx][j] for idx in bestMatches[i]]) / float(nMatches)
+                                for j in range(cols)]
 
     return lastMatches
+
+
+def scaleDown(data, distance=pearson, rate=0.01):
+    if len(data) == 0:
+        return None
+
+    rows = len(data)
+    cols = len(data[0])
+
+    # The real distances between every pair of items
+    expectedDist = [[distance(data[i], data[j]) for j in range(rows)]
+                    for i in range(rows)]
+
+    # Randomly initialize the starting points of the locations in 2D
+    loc = [(random.random(), random.random()) for i in range(rows)]
+    lastError = None
+
+    def Euclidean(u, v):
+        n = len(u)
+        return sqrt(sum([pow(u[i] - v[i], 2) for i in range(n)]))
+
+    for itr in range(1000):
+        if itr % 100 == 0:
+            print "Iteration %d" % itr
+
+        # Find projected distances
+        actualDist = [[Euclidean(loc[i], loc[j]) for j in range(rows)]
+                      for i in range(rows)]
+
+        # Move points
+        grad = [(0.0, 0.0) for i in range(rows)]
+
+        for i in range(rows):
+            for j in range(rows):
+                if i == j:
+                    continue
+
+                # The error is percent difference between the distances
+                errorTerm = (actualDist[i][j] - expectedDist[i][j]) / expectedDist[i][j]
+
+                # Each point needs to be moved away from or towards the other
+                # point in proportion to how much error it has
