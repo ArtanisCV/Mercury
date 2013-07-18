@@ -58,3 +58,12 @@ def downloadZeboData():
                 else:
                     out.write('\t0')
             out.write('\n')
+
+
+def testZebo():
+    import clusters
+
+    (itemNames, people, data) = clusters.readFile('zeboData.txt')
+
+    itemClust = clusters.hCluster(data, distance=clusters.tanamoto)
+    clusters.drawDendrogram(itemClust, itemNames, 'itemClusters.jpg')

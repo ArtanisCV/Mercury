@@ -262,7 +262,6 @@ def kCluster(vecs, k=4, distance=pearson):
 
         # If the results are the same as last time, this is complete
         if bestMatches == lastMatches:
-            lastMatches = bestMatches
             break
         else:
             lastMatches = bestMatches
@@ -278,19 +277,18 @@ def kCluster(vecs, k=4, distance=pearson):
     return lastMatches
 
 
-def scaleDown(data, distance=pearson, rate=0.01):
-    if len(data) == 0:
+def scaleDown(vecs, distance=pearson, rate=0.01):
+    nVec = len(vecs)
+
+    if nVec == 0:
         return None
 
-    rows = len(data)
-    cols = len(data[0])
-
     # The real distances between every pair of items
-    expectedDist = [[distance(data[i], data[j]) for j in range(rows)]
-                    for i in range(rows)]
+    expectedDist = [[distance(vecs[i], vecs[j]) for j in range(nVec)]
+                    for i in range(nVec)]
 
     # Randomly initialize the starting points of the locations in 2D
-    loc = [(random.random(), random.random()) for i in range(rows)]
+    loc = [[random.random(), random.random()] for i in range(nVec)]
     lastError = None
 
     def Euclidean(u, v):
@@ -298,18 +296,17 @@ def scaleDown(data, distance=pearson, rate=0.01):
         return sqrt(sum([pow(u[i] - v[i], 2) for i in range(n)]))
 
     for itr in range(1000):
-        if itr % 100 == 0:
-            print "Iteration %d" % itr
-
         # Find projected distances
-        actualDist = [[Euclidean(loc[i], loc[j]) for j in range(rows)]
-                      for i in range(rows)]
+        actualDist = [[Euclidean(loc[i], loc[j]) for j in range(nVec)]
+                      for i in range(nVec)]
 
         # Move points
-        grad = [(0.0, 0.0) for i in range(rows)]
+        grad = [[0.0, 0.0] for i in range(nVec)]
 
-        for i in range(rows):
-            for j in range(rows):
+        totalError = 0
+
+        for i in range(nVec):
+            for j in range(nVec):
                 if i == j:
                     continue
 
@@ -318,3 +315,61 @@ def scaleDown(data, distance=pearson, rate=0.01):
 
                 # Each point needs to be moved away from or towards the other
                 # point in proportion to how much error it has
+                # (loc[i] - loc[j]) / actualDist[i][j] forms a unit vector from j to i
+                grad[i][0] += (loc[i][0] - loc[j][0]) / actualDist[i][j] * errorTerm
+                grad[i][1] += (loc[i][1] - loc[j][1]) / actualDist[i][j] * errorTerm
+
+                # Keep track of the total error
+                totalError += abs(errorTerm)
+
+        print "Iteration %d Error: %f" % (itr, totalError)
+
+        # If the answer got worse by moving the points, we are done
+        if lastError is not None and lastError < totalError:
+            break
+        else:
+            lastError = totalError
+
+        # Move each of the points by the learning rate times the gradient
+        for i in range(nVec):
+            loc[i][0] -= rate * grad[i][0]
+            loc[i][1] -= rate * grad[i][1]
+
+    return loc
+
+
+def draw2d(data, labels, file='mds2d.jpg'):
+    img = Image.new('RGB', (2000, 2000), (255, 255, 255))
+    draw = ImageDraw.Draw(img)
+
+    for i in range(len(data)):
+        x = (data[i][0] + 0.5) * 1000
+        y = (data[i][1] + 0.5) * 1000
+        draw.text((x, y), labels[i], (0, 0, 0))
+
+    img.save(file, 'JPEG')
+
+
+def testClusters():
+    import time
+
+    (blogNames, words, data) = readFile('blogData.txt')
+
+    start = time.clock()
+    blogClust = hCluster(data)
+    print "Total Time:" + str(time.clock() - start)
+
+    printClust(blogClust, blogNames, 0)
+    drawDendrogram(blogClust, blogNames, 'blogClusters.jpg')
+
+    wordClust = hCluster(rotateMatrix(data))
+    drawDendrogram(wordClust, words, 'wordClusters.jpg')
+
+    start = time.clock()
+    kClust = kCluster(data, 10)
+    print "Total Time:" + str(time.clock() - start)
+    print len(kClust[0]), [blogNames[idx] for idx in kClust[0]]
+    print len(kClust[1]), [blogNames[idx] for idx in kClust[1]]
+
+    coords = scaleDown(data)
+    draw2d(coords, blogNames, "blogs2d.jpg")
