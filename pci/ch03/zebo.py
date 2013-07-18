@@ -5,14 +5,6 @@ from BeautifulSoup import BeautifulSoup
 __author__ = 'Artanis'
 
 
-def testBeautifulSoup():
-    file = urllib2.urlopen('http://kiwitobes.com/wiki/Programming_language.html')
-    soup = BeautifulSoup(file.read())
-    links = soup('a')
-    print links[10]
-    print links[10]['href']
-
-
 def downloadZeboData():
     chare = re.compile(r'[!-\.&]')
     itemOwners = {}
