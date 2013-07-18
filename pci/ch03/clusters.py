@@ -1,4 +1,5 @@
 from math import sqrt
+import random
 from PIL import Image, ImageDraw
 
 __author__ = 'Artanis'
@@ -59,7 +60,7 @@ class BiCluster:
 
 
 # Hierarchical Clustering
-def hcluster(vecs, distance=pearson):
+def hCluster(vecs, distance=pearson):
     if len(vecs) == 0:
         return None
 
@@ -83,6 +84,7 @@ def hcluster(vecs, distance=pearson):
                     distances[idPair] = distance(clust[i].vec, clust[j].vec)
 
                 d = distances[idPair]
+
                 if d < closest:
                     lowestIdxPair = (i, j)
                     closest = d
@@ -205,3 +207,54 @@ def rotateMatrix(data):
         newData.append([data[j][i] for j in range(nRow)])
 
     return newData
+
+
+def kCluster(vecs, k=4, distance=pearson):
+    if len(vecs) == 0:
+        return None
+
+    n = len(vecs[0])
+
+    # Determine the minimum and maximum values for each column
+    ranges = [(min([vec[i] for vec in vecs]), max([vec[i] for vec in vecs]))
+              for i in range(n)]
+
+    # Create k randomly placed centroids
+    centroids = [[random.random() * (ranges[i][1] - ranges[i][0]) + ranges[i][0] for i in range(n)]
+                 for j in range(k)]
+
+    lastMatches = None
+    for itr in range(100):
+        print 'Iteration %d' % itr
+        bestMatches = [[] for i in range(k)]
+
+        for i in range(len(vecs)):
+            vec = vecs[i]
+            lowestIdx = 0
+            closest = distance(vec, centroids[0])
+
+            for j in range(1, k):
+                d = distance(vec, centroids[j])
+
+                if d < closest:
+                    lowestIdx = j
+                    closest = d
+
+            bestMatches[lowestIdx].append(i)
+
+        # If the results are the same as last time, this is complete
+        if bestMatches == lastMatches:
+            lastMatches = bestMatches
+            break
+        else:
+            lastMatches = bestMatches
+
+        # Move the centroids to the average of their members
+        for i in range(k):
+            nMatches = len(bestMatches[i])
+
+            if nMatches > 0:
+                centroids[i] = [sum([vecs[idx][j] for idx in bestMatches[i]]) / nMatches
+                                for j in range(n)]
+
+    return lastMatches
