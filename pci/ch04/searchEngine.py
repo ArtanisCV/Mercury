@@ -24,15 +24,15 @@ class crawler:
     # Auxilliary function for getting an entry id and adding
     # it if it's not present
     def getEntryId(self, table, field, value, createNew=True):
-        handle = self.conn.execute("select rowId from %s where %s = '%s'" %
-                                  (table, field, value))
-        result = handle.fetchone()
+        cursor = self.conn.execute("select rowId from %s where %s = '%s'" %
+                                   (table, field, value))
+        result = cursor.fetchone()
 
         if result is None:
             if createNew:
-                handle = self.conn.execute("insert into %s (%s) values ('%s')" %
-                                          (table, field, value))
-                return handle.lastrowid
+                cursor = self.conn.execute("insert into %s(%s) values ('%s')" %
+                                           (table, field, value))
+                return cursor.lastrowid
             else:
                 return -1
         else:
@@ -49,7 +49,7 @@ class crawler:
         text = self.getTextOnly(soup)
         words = self.separateWords(text)
 
-        # Get the URL id
+        # Get the url id
         urlId = self.getEntryId('UrlList', 'url', url)
 
         # Link each word to this url
@@ -58,7 +58,7 @@ class crawler:
                 wordId = self.getEntryId('WordList', 'word', words[i])
 
                 self.conn.execute("insert into WordLocation(urlId, wordId, location) values (%d, %d, %d)" %
-                                 (urlId, wordId, i))
+                                  (urlId, wordId, i))
 
     # Extract the text from an HTML page (no tags)
     def getTextOnly(self, soup):
@@ -95,7 +95,20 @@ class crawler:
 
     # Add a link between two pages
     def addLinkRef(self, urlFrom, urlTo, linkText):
-        pass
+        words = self.separateWords(linkText)
+        fromId = self.getEntryId("UrlList", "url", urlFrom)
+        toId = self.getEntryId("UrlList", "url", urlTo)
+
+        if fromId == toId:
+            return
+        else:
+            cursor = self.conn.execute("insert into Link(fromId, toId) values (%d, %d)" % (fromId, toId))
+            linkId = cursor.lastrowid
+
+            for word in words:
+                if word not in ignoreWords:
+                    wordId = self.getEntryId("WordList", "word", word)
+                    self.conn.execute("insert into LinkWords(linkId, wordId) values (%d, %d)" % (linkId, wordId))
 
     # Starting with a list of urls, do a breadth
     # first search to the given depth, indexing pages
@@ -169,6 +182,35 @@ class crawler:
 
         self.dbCommit()
 
+    def calculatePageRank(self, iterations=20):
+        # clear out the current PageRank tables
+        self.conn.execute("drop table if exists PageRank")
+        self.conn.execute("create table PageRank(urlId primary key, score)")
+
+        # initialize every url with a PageRank of 1
+        self.conn.execute("insert into PageRank select rowId, 1 from UrlList")
+        self.dbCommit()
+
+        for i in range(iterations):
+            print "Iteration %d" % i
+
+            for (urlId,) in self.conn.execute("select rowId from UrlList"):
+                pageRank = 0.15
+
+                # Loop through all the urls that link to this one
+                for inUrlId in self.conn.execute("select distinct fromId from Link where toId = %d" % urlId):
+                    # Get the PageRank of the inUrl
+                    inUrlPR = self.conn.execute("select score from PageRank where urlId = %d" % inUrlId).fetchone()[0]
+
+                    # Get the total number of links from the inUrl
+                    count = self.conn.execute("select count(*) from Link where fromId = %d" % inUrlId).fetchone()[0]
+
+                    pageRank += 0.85 * inUrlPR / count
+
+                self.conn.execute("update PageRank set score = %f where urlId = %d" % (pageRank, urlId))
+
+            self.dbCommit()
+
 
 class Searcher:
     def __init__(self, dbName):
@@ -216,7 +258,9 @@ class Searcher:
 
         weights = [(1.0, self.frequencyScore(rows)),
                    (1.0, self.locationScore(rows)),
-                   (1.0, self.distanceScore(rows))]
+                   #(1.0, self.distanceScore(rows)),
+                   (1.0, self.pageRankScore(rows)),
+                   (1.0, self.linkTextScore(rows, wordIds))]
 
         for (weight, scores) in weights:
             for url in totalScores:
@@ -298,3 +342,25 @@ class Searcher:
             inboundCounts[urlId] = self.conn.execute("select count(*) from Link where toId = %d" % urlId).fetchone()[0]
 
         return self.normalizeScores(inboundCounts)
+
+    def pageRankScore(self, rows):
+        pageRanks = dict(
+            [(row[0], self.conn.execute("select score from PageRank where urlId = %d" % row[0]).fetchone()[0])
+             for row in rows])
+
+        return self.normalizeScores(pageRanks)
+
+    def linkTextScore(self, rows, wordIds):
+        linkTextScores = dict([(row[0], 0.0) for row in rows])
+
+        for wordId in wordIds:
+            cursor = self.conn.execute(
+                "select Link.fromId, Link.toId from Link, LinkWords "
+                "where Link.rowId = LinkWords.linkId and LinkWords.wordId = %d" % wordId)
+
+            for (fromId, toId) in cursor:
+                if toId in linkTextScores:
+                    linkTextScores[toId] += \
+                        self.conn.execute("select score from PageRank where urlId = %d" % fromId).fetchone()[0]
+
+        return self.normalizeScores(linkTextScores)
