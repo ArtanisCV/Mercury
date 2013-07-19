@@ -137,16 +137,36 @@ class crawler:
 
     # Create the database tables
     def createIndexTables(self):
-        self.conn.execute('create table UrlList(url)')
-        self.conn.execute('create table WordList(word)')
-        self.conn.execute('create table WordLocation(urlId, wordId, location)')
-        self.conn.execute('create table Link(fromId integer, toId integer)')
-        self.conn.execute('create table LinkWords(wordId, linkId)')
-        self.conn.execute('create index WordIdx on WordList(word)')
-        self.conn.execute('create index UrlIdx on UrlList(url)')
-        self.conn.execute('create index WordUrlIdx on WordLocation(wordId)')
-        self.conn.execute('create index urlToIdx on Link(toId)')
-        self.conn.execute('create index urlFromIdx on Link(fromId)')
+        self.conn.execute("drop table if exists UrlList")
+        self.conn.execute("create table UrlList(url)")
+
+        self.conn.execute("drop table if exists WordList")
+        self.conn.execute("create table WordList(word)")
+
+        self.conn.execute("drop table if exists WordLocation")
+        self.conn.execute("create table WordLocation(urlId, wordId, location)")
+
+        self.conn.execute("drop table if exists Link")
+        self.conn.execute("create table Link(fromId integer, toId integer)")
+
+        self.conn.execute("drop table if exists LinkWords")
+        self.conn.execute("create table LinkWords(wordId, linkId)")
+
+        self.conn.execute("drop index if exists WordIdx")
+        self.conn.execute("create index WordIdx on WordList(word)")
+
+        self.conn.execute("drop index if exists UrlIdx")
+        self.conn.execute("create index UrlIdx on UrlList(url)")
+
+        self.conn.execute("drop index if exists WordUrlIdx")
+        self.conn.execute("create index WordUrlIdx on WordLocation(wordId)")
+
+        self.conn.execute("drop index if exists UrlToIdx")
+        self.conn.execute("create index UrlToIdx on Link(toId)")
+
+        self.conn.execute("drop index if exists UrlFromIdx")
+        self.conn.execute("create index UrlFromIdx on Link(fromId)")
+
         self.dbCommit()
 
 
@@ -269,3 +289,12 @@ class Searcher:
             distances[row[0]] = min(distances[row[0]], sum([abs(row[i] - row[i - 1]) for i in range(2, nWord)]))
 
         return self.normalizeScores(distances, smallIsBetter=True)
+
+    def inboundLinkScore(self, rows):
+        urlIds = set([row[0] for row in rows])
+        inboundCounts = {}
+
+        for urlId in urlIds:
+            inboundCounts[urlId] = self.conn.execute("select count(*) from Link where toId = %d" % urlId).fetchone()[0]
+
+        return self.normalizeScores(inboundCounts)

@@ -11,7 +11,5 @@ crawler = searchEngine.crawler('SearchIndex.db')
 print [row for row in crawler.conn.execute("select urlId from WordLocation where wordId=1")]
 
 searcher = searchEngine.Searcher('SearchIndex.db')
-
 print searcher.getMatchRows("functional programming")[0]
-
 print searcher.query("functional programming")
