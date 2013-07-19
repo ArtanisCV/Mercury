@@ -5,13 +5,13 @@
     <ignored path="Mercury.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/clusters.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374150499838" ignored="false" />
-    <file path="/main.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374208819289" ignored="false" />
+    <file path="/main.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374220316342" ignored="false" />
     <file path="/zebo.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374150419378" ignored="false" />
     <file path="/feed.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374126197772" ignored="false" />
     <file path="/tmp.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374131991864" ignored="false" />
     <file path="/a.dummy" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374144090549" ignored="false" />
     <file path="/recommendations.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374144005347" ignored="false" />
-    <file path="/searchEngine.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374208855717" ignored="false" />
+    <file path="/searchEngine.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374226660313" ignored="false" />
     <file path="/searchengine.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374205455720" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="searchEngine.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="searchEngine.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pci/ch04/searchEngine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="34" selection-start="5197" selection-end="5197" vertical-scroll-proportion="0.0">
+            <state line="205" column="0" selection-start="6788" selection-end="6788" vertical-scroll-proportion="0.7593819">
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pci/ch04/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="15" selection-start="602" selection-end="602" vertical-scroll-proportion="0.5629139">
+            <state line="15" column="0" selection-start="438" selection-end="439" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,8 +72,8 @@
         <option value="$PROJECT_DIR$/pci/ch03/zebo.py" />
         <option value="$USER_HOME$/Desktop/Tmp/searchengine.py" />
         <option value="$USER_HOME$/Desktop/Tmp/main.py" />
-        <option value="$PROJECT_DIR$/pci/ch04/searchEngine.py" />
         <option value="$PROJECT_DIR$/pci/ch04/main.py" />
+        <option value="$PROJECT_DIR$/pci/ch04/searchEngine.py" />
       </list>
     </option>
   </component>
@@ -362,7 +362,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -536,19 +536,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch04/searchEngine.py">
+    <entry file="file://$PROJECT_DIR$/pci/ch04/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="34" selection-start="5197" selection-end="5197" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state line="15" column="0" selection-start="438" selection-end="439" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch04/main.py">
+    <entry file="file://$PROJECT_DIR$/pci/ch04/searchEngine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="15" selection-start="602" selection-end="602" vertical-scroll-proportion="0.5629139">
-          <folding />
+        <state line="205" column="0" selection-start="6788" selection-end="6788" vertical-scroll-proportion="0.7593819">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

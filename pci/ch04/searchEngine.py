@@ -190,3 +190,82 @@ class Searcher:
             return [], wordIds
         else:
             return [row for row in result], wordIds
+
+    def getScoredList(self, rows, wordIds):
+        totalScores = dict([(row[0], 0) for row in rows])
+
+        weights = [(1.0, self.frequencyScore(rows)),
+                   (1.0, self.locationScore(rows)),
+                   (1.0, self.distanceScore(rows))]
+
+        for (weight, scores) in weights:
+            for url in totalScores:
+                totalScores[url] += weight * scores[url]
+
+        return totalScores
+
+    def getUrlName(self, urlId):
+        result = self.conn.execute("select url from UrlList where rowId = %d" % urlId).fetchone()
+
+        if result is None:
+            return None
+        else:
+            return result[0]
+
+    def query(self, q):
+        (rows, wordIds) = self.getMatchRows(q)
+        scores = self.getScoredList(rows, wordIds)
+
+        rankedScores = sorted([(score, url) for (url, score) in scores.items()], reverse=True)
+
+        for (score, url) in rankedScores:
+            print "%f\t%s" % (score, self.getUrlName(url))
+
+    # return scores between 0 (the worst) and 1 (the best)
+    def normalizeScores(self, scores, smallIsBetter=False):
+        # Avoid division by zero errors
+        eps = 0.00001
+
+        if smallIsBetter:
+            minScore = max(eps, min(scores.values()))
+            return dict([(u, float(minScore) / max(eps, v)) for (u, v) in scores.items()])
+        else:
+            maxScore = max(eps, max(scores.values()))
+            return dict([(u, float(v) / maxScore) for (u, v) in scores.items()])
+
+    def frequencyScore(self, rows):
+        counts = {}
+
+        for row in rows:
+            counts.setdefault(row[0], 0)
+            counts[row[0]] += 1
+
+        return self.normalizeScores(counts)
+
+    def locationScore(self, rows):
+        eps = 10000000
+        locations = {}
+
+        for row in rows:
+            locations.setdefault(row[0], eps)
+            locations[row[0]] = min(locations[row[0]], sum(row[1:]))
+
+        return self.normalizeScores(locations, smallIsBetter=True)
+
+    def distanceScore(self, rows):
+        if len(rows) == 0:
+            return {}
+
+        eps = 10000000
+        nWord = len(rows[0])
+        distances = {}
+
+        # If there's only one word, everyone wins!
+        if nWord <= 2:
+            return dict([(row[0], 1.0) for row in rows])
+
+        for row in rows:
+            distances.setdefault(row[0], eps)
+            distances[row[0]] = min(distances[row[0]], sum([abs(row[i] - row[i - 1]) for i in range(2, nWord)]))
+
+        return self.normalizeScores(distances, smallIsBetter=True)
