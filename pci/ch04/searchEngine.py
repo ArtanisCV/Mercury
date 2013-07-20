@@ -191,14 +191,14 @@ class crawler:
         self.conn.execute("insert into PageRank select rowId, 1 from UrlList")
         self.dbCommit()
 
-        for i in range(iterations):
-            print "Iteration %d" % i
+        for itr in range(iterations):
+            print "Iteration %d" % itr
 
             for (urlId,) in self.conn.execute("select rowId from UrlList"):
                 pageRank = 0.15
 
                 # Loop through all the urls that link to this one
-                for inUrlId in self.conn.execute("select distinct fromId from Link where toId = %d" % urlId):
+                for (inUrlId,) in self.conn.execute("select distinct fromId from Link where toId = %d" % urlId):
                     # Get the PageRank of the inUrl
                     inUrlPR = self.conn.execute("select score from PageRank where urlId = %d" % inUrlId).fetchone()[0]
 
@@ -263,8 +263,8 @@ class Searcher:
                    (1.0, self.linkTextScore(rows, wordIds))]
 
         for (weight, scores) in weights:
-            for url in totalScores:
-                totalScores[url] += weight * scores[url]
+            for urlId in totalScores:
+                totalScores[urlId] += weight * scores[urlId]
 
         return totalScores
 
@@ -276,14 +276,16 @@ class Searcher:
         else:
             return result[0]
 
-    def query(self, q):
-        (rows, wordIds) = self.getMatchRows(q)
+    def query(self, queryText):
+        (rows, wordIds) = self.getMatchRows(queryText)
         scores = self.getScoredList(rows, wordIds)
 
-        rankedScores = sorted([(score, url) for (url, score) in scores.items()], reverse=True)
+        rankedScores = sorted([(score, urlId) for (urlId, score) in scores.items()], reverse=True)
 
-        for (score, url) in rankedScores:
-            print "%f\t%s" % (score, self.getUrlName(url))
+        for (score, urlId) in rankedScores:
+            print "%f\t%s" % (score, self.getUrlName(urlId))
+
+        return wordIds, [urlId for (score, urlId) in rankedScores[0:10]]
 
     # return scores between 0 (the worst) and 1 (the best)
     def normalizeScores(self, scores, smallIsBetter=False):
@@ -364,3 +366,15 @@ class Searcher:
                         self.conn.execute("select score from PageRank where urlId = %d" % fromId).fetchone()[0]
 
         return self.normalizeScores(linkTextScores)
+
+    def neuralNetworkScore(self, rows, wordIds):
+        import neuralNetwork
+
+        # Get unique URL IDs as an ordered list
+        urlIds = [urlId for urlId in set([row[0] for row in rows])]
+
+        myNet = neuralNetwork.searchNet('NerualNetwork.db')
+        result = myNet.getResult(wordIds, urlIds)
+
+        scores = dict([(urlIds[i], result[i]) for i in range(len(urlIds))])
+        return self.normalizeScores(scores)
