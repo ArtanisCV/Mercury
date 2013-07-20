@@ -198,3 +198,32 @@ class searchNet:
                 self.setStrength(self.hiddenIds[i], self.urlIds[j], 1, self.hiddenUrl[i][j])
 
         self.conn.commit()
+
+
+def testNeuralNetwork():
+    myNet = searchNet('NeuralNetwork.db')
+
+    myNet.createTables()
+
+    wWorld, wRiver, wBank = 101, 102, 103
+    uWorldBank, uRiver, uEarth = 201, 202, 203
+    allUrlIds = [uWorldBank, uRiver, uEarth]
+
+    myNet.generateHiddenNode([wWorld, wBank], allUrlIds)
+    for c in myNet.conn.execute('select * from WordHidden'):
+        print c
+    for c in myNet.conn.execute('select * from HiddenUrl'):
+        print c
+
+    print myNet.getResult([wWorld, wBank], allUrlIds)
+
+    myNet.trainQuery([wWorld, wBank], allUrlIds, uWorldBank)
+    print myNet.getResult([wWorld, wBank], allUrlIds)
+
+    for i in range(30):
+        myNet.trainQuery([wWorld, wBank], allUrlIds, uWorldBank)
+        myNet.trainQuery([wRiver, wBank], allUrlIds, uRiver)
+        myNet.trainQuery([wWorld], allUrlIds, uEarth)
+    print myNet.getResult([wWorld, wBank], allUrlIds)
+    print myNet.getResult([wRiver, wBank], allUrlIds)
+    print myNet.getResult([wBank], allUrlIds)

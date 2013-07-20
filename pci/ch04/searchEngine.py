@@ -10,7 +10,7 @@ __author__ = 'Artanis'
 ignoreWords = set(['the', 'of', 'to', 'and', 'a', 'in', 'is', 'it'])
 
 
-class crawler:
+class Crawler:
     # Initialize the crawler with the name of database
     def __init__(self, dbName):
         self.conn = sqlite.connect(dbName)
@@ -258,7 +258,9 @@ class Searcher:
 
         weights = [(1.0, self.frequencyScore(rows)),
                    (1.0, self.locationScore(rows)),
-                   #(1.0, self.distanceScore(rows)),
+                   # (1.0, self.distanceScore(rows)),
+                   # (5.0, self.neuralNetworkScore(rows, wordIds)),
+                   # (1.0, self.inboundLinkScore(rows)),
                    (1.0, self.pageRankScore(rows)),
                    (1.0, self.linkTextScore(rows, wordIds))]
 
@@ -373,8 +375,30 @@ class Searcher:
         # Get unique URL IDs as an ordered list
         urlIds = [urlId for urlId in set([row[0] for row in rows])]
 
-        myNet = neuralNetwork.searchNet('NerualNetwork.db')
+        myNet = neuralNetwork.searchNet('NeuralNetwork.db')
         result = myNet.getResult(wordIds, urlIds)
 
         scores = dict([(urlIds[i], result[i]) for i in range(len(urlIds))])
         return self.normalizeScores(scores)
+
+
+def testSearchEngine():
+    dbName = 'SearchIndex.db'
+    crawler = Crawler(dbName)
+    searcher = Searcher(dbName)
+
+    # crawler.createIndexTables()
+    #
+    # pages = ['http://kiwitobes.com/wiki/Categorical_list_of_programming_languages.html']
+    # crawler.crawl(pages)
+    # print [row for row in crawler.conn.execute("select urlId from WordLocation where wordId=1")]
+
+    print searcher.getMatchRows("functional programming")[0]
+
+    searcher.query("functional programming")
+
+    crawler.calculatePageRank()
+    cursor = crawler.conn.execute('select * from PageRank order by score desc')
+    for i in range(3):
+        print cursor.next()
+    print searcher.getUrlName(438)
