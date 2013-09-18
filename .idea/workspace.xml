@@ -15,6 +15,23 @@
     <file path="/searchengine.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374205455720" ignored="false" />
     <file path="/neuralNetwork.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374312432465" ignored="false" />
     <file path="/__init__.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374312644288" ignored="false" />
+    <file path="/server.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374772183840" ignored="false" />
+    <file path="/client2.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1374771960222" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1375962004765" ignored="false" />
+    <file path="/dA.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1375862058990" ignored="false" />
+    <file path="/load.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1375801206210" ignored="false" />
+    <file path="/utils.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1375794354129" ignored="false" />
+    <file path="/SdA.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1375865153557" ignored="false" />
+    <file path="/JobRunner.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1375969692476" ignored="false" />
+    <file path="/test_vasync_client.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1375970029591" ignored="false" />
+    <file path="/test_vasync_server.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1375970904082" ignored="false" />
+    <file path="/JobManager.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1376365084703" ignored="false" />
+    <file path="/'.cmd" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1376653371190" ignored="false" />
+    <file path="/run.cmd" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1376657672224" ignored="false" />
+    <file path="/assignPatch.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1376657335781" ignored="false" />
+    <file path="/fitBezier.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1376657795539" ignored="false" />
+    <file path="/refineXByLike.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1376663197290" ignored="false" />
+    <file path="/traceBd.py" changelist="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" time="1376668112151" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,23 +57,33 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Venus" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$USER_HOME$/Desktop/zebo.txt" />
-        <option value="$PROJECT_DIR$/pci/ch03/zoba.py" />
-        <option value="$PROJECT_DIR$/pci/ch03/feed.py" />
-        <option value="$PROJECT_DIR$/pci/ch03/tmp.py" />
-        <option value="$PROJECT_DIR$/pci/ch02/recommendations.py" />
-        <option value="$PROJECT_DIR$/pci/ch03/clusters.py" />
-        <option value="$PROJECT_DIR$/pci/ch03/main.py" />
-        <option value="$PROJECT_DIR$/pci/ch03/zebo.py" />
-        <option value="$USER_HOME$/Desktop/Tmp/searchengine.py" />
-        <option value="$USER_HOME$/Desktop/Tmp/main.py" />
-        <option value="$PROJECT_DIR$/pci/ch04/searchEngine.py" />
-        <option value="$PROJECT_DIR$/pci/ch04/neuralNetwork.py" />
-        <option value="$PROJECT_DIR$/pci/ch04/main.py" />
-        <option value="$PROJECT_DIR$/pci/ch04/__init__.py" />
+        <option value="$PROJECT_DIR$/../libdl/src/dA.py" />
+        <option value="$PROJECT_DIR$/../libdl/src/load.py" />
+        <option value="$PROJECT_DIR$/../libdl/src/SdA.py" />
+        <option value="$PROJECT_DIR$/../Venus/vasync/JobRunner.py" />
+        <option value="$PROJECT_DIR$/../Venus/test_vasync.py" />
+        <option value="$PROJECT_DIR$/../Venus/test_vasync_server.py" />
+        <option value="$PROJECT_DIR$/../Venus/test_vasync_client.py" />
+        <option value="$PROJECT_DIR$/../Venus/vasync/JobManager.py" />
+        <option value="$USER_HOME$/Desktop/python/'.cmd" />
+        <option value="$USER_HOME$/Desktop/python/run.cmd" />
+        <option value="$USER_HOME$/Desktop/Vectorization/src/assignPatch.py" />
+        <option value="$USER_HOME$/Desktop/Vectorization/src/run.cmd" />
+        <option value="$USER_HOME$/Desktop/Vectorization/src/helper.py" />
+        <option value="$USER_HOME$/Desktop/Vectorization/src/traceBd.py" />
+        <option value="$USER_HOME$/Desktop/Vectorization/src/refineXByLike.py" />
+        <option value="$USER_HOME$/Desktop/Vectorization/src/fitBezier.py" />
       </list>
     </option>
   </component>
@@ -66,7 +93,7 @@
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -92,6 +119,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -106,7 +134,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mercury" />
+              <option name="myItemId" value="VectorMagic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -116,25 +148,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mercury" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pci" />
+              <option name="myItemId" value="VectorMagic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Venus" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -147,7 +174,7 @@
       <PyConsoleSettings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.dA">
     <configuration default="false" name="zebo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -207,6 +234,25 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="dA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../libdl/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="libdl" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../libdl/src/dA.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -216,7 +262,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mercury" />
+      <module name="Vectorization" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -240,7 +286,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mercury" />
+      <module name="Vectorization" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
@@ -255,7 +301,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mercury" />
+      <module name="Vectorization" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -266,18 +312,19 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.zebo" />
       <item index="1" class="java.lang.String" itemvalue="Python.tmp" />
       <item index="2" class="java.lang.String" itemvalue="Python.main" />
+      <item index="3" class="java.lang.String" itemvalue="Python.dA" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dA" />
         <item index="1" class="java.lang.String" itemvalue="Python.main" />
         <item index="2" class="java.lang.String" itemvalue="Python.main" />
         <item index="3" class="java.lang.String" itemvalue="Python.main" />
-        <item index="4" class="java.lang.String" itemvalue="Python.tmp" />
+        <item index="4" class="java.lang.String" itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -333,18 +380,18 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17268041" sideWeight="0.7367688" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19394329" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17976804" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3983287" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2632312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="24" y="354" width="1552" height="152" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26220363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="24" y="354" width="1552" height="152" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32635984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -413,96 +460,92 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Develop/Anaconda/Lib/re.py">
+    <entry file="file://$PROJECT_DIR$/../libdl/src/SdA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="4" selection-start="6849" selection-end="6849" vertical-scroll-proportion="0.33236575" />
+        <state line="459" column="64" selection-start="18558" selection-end="18558" vertical-scroll-proportion="0.5565217" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch02/delicious.py">
+    <entry file="file://$PROJECT_DIR$/../libdl/src/dA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5239478" />
+        <state line="339" column="26" selection-start="12922" selection-end="12922" vertical-scroll-proportion="0.4347826" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch03/feed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="17" selection-start="838" selection-end="838" vertical-scroll-proportion="0.23802613" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch03/zeboData.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="30" selection-start="210950" selection-end="210950" vertical-scroll-proportion="0.59911245" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch02/recommendations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="134" selection-end="143" vertical-scroll-proportion="0.13062409" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch02/movieLens.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="63" selection-start="905" selection-end="905" vertical-scroll-proportion="0.7387518" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch03/clusters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="374" column="4" selection-start="10532" selection-end="10532" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch02/main.py">
+    <entry file="file://$PROJECT_DIR$/../Venus/vasync/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch03/zebo.py">
+    <entry file="file://D:/Develop/Anaconda/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="0.13062409" />
+        <state line="639" column="6" selection-start="22398" selection-end="22398" vertical-scroll-proportion="-1.8447025" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch04/searchEngine.py">
+    <entry file="file://$USER_HOME$/.PyCharm20/system/python_stubs/-347824807/_collections.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="386" column="29" selection-start="13458" selection-end="13458" vertical-scroll-proportion="0.5">
+        <state line="76" column="8" selection-start="2451" selection-end="2451" vertical-scroll-proportion="-0.3207547" />
+      </provider>
+    </entry>
+    <entry file="file://D:/Develop/Anaconda/Lib/site-packages/tornado/websocket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="187" column="8" selection-start="6967" selection-end="6967" vertical-scroll-proportion="0.33236575" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Venus/test_vasync_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="23" selection-start="343" selection-end="343" vertical-scroll-proportion="0.2826087" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Venus/vasync/JobManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="20" selection-start="542" selection-end="542" vertical-scroll-proportion="0.02173913" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Venus/test_vasync_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="16" selection-start="221" selection-end="221" vertical-scroll-proportion="0.3478261" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/VectorMagic/src/assignPatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="26" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/VectorMagic/src/fitBSpline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.9027576" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/VectorMagic/src/helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="402" column="19" selection-start="14534" selection-end="14534" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/VectorMagic/src/fitBezier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="34" selection-start="3932" selection-end="3932" vertical-scroll-proportion="0.021770682">
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/VectorMagic/src/refineXByLike.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="47" selection-start="5666" selection-end="5674" vertical-scroll-proportion="0.021770682">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch03/main.py">
+    <entry file="file://$USER_HOME$/Desktop/VectorMagic/src/traceBd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.04347826">
+        <state line="22" column="4" selection-start="743" selection-end="743" vertical-scroll-proportion="0.021770682">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch04/main.py">
+    <entry file="file://$USER_HOME$/Desktop/VectorMagic/src/run.cmd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.04347826">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch04/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="0" selection-start="7168" selection-end="7168" vertical-scroll-proportion="0.7173913">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch02/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch03/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pci/ch04/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="23" selection-end="23" vertical-scroll-proportion="0.02173913">
+        <state line="28" column="6" selection-start="953" selection-end="953" vertical-scroll-proportion="0.6095791">
           <folding />
         </state>
       </provider>

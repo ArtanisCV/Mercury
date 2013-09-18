@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Mercury.iml" filepath="$PROJECT_DIR$/.idea/Mercury.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/VectorMagic/.idea/Vectorization.iml" filepath="$USER_HOME$/Desktop/VectorMagic/.idea/Vectorization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Venus/.idea/Venus.iml" filepath="$PROJECT_DIR$/../Venus/.idea/Venus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../libdl/.idea/libdl.iml" filepath="$PROJECT_DIR$/../libdl/.idea/libdl.iml" />
     </modules>
   </component>
 </project>

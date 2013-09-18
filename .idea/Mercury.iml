@@ -4,6 +4,9 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="libdl" />
+    <orderEntry type="module" module-name="Venus" />
+    <orderEntry type="module" module-name="Vectorization" />
   </component>
 </module>
 
