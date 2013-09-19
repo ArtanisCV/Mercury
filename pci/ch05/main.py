@@ -1,30 +1,21 @@
 __author__ = 'Artanis'
 
 
-import optimization
+import flight
 
-s = [1, 4, 3, 2, 7, 3, 6, 3, 2, 4, 5, 3]
-print optimization.scheduleCost(s)
-optimization.printSchedule(s)
+flight.testFlight()
 
-domain = [(0, 9)] * (len(optimization.people) * 2)
 
-print
-s = optimization.randomOptimize(domain, optimization.scheduleCost)
-print optimization.scheduleCost(s)
-optimization.printSchedule(s)
+import kayak
 
-print
-s = optimization.hillClimb(domain, optimization.scheduleCost)
-print optimization.scheduleCost(s)
-optimization.printSchedule(s)
+kayak.testKayak()
 
-print
-s = optimization.annealingOptimize(domain, optimization.scheduleCost)
-print optimization.scheduleCost(s)
-optimization.printSchedule(s)
 
-print
-s = optimization.geneticOptimize(domain, optimization.scheduleCost)
-print optimization.scheduleCost(s)
-optimization.printSchedule(s)
+import dorm
+
+dorm.testDorm()
+
+
+import socialNetwork
+
+socialNetwork.testSocialNetwork()

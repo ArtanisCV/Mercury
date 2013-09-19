@@ -4,81 +4,6 @@ import math
 
 __author__ = 'Artanis'
 
-people = [('Seymour', 'BOS'),
-          ('Franny', 'DAL'),
-          ('Zooey', 'CAK'),
-          ('Walt', 'MIA'),
-          ('Buddy', 'ORD'),
-          ('Les', 'OMA')]
-
-# LaGuardia airport in New York
-destination = 'LGA'
-
-flights = {}
-
-for line in file('schedule.txt'):
-    origin, dest, depart, arrive, price = line.strip().split(',')
-    flights.setdefault((origin, dest), [])
-
-    # Add details to the list of possible flights
-    flights[(origin, dest)].append((depart, arrive, int(price)))
-
-
-def getMinutes(t):
-    x = time.strptime(t, '%H:%M')
-    return x[3] * 60 + x[4]
-
-
-def printSchedule(v):
-    for idx in range(len(v) / 2):
-        name = people[idx][0]
-        origin = people[idx][1]
-        out = flights[(origin, destination)][int(v[idx * 2])]
-        ret = flights[(destination, origin)][int(v[idx * 2 + 1])]
-        print '%10s%10s %5s-%5s $%3s %5s-%5s $%3s' % (name, origin,
-                                                      out[0], out[1], out[2],
-                                                      ret[0], ret[1], ret[2])
-
-
-def scheduleCost(v):
-    totalPrice = 0
-    lastestArrival = 0
-    earliestDep = 24 * 60
-
-    for idx in range(len(v) / 2):
-        # Get the inbound and outbound flights
-        origin = people[idx][1]
-        out = flights[(origin, destination)][int(v[idx * 2])]
-        ret = flights[(destination, origin)][int(v[idx * 2 + 1])]
-
-        # Total price is the price of all outbound and return flights
-        totalPrice += out[2] + ret[2]
-
-        # Track the latest arrival and earliest departure
-        if lastestArrival < getMinutes(out[1]):
-            lastestArrival = getMinutes(out[1])
-
-        if earliestDep > getMinutes(ret[0]):
-            earliestDep = getMinutes(ret[0])
-
-    # Every person must wait at the airport until the latest person arrives.
-    # They also must arrive at the same time and wait for their flights.
-    totalWait = 0
-
-    for idx in range(len(v) / 2):
-        origin = people[idx][1]
-        out = flights[(origin, destination)][int(v[idx * 2])]
-        ret = flights[(destination, origin)][int(v[idx * 2 + 1])]
-
-        totalWait += lastestArrival - getMinutes(out[1])
-        totalWait += getMinutes(ret[0]) - earliestDep
-
-    # Does this solution require an extra day of car rental? That'll be $50!
-    if lastestArrival < earliestDep:
-        totalPrice += 50
-
-    return totalPrice + totalWait
-
 
 def randomOptimize(domain, costF):
     best = 999999999
@@ -145,11 +70,11 @@ def annealingOptimize(domain, costF, T=10000.0, cool=0.95, step=1):
         i = random.randint(0, len(domain) - 1)
 
         # Choose a direction to change it
-        dir = random.randint(-step, step)
+        d = random.randint(-step, step)
 
         # Create a new list with one of the values changed
         rb = r[:]
-        rb[i] += dir
+        rb[i] += d
 
         if rb[i] < domain[i][0]:
             rb[i] = domain[i][0]
@@ -198,13 +123,19 @@ def geneticOptimize(domain, costF, popSize=50, step=1, mutProb=0.2, elite=0.2, m
     topElite = int(elite * popSize)
 
     # Main loop
-    for i in range(maxIter):
+    for i in range(maxIter + 1):
         scores = [(costF(v), v) for v in pop]
         scores.sort()
-        ranked = [v for (s, v) in scores]
+
+        # Print current best score
+        print scores[0][0]
+
+        if i == maxIter:
+            break
 
         # Start with the pure winners
-        pop = ranked[0 : topElite]
+        ranked = [v for (s, v) in scores]
+        pop = ranked[0: topElite]
 
         # Add mutated and bred forms of the winners
         while len(pop) < popSize:
@@ -217,8 +148,5 @@ def geneticOptimize(domain, costF, popSize=50, step=1, mutProb=0.2, elite=0.2, m
                 c1 = random.randint(0, topElite)
                 c2 = random.randint(0, topElite)
                 pop.append(crossover(ranked[c1], ranked[c2]))
-
-        # Print current best score
-        print scores[0][0]
 
     return scores[0][1]
