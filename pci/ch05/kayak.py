@@ -2,6 +2,7 @@ import time
 import urllib2
 import xml.dom.minidom
 
+__author__ = 'Artanis'
 
 kayakKey = 'YOUR KEY HERE'
 

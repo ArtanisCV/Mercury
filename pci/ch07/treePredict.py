@@ -3,7 +3,6 @@ from PIL import Image, ImageDraw
 
 __author__ = 'Artanis'
 
-
 userData = [['slashdot', 'USA', 'yes', 18, 'None'],
             ['google', 'France', 'yes', 23, 'Premium'],
             ['digg', 'USA', 'yes', 24, 'Basic'],

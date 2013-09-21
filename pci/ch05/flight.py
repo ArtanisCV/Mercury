@@ -2,7 +2,6 @@ import time
 
 __author__ = 'Artanis'
 
-
 people = [('Seymour', 'BOS'),
           ('Franny', 'DAL'),
           ('Zooey', 'CAK'),

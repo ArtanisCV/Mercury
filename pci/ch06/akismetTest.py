@@ -2,7 +2,6 @@ import akismet
 
 __author__ = 'Artanis'
 
-
 defaultKey = "YOURKEYHERE"
 pageUrl = "http://yoururlhere.com"
 

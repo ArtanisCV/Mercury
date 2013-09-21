@@ -1,6 +1,5 @@
 __author__ = 'Artanis'
 
-
 # The dorms, each of which has two available spaces
 dorms = ['Zeus', 'Athena', 'Hercules', 'Bacchus', 'Pluto']
 

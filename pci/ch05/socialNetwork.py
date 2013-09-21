@@ -3,7 +3,6 @@ import math
 
 __author__ = 'Artanis'
 
-
 people = ['Charlie', 'Augustus', 'Veruca', 'Violet', 'Mike', 'Joe', 'Willy', 'Miranda']
 
 links = [('Augustus', 'Willy'),
