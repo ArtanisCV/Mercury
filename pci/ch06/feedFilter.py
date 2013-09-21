@@ -45,14 +45,14 @@ def entryFeatures(entry):
         feature['Title:' + word] = 1
 
     # Extract the summary words
-    summaryWords = [word.lower() for word in splitter.split(entry['summary'])
+    summaryWords = [word for word in splitter.split(entry['summary'])
                     if 2 < len(word) < 20]
 
     # Count upper words
     uc = 0
     for i in range(len(summaryWords)):
         word = summaryWords[i]
-        feature[word] = 1
+        feature[word.lower()] = 1
 
         if word.isupper():
             uc += 1
@@ -60,7 +60,7 @@ def entryFeatures(entry):
         # Get word pairs in summary as features
         if i < len(summaryWords) - 1:
             twoWords = ' '.join(summaryWords[i: i + 1])
-            feature[twoWords] = 1
+            feature[twoWords.lower()] = 1
 
     # Keep creator and publisher whole
     feature['Publisher:' + entry['publisher']] = 1

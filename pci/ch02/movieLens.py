@@ -4,7 +4,7 @@ import time
 __author__ = 'Artanis'
 
 
-def loadMovieLens(path='..\data\MovieLens\ml-100k.zip'):
+def loadMovieLens(path='MovieLens\ml-100k.zip'):
     movies = {}
     prefs = {}
     file = zipfile.ZipFile(path)
