@@ -16,7 +16,7 @@ def simEuclidean(prefs, person1, person2):
     if nShared == 0:
         return 0
     else:
-        return 1 / (1 + sum_of_square)
+        return 1 / (1 + sqrt(sum_of_square))
 
 
 # Returns the Pearson correlation coefficient for person1 and person2
@@ -31,6 +31,8 @@ def simPearson(prefs, person1, person2):
             sumSq2 += pow(prefs[person2][item], 2)
             pSum += prefs[person1][item] * prefs[person2][item]
             nShared += 1
+
+    nShared = float(nShared)
 
     # If they have no ratings in common, return 0
     if nShared == 0:

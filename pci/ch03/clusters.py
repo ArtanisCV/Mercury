@@ -40,6 +40,7 @@ def pearson(v1, v2):
 
     pSum = sum([v1[i] * v2[i] for i in range(n)])
 
+    n = float(n)
     num = pSum - sum1 * sum2 / n
     den = sqrt((sumSq1 - pow(sum1, 2) / n) * (sumSq2 - pow(sum2, 2) / n))
 
