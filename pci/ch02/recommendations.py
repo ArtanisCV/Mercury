@@ -32,12 +32,11 @@ def simPearson(prefs, person1, person2):
             pSum += prefs[person1][item] * prefs[person2][item]
             nShared += 1
 
-    nShared = float(nShared)
-
     # If they have no ratings in common, return 0
     if nShared == 0:
         return 0
     else:
+        nShared = float(nShared)
         num = pSum - (sum1 * sum2 / nShared)
         den = sqrt((sumSq1 - pow(sum1, 2) / nShared) * (sumSq2 - pow(sum2, 2) / nShared))
 
