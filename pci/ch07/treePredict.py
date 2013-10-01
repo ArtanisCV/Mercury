@@ -311,7 +311,7 @@ def testTreePredict():
     print
     tree = buildTree(userData)
     printTree(tree)
-    drawTree(tree, jpeg='treeView.jpg')
+    drawTree(tree, jpeg='userTree.jpg')
 
     print
     print classify(['(direct)', 'USA', 'yes', 5], tree)

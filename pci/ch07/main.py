@@ -6,9 +6,9 @@ import treePredict
 treePredict.testTreePredict()
 
 
-# import zillow
-#
-# zillow.testZillow()
+import zillow
+
+zillow.testZillow()
 
 
 # import hotOrNot

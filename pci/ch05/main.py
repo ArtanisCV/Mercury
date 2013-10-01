@@ -6,9 +6,9 @@ import flight
 flight.testFlight()
 
 
-import kayak
-
-kayak.testKayak()
+#import kayak
+#
+#kayak.testKayak()
 
 
 import dorm

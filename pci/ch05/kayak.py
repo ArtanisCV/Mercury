@@ -97,16 +97,16 @@ def testKayak():
     print rec[0].firstChild
     print rec[0].firstChild.data
 
-    # sessionId = getKayakSession()
-    # searchId = flightSearch(sessionId, 'BOS', 'LGA', '11/17/2006')
-    # print flightSearchResults(sessionId, searchId)[0: 3]
-    #
-    # import flight
-    # import optimization
-    #
-    # flights = createSchedule(flight.people[0: 2], 'LGA', '11/17/2006', '11/19/2006')
-    # flight.flights = flights
-    # domain = [(0, 30)] * len(flights)
-    #
-    # s = optimization.geneticOptimize(domain, flight.scheduleCost)
-    # flight.printSchedule(s)
+    sessionId = getKayakSession()
+    searchId = flightSearch(sessionId, 'BOS', 'LGA', '11/17/2006')
+    print flightSearchResults(sessionId, searchId)[0: 3]
+
+    import flight
+    import optimization
+
+    flights = createSchedule(flight.people[0: 2], 'LGA', '11/17/2006', '11/19/2006')
+    flight.flights = flights
+    domain = [(0, 30)] * len(flights)
+
+    s = optimization.geneticOptimize(domain, flight.scheduleCost)
+    flight.printSchedule(s)
