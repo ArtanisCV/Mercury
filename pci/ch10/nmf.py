@@ -40,7 +40,7 @@ def factorize(v, r=10, maxIter=50):
 
         # Update weights matrix
         vh = v * h.transpose()
-        whh = w * h * h.transpose()
+        whh = w * h * h.transpose() + eps
         w = matrix(w.A * vh.A / whh.A)  # element-wise operations
 
     return w, h

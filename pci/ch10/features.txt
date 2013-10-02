@@ -1,0 +1,100 @@
+['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
+(44.980228253741615, 'Stocks up as investors shrug off shutdown - Newsday')
+(3.2246070158982865, '20 questions: What happens now with shutdown?')
+(2.6230690629612501, 'Wall Street looks beyond government shutdown')
+
+['were', 'about', 'mall', 'before', 'kenya', 'attack']
+(24.73720337566526, 'Sources: Kenya was warned before mall attack')
+(12.290584601495031, "Witness to Pakistan blast: 'Women and children were burning'")
+(9.9567662427382579, 'Kenya attack')
+
+['their', 'with', 'could', 'cleric', 'light', 'drugs']
+(14.963838991745421, 'A new sense of optimism in Iran')
+(12.956607856355928, 'Cleric: Driving could hurt ovaries')
+(12.790968150299488, 'Cleric: Driving could harm ovaries')
+
+['world', 'more', 'your', 'than', 'girls', 'make']
+(23.890422720662141, 'Impact Your World: How to help')
+(15.432237728837523, 'Bloomberg on climate change')
+(9.3747005739434801, "China's rich wealthier than thought")
+
+['middot', 'says', 'president', 'died', 'company', 'seattle']
+(43.779733667453257, "Executive says it's believed construction company president and son died in ... - Seattle Post Intelligencer")
+(2.575503811933149, 'Black men in pain need help')
+(2.4149501168274425, "'Pink Star' might go for $60 million")
+
+['government', 'times', 'down', 'shuts', 'budget', 'york']
+(52.496282206403677, 'US Government Shuts Down in Budget Impasse - New York Times')
+(8.5157221908341043, 'Government powers down; Obama to address country - Boston.com')
+(4.3179364161879032, 'Get up to speed in 20 questions')
+
+['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+(21.363993204635083, "Obama, Rouhani's historic call")
+(15.293044802197596, 'TWITTER TENSION  Iranian foreign minister accuses Obama of flip-flop')
+(13.226744423065696, 'Hassan Rouhani full interview')
+
+['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+(18.808650763638031, 'Typhoon Usagi hits China, dozens dead')
+(14.270533338440179, 'Chinese fishing boats sink, 72 missing')
+(11.4732160586563, "China's Bo Xilai appeals conviction")
+
+['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+(44.611702799808391, 'Chemical Weapons Inspectors Cross Into Syria - ABC News')
+(8.9856778042632097, 'Now comes the real test in Syria')
+(7.0352787765755096, 'U.N. approves Syria resolution')
+
+['something', 'doing', 'stupid', 'could', 'into', 'says']
+(29.705442411439151, "Shutdown could be 'shock therapy'")
+(28.128496674902376, 'Shutdown shock therapy?')
+(3.0335806055572001, 'The laser light that could cut cyclist deaths')
+
+['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+(23.059987464601839, 'Terrifying road rage video goes viral')
+(20.471415886911299, 'Bikers chase SUV driver, video shows')
+(19.59080746569839, 'Police: Gang attacks driver')
+
+['korea', 'south', 'news', 'military', 'talks', 'korean']
+(52.511303980805586, 'Chuck Hagel in South Korea for military talks - BBC News')
+(7.5535384356088597, 'N. Korean defectors')
+(7.4222325209041227, 'Sent back to N. Korean nightmare')
+
+['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
+(55.421791842128805, 'Yosemite National Park Gets Google Doodle Amidst Shutdown - PC Magazine')
+(4.7454179835762007, "'Wall of trees' to save wildlife")
+(3.1455511167545249, 'What does shutdown mean for tourists?')
+
+['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+(47.728680369953729, 'Government powers down; Obama to address country - Boston.com')
+(5.6274669106412771, 'Wall Street looks beyond government shutdown')
+(5.5429719103149493, 'The best of African street art')
+
+['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+(43.149245890802831, 'Dad killed in Colo. rockslide shielded teenage daughter - USA TODAY')
+(5.6804443924755983, 'Police: 5 killed in rockslide')
+(5.5192225206563341, 'Girl saved as U.S. rockslide kills 5')
+
+['insurance', 'health', 'york', 'times', 'nbsp', 'make']
+(55.766122798063641, 'As Insurance Marketplaces Make Debut, Questions Remain - New York Times')
+(1.9879547272439422, 'Government powers down; Obama to address country - Boston.com')
+(1.901948843004919, 'US Government Shuts Down in Budget Impasse - New York Times')
+
+['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+(40.620191161739243, "'GLITCH' WATCH ObamaCare website posts error messages")
+(4.7092848154922615, '10 ways shutdown will affect U.S.')
+(4.6066018741176151, 'Government powers down; Obama to address country - Boston.com')
+
+['that', 'what', 'place', 'attacks', 'only', 'city']
+(11.96746578625536, 'What does shutdown mean for tourists?')
+(9.0741806071822442, 'Oops! Kids can scrub online posts')
+(7.2795650415364612, '20 questions: What happens now with shutdown?')
+
+['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+(26.835016368630111, "Syrian minister: 'There is no civil war'")
+(19.326516474368812, "Syria FM: 'There is no civil war'")
+(12.601046807074615, 'What Syrian minister told the U.N.')
+
+['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+(54.173909823892899, 'Power restored to most of UC Berkeley - San Francisco Chronicle')
+(10.181109042347108, 'UC Berkeley campus cleared after explosion')
+(9.2910226770752793, 'UC Berkeley campus evacuated')
+

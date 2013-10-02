@@ -1,3 +1,4 @@
+from numpy import *
 import feedparser
 import re
 
@@ -143,42 +144,116 @@ def loadNews():
     return allWords, articleWords, articleTitles
 
 
+def showFeatures(weights, features, titles, wordVec, out='features.txt'):
+    outFile = file(out, 'w')
+    r, m = features.shape
+    topPatterns = [[] for i in range(len(titles))]
+    patternNames = []
+
+    # Loop over all the features
+    for i in range(r):
+        wordList = []
+
+        # Create a list of words and their weights
+        for j in range(m):
+            wordList.append((features[i, j], wordVec[j]))
+
+        # Reverse sort the word list
+        wordList.sort()
+        wordList.reverse()
+
+        # Print the first six elements
+        topWords = [word[1] for word in wordList[0:6]]
+        outFile.write(str(topWords) + '\n')
+        patternNames.append(topWords)
+
+        # Create a list of articles for this feature
+        titleList = []
+        for j in range(len(titles)):
+            # Add the article with its weight
+            titleList.append((weights[j, i], titles[j]))
+            topPatterns[j].append((weights[j, i], i, titles[j]))
+
+        # Reverse sort the list
+        titleList.sort()
+        titleList.reverse()
+
+        # Show the top 3 articles
+        for title in titleList[0:3]:
+            outFile.write(str(title) + '\n')
+        outFile.write('\n')
+
+    outFile.close()
+
+    # Return the pattern names for later use
+    return topPatterns, patternNames
+
+
+def showArticles(titles, topPatterns, patternNames, out='articles.txt'):
+    outFile = file(out, 'w')
+
+    # Loop over all the articles
+    for j in range(len(titles)):
+        outFile.write(titles[j].encode('utf8') + '\n')
+
+        # Get the top features for this article and reverse sort them
+        topPatterns[j].sort()
+        topPatterns[j].reverse()
+
+        # Print the top three patterns
+        for i in range(3):
+            outFile.write(str(topPatterns[j][i][0]) + ' ' +
+                          str(patternNames[topPatterns[j][i][1]]) + '\n')
+        outFile.write('\n')
+
+    outFile.close()
+
+
 def testNewsFeatures():
     # allWords, articleWords, articleTitles = getArticleWords()
     # saveNews(allWords, articleWords, articleTitles)
     allWords, articleWords, articleTitles = loadNews()
 
     wordMatrix, wordVec = makeMatrix(allWords, articleWords)
-    print wordVec[0: 10]
-    print articleTitles[1]
-    print wordMatrix[1][0: 10]
-
-    def wordMatrixFeatures(counts):
-        return [wordVec[i] for i in range(len(counts)) if counts[i] > 0]
+    #print wordVec[0: 10]
+    #print articleTitles[1]
+    #print wordMatrix[1][0: 10]
+    #
+    #def wordMatrixFeatures(counts):
+    #    return [wordVec[i] for i in range(len(counts)) if counts[i] > 0]
+    #
+    #print
+    #print wordMatrixFeatures(wordMatrix[0])
+    #
+    #print
+    #from pci.ch06 import docClass
+    #
+    #classifier = docClass.NaiveBayes(wordMatrixFeatures)
+    #classifier.setDB('news.db')
+    #
+    #print articleTitles[0]
+    ## Train this as an 'government' story
+    #classifier.train(wordMatrix[0], 'government')
+    #
+    #print articleTitles[1]
+    ## Train this as an 'market' story
+    #classifier.train(wordMatrix[1], 'market')
+    #
+    #print articleTitles[2]
+    ## How is this story classified?
+    #print classifier.classify(wordMatrix[2])
+    #
+    #print
+    #from pci.ch03 import clusters
+    #
+    #clust = clusters.hCluster(wordMatrix)
+    #clusters.drawDendrogram(clust, articleTitles, jpeg='news.jpg')
 
     print
-    print wordMatrixFeatures(wordMatrix[0])
+    import nmf
 
-    print
-    from pci.ch06 import docClass
+    weights, features = nmf.factorize(matrix(wordMatrix), 20, 50)
+    print weights
 
-    classifier = docClass.NaiveBayes(wordMatrixFeatures)
-    classifier.setDB('news.db')
-
-    print articleTitles[0]
-    # Train this as an 'government' story
-    classifier.train(wordMatrix[0], 'government')
-
-    print articleTitles[1]
-    # Train this as an 'market' story
-    classifier.train(wordMatrix[1], 'market')
-
-    print articleTitles[2]
-    # How is this story classified?
-    print classifier.classify(wordMatrix[2])
-
-    print
-    from pci.ch03 import clusters
-
-    clust = clusters.hCluster(wordMatrix)
-    clusters.drawDendrogram(clust, articleTitles, jpeg='news.jpg')
+    topPatterns, patternNames = showFeatures(weights, features, articleTitles, wordVec)
+    showArticles(articleTitles, topPatterns, patternNames)
