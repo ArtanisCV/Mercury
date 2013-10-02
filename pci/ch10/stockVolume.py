@@ -9,41 +9,41 @@ dataDir = 'Finances'
 tickers = ['YHOO', 'AVP', 'BIIB', 'BP', 'CL', 'CVX',
            'AAPL', 'EXPE', 'GOOG', 'PG', 'XOM', 'AMGN']
 
+shortest = 300
+prices = {}
+dates = None
+
+for t in tickers:
+    # Load data
+    dataPath = dataDir + os.sep + '%s.csv' % t
+
+    if os.path.exists(dataPath):
+        fd = open(dataPath, 'r')
+        rows = fd.readlines()
+        fd.close()
+    else:
+        rows = urllib2.urlopen('http://ichart.finance.yahoo.com/table.csv?' +
+                               's=%s&d=11&e=26&f=2006&g=d&a=3&b=12&c=1996' % t +
+                               '&ignore=.csv').readlines()
+
+        fd = open(dataPath, 'w')
+        fd.writelines(rows)
+        fd.close()
+
+    # Extract the volumn field from every line
+    prices[t] = [float(row.split(',')[5]) for row in rows[1:] if row.strip() != '']
+
+    if len(prices[t]) < shortest:
+        shortest = len(prices[t])
+
+    if not dates:
+        dates = [row.split(',')[0] for row in rows[1:] if row.strip() != '']
+
+list2d = [[prices[tickers[i]][j] for i in range(len(tickers))]
+          for j in range(shortest)]
+
 
 def testStockVolume():
-    shortest = 300
-    prices = {}
-    dates = None
-
-    for t in tickers:
-        # Load data
-        dataPath = dataDir + os.sep + '%s.csv' % t
-
-        if os.path.exists(dataPath):
-            fd = open(dataPath, 'r')
-            rows = fd.readlines()
-            fd.close()
-        else:
-            rows = urllib2.urlopen('http://ichart.finance.yahoo.com/table.csv?' +
-                                   's=%s&d=11&e=26&f=2006&g=d&a=3&b=12&c=1996' % t +
-                                   '&ignore=.csv').readlines()
-
-            fd = open(dataPath, 'w')
-            fd.writelines(rows)
-            fd.close()
-
-        # Extract the volumn field from every line
-        prices[t] = [float(row.split(',')[5]) for row in rows[1:] if row.strip() != '']
-
-        if len(prices[t]) < shortest:
-            shortest = len(prices[t])
-
-        if not dates:
-            dates = [row.split(',')[0] for row in rows[1:] if row.strip() != '']
-
-    list2d = [[prices[tickers[i]][j] for i in range(len(tickers))]
-              for j in range(shortest)]
-
     weights, features = nmf.factorize(matrix(list2d), 8)
 
     print weights

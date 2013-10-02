@@ -215,39 +215,39 @@ def testNewsFeatures():
     allWords, articleWords, articleTitles = loadNews()
 
     wordMatrix, wordVec = makeMatrix(allWords, articleWords)
-    #print wordVec[0: 10]
-    #print articleTitles[1]
-    #print wordMatrix[1][0: 10]
-    #
-    #def wordMatrixFeatures(counts):
-    #    return [wordVec[i] for i in range(len(counts)) if counts[i] > 0]
-    #
-    #print
-    #print wordMatrixFeatures(wordMatrix[0])
-    #
-    #print
-    #from pci.ch06 import docClass
-    #
-    #classifier = docClass.NaiveBayes(wordMatrixFeatures)
-    #classifier.setDB('news.db')
-    #
-    #print articleTitles[0]
-    ## Train this as an 'government' story
-    #classifier.train(wordMatrix[0], 'government')
-    #
-    #print articleTitles[1]
-    ## Train this as an 'market' story
-    #classifier.train(wordMatrix[1], 'market')
-    #
-    #print articleTitles[2]
-    ## How is this story classified?
-    #print classifier.classify(wordMatrix[2])
-    #
-    #print
-    #from pci.ch03 import clusters
-    #
-    #clust = clusters.hCluster(wordMatrix)
-    #clusters.drawDendrogram(clust, articleTitles, jpeg='news.jpg')
+    print wordVec[0: 10]
+    print articleTitles[1]
+    print wordMatrix[1][0: 10]
+
+    def wordMatrixFeatures(counts):
+        return [wordVec[i] for i in range(len(counts)) if counts[i] > 0]
+
+    print
+    print wordMatrixFeatures(wordMatrix[0])
+
+    print
+    from pci.ch06 import docClass
+
+    classifier = docClass.NaiveBayes(wordMatrixFeatures)
+    classifier.setDB('news.db')
+
+    print articleTitles[0]
+    # Train this as an 'government' story
+    classifier.train(wordMatrix[0], 'government')
+
+    print articleTitles[1]
+    # Train this as an 'market' story
+    classifier.train(wordMatrix[1], 'market')
+
+    print articleTitles[2]
+    # How is this story classified?
+    print classifier.classify(wordMatrix[2])
+
+    print
+    from pci.ch03 import clusters
+
+    clust = clusters.hCluster(wordMatrix)
+    clusters.drawDendrogram(clust, articleTitles, jpeg='news.jpg')
 
     print
     import nmf

@@ -1,1330 +1,1330 @@
 Government powers down; Obama to address country - Boston.com
-47.72868037 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-8.51572219083 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-4.60660187412 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+32.1327367488 ['government', 'down', 'some', 'obama', 'boston', 'country']
+15.7694854385 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+9.55160852415 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 As Insurance Marketplaces Make Debut, Questions Remain - New York Times
-55.7661227981 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-4.52429715527 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.495716485449 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+50.9997112272 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
+4.55319097639 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+1.1305906336 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 US Government Shuts Down in Budget Impasse - New York Times
-52.4962822064 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-1.901948843 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-0.282500770286 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+58.4662200253 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
+3.20002149675 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.259939259361 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 Dad killed in Colo. rockslide shielded teenage daughter - USA TODAY
-43.1492458908 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-1.45564214998 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.839634855391 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
+45.6010943327 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+1.94411002251 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.678970269491 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
 
 Executive says it's believed construction company president and son died in ... - Seattle Post Intelligencer
-43.7797336675 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.373551981429 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.156041847676 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
+44.9398559239 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.428904251417 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.064590565009 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 Power restored to most of UC Berkeley - San Francisco Chronicle
-54.1739098239 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-1.31207576831 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.496405708045 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+45.2489179969 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+1.6437781055 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.800594685475 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 Chemical Weapons Inspectors Cross Into Syria - ABC News
-44.6117027998 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-1.93598807057 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.549073941257 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+45.9972809438 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+3.60063231249 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+1.70440552956 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 Yosemite National Park Gets Google Doodle Amidst Shutdown - PC Magazine
-55.4217918421 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
-4.70107519594 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.81460412752 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
+58.0070940483 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
+4.23473188149 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.72262435986 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
 
 Chuck Hagel in South Korea for military talks - BBC News
-52.5113039808 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-0.669113141822 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-0.552342428881 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
+49.8363351006 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+1.0972829129 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.41988188886 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
 
 Stocks up as investors shrug off shutdown - Newsday
-44.9802282537 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-1.8641514347 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-1.06569721491 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+45.8745385668 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+2.17355244091 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.43184899771 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 TWITTER TENSION  Iranian foreign minister accuses Obama of flip-flop
-15.2930448022 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-3.08085439748 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-1.31709173734 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+16.3332738383 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+2.41849185378 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.21857965664 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 SUSPECT ARRESTED  Search for motive in biker gang beating of NY dad
-1.28505747253 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-0.115839673678 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.00244560242769 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+1.34003268306 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.0342248991745 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.0164140030053 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 BORDER BATTLE Ariz. county forced to end smuggling prosecutions
-3.07604115791 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-1.2475239897 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.790115243197 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
+3.14872715411 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+1.17960234922 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.666672134861 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 'GLITCH' WATCH ObamaCare website posts error messages
-40.6201911617 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.0135577502904 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-0.0040372269711 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+40.1360021843 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.032489466165 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+0.00971735680246 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 New fertility treatment can induce egg growth in infertile women
-0.629954790509 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.214767887186 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-2.5951185993e-15 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+0.595758454422 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.157832350859 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.05740760641e-42 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 Energy Dept. chief hails Solyndra loan program as 'terrific success'
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Officials: 13-foot-long gator shouldn't have been killed
-2.25201501911 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.83470256306 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-0.76165626629 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+2.32745725254 ['light', 'have', 'like', 'they', 'just', 'when']
+2.11768810222 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.475455118561 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 2 Marine generals ousted over deadly Afghan attack
-1.32688427514 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.734921353708 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.273251554509 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+0.849336356353 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.45196869803 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.443864782099 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Pa. may rethink rule that allows cross-gender teams
-4.66834023184 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.966575589581 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-0.0223597096216 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+3.05076460162 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.07190493183 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+0.26999281603 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Georgia school district considers assault rifles
-0.294121840314 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.0694840539592 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-3.34111748692e-19 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+0.31124648324 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.158367642995 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.114217366806 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 UN report adds little explanation for 'pause' in warming
-0.443204659191 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.111028942989 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.34839882947e-38 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+0.279239488789 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.093397745459 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.00131218744381 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 NBC, CNN scrap Hillary Clinton programs
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Wall Street looks beyond government shutdown
-5.62746691064 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-2.62306906296 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.434624202582 ['that', 'what', 'place', 'attacks', 'only', 'city']
+5.00857549815 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+3.74737475079 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.322867175084 ['light', 'have', 'like', 'they', 'just', 'when']
 
 STARNES: Airmen say Air Force punishing Christians
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Couple arrested in 1980 killings of exes, 2 children- NY workplace shooting suspect's body found in river
-0.524872637857 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.223889030608 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.174412826945 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+0.475289394761 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.0246898111075 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.0233923872872 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 Kenyan troops suspected of looting mall during siege
-1.67204336199 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.313863751745 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-0.0495740866851 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+0.708344251317 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.29035380354 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.0257846458977 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Chemical weapons inspectors move into Syria
-6.95684596167 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-0.687106012968 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.00633525376471 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+7.42150013415 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+0.623191430535 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.583391214266 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Effort resumes to retrieve bodies of 5 killed in Colo. rock slide
-2.03743797003 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-0.719346836384 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.00235820404685 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+2.22490167316 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.160771064788 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.202181712e-33 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 NSA reportedly compiling individual digital footprints
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Nude scenes that hurt careers
-4.69938109361 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.0466603954871 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.00716245145474 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+3.1243850493 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.288733011544 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.108968314514 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
 
 Creepy or cool? Wearable tech
-0.0103770227475 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-2.85764058729e-294 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+0.727608386635 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Bourdain offends entire state
-1.05112803179 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.45046233385 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-7.37096751592e-17 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+0.436635354932 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
+0.373666097341 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.0427845501176 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Jay Leno the new Batman?
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Stars blast GOP over shutdown
-1.84437009254 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-1.28891564643 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.613046228745 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+1.78418718543 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+1.20023827817 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.663480275667 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Microsoft beats Apple
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Quit artificial sweeteners
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Michigan's Upper Peninsula
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Bynes finally doing better
-2.73724730106 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+2.82116308651 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Ancient kingdom uncovered
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Kerr talks undies collection
-1.00205429755 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-0.343307073492 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-4.39010229635e-21 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.950824898232 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.277975025343 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+5.34990900103e-26 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 Dessert for dinner
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Top stars before the fame
-1.62356426371 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-2.17122123205e-06 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-9.50444555529e-17 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+0.518214231361 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.0217145950158 ['government', 'down', 'some', 'obama', 'boston', 'country']
+7.94406568238e-07 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 'The Factor' crashes the UN
-0.0 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.0 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0 ['that', 'what', 'place', 'attacks', 'only', 'city']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Two popes get dates for sainthood
-1.61203246849 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-1.1140602925 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.21360352295 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+1.12240207887 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.554404250984 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.427379645985 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 Site maps 1.2 billion Facebook faces
-1.3193112474 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.852365789916 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.434769509701 ['world', 'more', 'your', 'than', 'girls', 'make']
+3.14000509702 ['light', 'have', 'like', 'they', 'just', 'when']
+1.20066885545 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.81695915066 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Nigerian gunmen kill sleeping students
-0.412292564287 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.0284119516816 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.0019344936492 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+0.682851917079 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.0404557556012 ['world', 'your', 'make', 'girls', 'education', 'around']
+3.68785343331e-11 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 Top gambler accused of cheating
-1.59912254151 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.23489390772 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.01915049728 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+2.39988714007 ['light', 'have', 'like', 'they', 'just', 'when']
+1.18085156341 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.11819805231 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Jet makes amazing foam landing
-3.37277618024 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.58293522536 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-1.08704455099 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+1.46919571153 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
+1.31463113979 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+1.16509714542 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Shutdown could be 'shock therapy'
-29.7054424114 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.0440063660745 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.0192408871283 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
+30.567431564 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.010674812074 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.00387514989023 ['light', 'have', 'like', 'they', 'just', 'when']
 
 'Smiley' Iran: Why caution is needed
-9.33850969925 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.636195405328 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-2.57846984072e-05 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+9.9718072202 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+0.495360455379 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+1.33228235733e-09 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Pope Francis shows road to tolerance
-2.0313461795 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-1.47557491111 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-0.91979916695 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+2.05475607974 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+1.48581771239 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.921475274122 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Why attacks show Al-Shabaab is losing
-5.93102558022 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.97775510556 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.621206674336 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+5.41104903539 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.766338308535 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
+0.484952714384 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 World holds breath as U.S. government closes
-4.45518213352 ['world', 'more', 'your', 'than', 'girls', 'make']
-4.18986567437 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.364018640759 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+4.32183480963 ['world', 'your', 'make', 'girls', 'education', 'around']
+3.58142302295 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
+2.2249689976 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Get up to speed in 20 questions
-4.31793641619 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-1.53187922252 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.31737987234 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+5.47103761807 ['government', 'down', 'some', 'obama', 'boston', 'country']
+4.49806146473 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.397638371322 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 10 ways shutdown will affect U.S.
-4.70928481549 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-3.33575608066 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-3.19620559578 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+6.80370971479 ['government', 'down', 'some', 'obama', 'boston', 'country']
+4.83159637197 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+1.80379254266 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 1995 deja vu
-1.93445703955 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-1.52652196753 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-1.47199037604 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
+2.09887628888 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+1.91701417766 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.703267713 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Girl saved as U.S. rockslide kills 5
-5.51922252066 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-3.23815020377 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.33679588527 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+7.42873133305 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+5.40398990776 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.965268465467 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Venezuela expels top U.S. envoy
-6.94595108659 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-3.98796280048 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-3.77815874315 ['that', 'what', 'place', 'attacks', 'only', 'city']
+8.47206578419 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.44571071512 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.70942321412 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Report: War on drugs failing
-8.1873880479 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.105063536415 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.32238110488e-12 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+2.98334550977 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.371978602564 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.65753493296e-11 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Chinese fishing boats sink, 72 missing
-14.2705333384 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.73821781705 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-0.179675444178 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+2.41771284773 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.96860324381 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+1.76473107125 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Leak prompts al Qaeda change
-1.1645716527 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.0176667693 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-0.781659027904 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+1.70177329843 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.14723736427 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.816511952726 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Water discovered in Martian soil
-2.21552759754 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.697901977758 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.536818001456 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+10.6665384521 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.12400365192e-10 ['light', 'have', 'like', 'they', 'just', 'when']
+4.91733717675e-15 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 Woman charged in Boston bombs con
-3.19572138315 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-2.99474076098 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-1.51918315789 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+8.57604880875 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+2.84032618307 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.289103108308 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Abbott has 'frank' talks on asylum
-6.27436534807 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-2.58934856913 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-2.25658774954 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+5.6717511523 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+2.10185642475 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+1.52798295329 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Court orders new tests in Knox retrial
-5.77530822118 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.98908347404 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.84441641898 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+6.77542100885 ['with', 'china', 'cleric', 'women', 'their', 'could']
+6.29904198827 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.235072674868 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 America's Cup: Australia building team
-1.067870166 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.714872409249 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.579692112059 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+5.20376363807 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.949494118714 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.522806314657 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
 
 Bollywood stars join catwalk
-0.654535131683 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.64898162124 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.145022282993 ['world', 'more', 'your', 'than', 'girls', 'make']
+0.512794525029 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.214125672083 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.192304118766 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Syria FM: 'There is no civil war'
-19.3265164744 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-3.91531183071 ['that', 'what', 'place', 'attacks', 'only', 'city']
-3.40286682334 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+9.09073874699 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+3.41613122077 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.9554284721 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 What Syrian minister told the U.N.
-12.6010468071 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.512864359097 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.491296170112 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+2.85650448907 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.34898669517 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.22630537586 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
 
 Syrian hospitals operate in secret
-3.95966439608 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-1.35714070116 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-3.31226056948e-38 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+2.53821308345 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+0.46760538204 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.3959351099e-05 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 U.N. approves Syria resolution
-7.03527877658 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-2.03797568507 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-6.33500962464e-06 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+8.19729291912 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+0.0060798983933 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+6.50457895136e-05 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 Closed for business
-0.560586751185 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.0909715495246 ['world', 'more', 'your', 'than', 'girls', 'make']
-3.34562709995e-10 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+0.548424312954 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.0401475933019 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.0183794441524 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Hassan Rouhani full interview
-13.2267444231 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.90536814016 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.463681906189 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+13.202593507 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+3.59010400979 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.0909349733462 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 Open Mic: Tehran
-2.94739084488 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.853810583842 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.756727389003 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
+3.41039432164 ['light', 'have', 'like', 'they', 'just', 'when']
+0.850764747758 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.720277076068 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 Nose grown on forehead
-3.96927803488 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.302009533756 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.197163632251 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+1.745750274 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.302582030779 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.119586864621 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 China hit with flood waters
-8.36721905876 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.353431621889 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.224767875985 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
+7.39832761174 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.0651246099827 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+3.80781038144e-05 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 Clinton's 'Bono' impersonation
-1.47848279822 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.857278608307 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.520072819824 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+4.16107839366 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.112318549208 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.0287613482148 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 Images capture coral reefs
-1.49724270515 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.20768348447 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-1.10601774512 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
+1.81872242795 ['light', 'have', 'like', 'they', 'just', 'when']
+1.45583695818 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.06286991891 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
 
 Sex, lies and lithographs
-0.733325650142 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.268713391061 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.1260893994e-07 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+0.33060528298 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.306182272737 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+4.51962011572e-06 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Chavez cash turning racing wheels
-5.21504497438 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.76192142783 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.0129641281354 ['world', 'more', 'your', 'than', 'girls', 'make']
+3.11306733551 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.81379472902 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.458641710215 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Escape from North Korea foiled
-6.22666028602 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-4.53705893743 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.35224233196 ['world', 'more', 'your', 'than', 'girls', 'make']
+5.78391412037 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+4.94895939143 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+2.42659570587 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 20 best franchises for travelers
-4.09222161544 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.94361000325 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.06787300811 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+2.91554420902 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.34785245364 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.948174514201 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 What CEOs can learn from Mourinho
-4.08627671755 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.780055011405 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.677797589457 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+4.86535005372 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+3.69918550864 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.65901112585 ['light', 'have', 'like', 'they', 'just', 'when']
 
 How is it to be Catholic and gay?
-0.91983083772 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.234572086834 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.0999222687777 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+1.82374787348 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.787848649414 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0276078874363 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Secrets of Martian soil finally unlocked
-2.28290461727 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.66117572603 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.373202441386 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+10.6794471955 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.91298196972e-11 ['light', 'have', 'like', 'they', 'just', 'when']
+2.29304626552e-25 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Helen Clark: Farm girl to U.N. bigwig
-3.68282743859 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-1.58741368372 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-0.839334893607 ['world', 'more', 'your', 'than', 'girls', 'make']
+2.34926193967 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.64709050005 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+1.33736888719 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 Terrifying road rage video goes viral
-23.0599874646 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-9.79492042705e-13 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-5.4635394186e-14 ['world', 'more', 'your', 'than', 'girls', 'make']
+23.5437212838 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.00371221005698 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.10164734133e-08 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
 
 Gift of U.S. diplomacy to Iran?
-5.01253506676 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-1.01523392505 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.565197198166 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+5.6902785203 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+0.570022568616 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.000118000656832 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Why Rouhani deserves praise
-4.16146616201 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.238942308517 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-2.2145629498e-11 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+4.42186912153 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.86593321364e-08 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.38351167281e-20 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Obama, Rouhani's historic call
-21.3639932046 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.950001815343 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.906820853851 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+22.1760748386 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+3.12344040551 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.662524863778 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 Rouhani's landmark week
-11.539231624 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.853267937868 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.263535370542 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+12.0835634657 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.01786946073 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
+0.123291047388 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 Open Mic from Tehran
-3.06705338751 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.0794858968 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.02892748848 ['world', 'more', 'your', 'than', 'girls', 'make']
+5.93475741667 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+3.23701403601 ['light', 'have', 'like', 'they', 'just', 'when']
+0.632536162222 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 10 best places to start a business
-1.70853172461 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.545826032962 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.000204157161765 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+1.72940112205 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.459880827411 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.376181198778 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 103 base jumpers leap off KL Tower
-2.04015211494 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.5533677715 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.672624478396 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+4.39928381689 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.87331713569 ['light', 'have', 'like', 'they', 'just', 'when']
+1.61932246327 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 'Bridget Jones's Diary' shocker
-1.25809096482 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.288131516427 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.0537666091366 ['world', 'more', 'your', 'than', 'girls', 'make']
+1.07562401177 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.389375897524 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.339968409062 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 Apple, Google top 'top brand' list
-1.28045703931 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
-0.671841493444 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.388855116712 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+2.68376987656 ['light', 'have', 'like', 'they', 'just', 'when']
+1.24694646465 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
+0.40848123219 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Africa's hottest new fashion designers
-3.21460235985 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.466038030446 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.287304983098 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+3.81173574196 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.491114678387 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.345997144662 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 Walt's transformation in 2 minutes
-0.600304407133 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.223631917337 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.097849475581 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+4.23111908376 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.000126103472656 ['world', 'your', 'make', 'girls', 'education', 'around']
+4.4080499183e-19 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Website maps 1.2B Facebook faces
-4.73750026905 ['that', 'what', 'place', 'attacks', 'only', 'city']
-4.36510496126 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.08982091182 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+7.88438697357 ['more', 'than', 'climate', 'population', 'that', 'history']
+2.0925575835 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.702185729605 ['light', 'have', 'like', 'they', 'just', 'when']
 
 'Breaking Bad' goes out with bang
-1.48169628781 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.832200397435 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.71738136083 ['that', 'what', 'place', 'attacks', 'only', 'city']
+4.47887303172 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.131088923931 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.0433746270327 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Is 'surveillance-proof' font unhackable?
-0.277374182934 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.00591712177996 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.00218197649763 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+0.24488270951 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.0190986710254 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.00220484828973 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Why beer is good for your health
-1.38272270391 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.0394755008034 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-4.82626364655e-17 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+1.73301299875 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.339958910624 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0220554709826 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Life in an Iranian-Jewish community
-4.39196219915 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.0653828748053 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.0559119414856 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+4.52452784636 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+0.359474344908 ['light', 'have', 'like', 'they', 'just', 'when']
+4.05945525585e-24 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Cleric: Driving could hurt ovaries
-12.9566078564 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-2.35722335035 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-1.85027424975 ['that', 'what', 'place', 'attacks', 'only', 'city']
+8.07495788515 ['with', 'china', 'cleric', 'women', 'their', 'could']
+6.9594999273 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.88470723868 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Olympic torch begins trip to Russia
-1.10357319391 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.447907337436 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.406926482625 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.453545267853 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.437201400683 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.351409272082 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 How free is the Mideast press?
-0.721074707031 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.351921480044 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.04889719052 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+1.16385576124 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.198400338891 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+0.133547936068 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 See wingsuiter's amazing China dive
-7.73823237864 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-5.48915763771e-37 ['world', 'more', 'your', 'than', 'girls', 'make']
-7.98455951912e-58 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+3.52843918089 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.197173573467 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.0588797099402 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 The death of the home stereo system
-1.18710866041 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-1.13640299031 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.490949181004 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+1.09975192377 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.02122440617 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.458628614539 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Can rest of the world learn to love NFL?
-3.50355237336 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.803897882865 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.153199616378 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+4.10826468684 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.79540843521 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.165723022405 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 How to end refugee boat crisis?
-0.926606542166 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.605961219445 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.416090923676 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.20908692483 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+0.679410782495 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.463806872046 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 World's most extreme golf courses
-3.10296878473 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.798299645296 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-0.220566608895 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+3.69518406676 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.647104130248 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+0.101183917261 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 10 things the U.S. does better
-0.977856157952 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.434913500755 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.288305064731 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+1.02398033146 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.255517978855 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+0.0385159448819 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Confronting Indonesia's dark past
-4.95719661946 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.9874819609 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.34594625909 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+3.60453901044 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.40645506806 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.63993013857 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Watch rocket launch into space
-1.87534988345 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-1.23659291376 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-0.877154525834 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+1.81186330568 ['light', 'have', 'like', 'they', 'just', 'when']
+1.69174221641 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+1.29237066506 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
 
 92 babies rescued from traffickers
-2.0571402681 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.58465343385 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-1.26172760877 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+4.36659562817 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+2.25189514996 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.67479908041 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 See deaf boy hear for first time
-2.09585533477 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.08233220662 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.0415500705 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+1.5597384574 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.14790778476 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.12473200752 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Kipsang smashes marathon record
-3.83495916097 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.02362943311 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.986278522644 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+4.25357579643 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.14321623669 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.872400579598 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Could ad device change the Internet?
-1.54655777953 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-1.22261388151 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.996102323522 ['world', 'more', 'your', 'than', 'girls', 'make']
+1.67951415889 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.75886054986 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.406900843329 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 'I can't get image of bodies out of mind'
-1.75011591314 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-1.70464379669 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.791295644296 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+1.79881981538 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.936990719848 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.785547166312 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Moving on from mall attack
-2.83907625013 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.21187058171 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.70239496317 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+4.60538666853 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+3.75599828213 ['with', 'china', 'cleric', 'women', 'their', 'could']
+3.65859334825 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Many families stuck in limbo
-1.52342229016 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.651536664033 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-0.634841392141 ['world', 'more', 'your', 'than', 'girls', 'make']
+0.70729653071 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.621544051761 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.605058969517 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Raw footage: Go inside devastated Nairobi mall
-4.00945441667 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-3.42612281628 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.222737102887 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+3.35365110284 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+7.07410450707e-16 ['world', 'your', 'make', 'girls', 'education', 'around']
+3.53262429677e-25 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Noses and hands hacked off
-9.93931107408 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.28975431052 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-0.395350888504 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+2.38195598843 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.19682969795 ['light', 'have', 'like', 'they', 'just', 'when']
+1.93127790218 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 Survivor couldn't save boy
-3.74894741646 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.244831025837 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-7.16393076526e-33 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+1.76383070908 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.259836636761 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+5.01043720332e-23 ['light', 'have', 'like', 'they', 'just', 'when']
 
 After Nairobi, is the West next?
-4.98472990647 ['that', 'what', 'place', 'attacks', 'only', 'city']
-3.0816727171 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-2.42610370363 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+5.34599104147 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.46437323858 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.594641158735 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 Al-Shabaab 'in survival scrap'
-5.56351201073 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.84339753324 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.225489436045 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+5.09826227061 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.300137937723 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
+0.22734542324 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
 
 Olympic torch begins its journey
-1.10357319386 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.447907337418 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.406926482607 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.453533324426 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.43717232735 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.351409243406 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 Russia's field of dreams?
-0.683121222596 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.409620470444 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.387436600289 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+1.55993352943 ['light', 'have', 'like', 'they', 'just', 'when']
+0.319412831739 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.304299286866 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 History of the winter games
-0.387977175573 ['world', 'more', 'your', 'than', 'girls', 'make']
-4.40116635058e-23 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-4.0353809965e-161 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
+0.597145992131 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.39497275059e-37 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+3.36788933472e-47 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Doctor Ice's quest for Olympic glory
-3.05392099809 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.175377996194 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-9.50317058646e-17 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+3.61926828984 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.11477238369e-05 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.7663190282e-37 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Mockery, laughter as U.S. shuts down
-6.04282174476 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.34779305061 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.0425951431158 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+6.46129183169 ['world', 'your', 'make', 'girls', 'education', 'around']
+3.99270461036 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+2.62865171913 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 What it means for pandas, asteroids
-0.806807059096 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.453621385444 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.254750412899 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+0.684672113405 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.295555592676 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.286245125383 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 The man behind Republican roadblock
-4.85145282076 ['that', 'what', 'place', 'attacks', 'only', 'city']
-3.78771133899 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-1.30516019215 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+4.96251332269 ['government', 'down', 'some', 'obama', 'boston', 'country']
+3.44881947633 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.26661375941 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 What does shutdown mean for tourists?
-11.9674657863 ['that', 'what', 'place', 'attacks', 'only', 'city']
-3.14555111675 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
-0.98066417968 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+6.53713824608 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+4.57468919307 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
+0.793117233306 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 U.S. shutdown
-0.919670343535 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-0.439084949973 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.418157897089 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+0.986116264194 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.306314162839 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.121924221706 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 N. Korean defectors
-7.55353843561 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-2.37881803903 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.21231602093 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+7.14853173028 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+2.98646316979 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.22289723148 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Kenya attack
-9.95676624274 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.70639123062 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-1.14841826956 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+6.11397979814 ['light', 'have', 'like', 'they', 'just', 'when']
+3.0493285817 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.9174006792 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 Sex, lies, lithographs
-1.29053363648 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
-0.769836327182 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.174709392535 ['world', 'more', 'your', 'than', 'girls', 'make']
+1.37716926997 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
+1.18704381797 ['light', 'have', 'like', 'they', 'just', 'when']
+0.255060270215 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 20 best franchises
-3.62293723806 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.257074690813 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-7.93388820498e-09 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+4.38022213367 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.0082183407e-07 ['more', 'than', 'climate', 'population', 'that', 'history']
+4.55605330265e-20 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 'Bad' finale
-4.44958484016 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.901158540003 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.599604404329 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+4.12638124551 ['light', 'have', 'like', 'they', 'just', 'when']
+1.20229628108 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.09904162046 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 A new phone concept?
-5.87617911403 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.50534424236 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-1.19725436648 ['world', 'more', 'your', 'than', 'girls', 'make']
+3.36265966454 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.9769272992 ['light', 'have', 'like', 'they', 'just', 'when']
+1.83059952338 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 The laser light that could cut cyclist deaths
-4.50030449167 ['that', 'what', 'place', 'attacks', 'only', 'city']
-4.34040535222 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-3.03358060556 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+11.7297479563 ['light', 'have', 'like', 'they', 'just', 'when']
+3.27711380194 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.2729048876 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Download, print, fire: Museum acquires 3D-printed gun
-3.568408952 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.430883678811 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.427611976448 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
+3.82234271701 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.492031613421 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.425702976451 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Crazy ways to recycle a plane
-1.48165424195 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.832153620385 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.717382621852 ['that', 'what', 'place', 'attacks', 'only', 'city']
+4.47885853828 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.131077113444 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.0433712961391 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Virgin spacecraft's test flight
-1.11719932706 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.0628027955057 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-0.0088450332429 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+1.10170377649 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.0911379609705 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+0.0 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
 
 How does Galaxy Gear measure up?
-0.561370393078 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.252392657028 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.0841367830667 ['world', 'more', 'your', 'than', 'girls', 'make']
+0.554422368288 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.050287673292 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.017207729081 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Hong Kong's new poverty line
-5.05836379598 ['that', 'what', 'place', 'attacks', 'only', 'city']
-3.35578722631 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.08250144152 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+4.03070073194 ['with', 'china', 'cleric', 'women', 'their', 'could']
+4.00925132353 ['government', 'down', 'some', 'obama', 'boston', 'country']
+3.30322851221 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Son of general jailed
-9.48091406513 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-4.72818897112 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.28230152049 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+3.66506109177 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.76680218337 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.57165615669 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Bo Xilai: Justice or political purge?
-2.60103235137 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.787042124586 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.673596350391 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+2.98288095018 ['light', 'have', 'like', 'they', 'just', 'when']
+2.14729071122 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
+1.28410612932 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 China's rich wealthier than thought
-9.37470057394 ['world', 'more', 'your', 'than', 'girls', 'make']
-4.15897510044 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.134763995423 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+12.3917274976 ['more', 'than', 'climate', 'population', 'that', 'history']
+2.30081695562 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.138684356599 ['with', 'china', 'cleric', 'women', 'their', 'could']
 
 China's Bo Xilai appeals conviction
-11.4732160587 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.622835669125 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.370084531864 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+8.8761695505 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.21005288507 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.528615358525 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 Typhoon Usagi hits China, dozens dead
-18.8086507636 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.08074010824 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.575957333836 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+4.01876653787 ['with', 'china', 'cleric', 'women', 'their', 'could']
+3.13231076472 ['light', 'have', 'like', 'they', 'just', 'when']
+2.7459044731 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 Plans for Jackie Chan theme park
-4.55116077797 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.63675711238 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.39104129095 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+6.28010115275 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.000426813003319 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.000139548749135 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 How Yihaodian sees e-commerce
-4.95870674437 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-4.95651579848 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.610298749964 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+3.22477982339 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.1985415937 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.11740521396 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Louvre hit by Chinese scam
-3.25117223322 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.03777898518e-30 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-6.61722188632e-34 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+0.525433925703 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.361081225752 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.270665558661 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 China obsesses about rumors
-7.57747538413 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.08497145993 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.402285231781 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+3.12013608144 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.17332601985 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.371873883205 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 Guangzhou moves on labor camps
-3.62214923265 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.41791483589 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.986577210913 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+1.85905802583 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.67098680117 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.43989943921 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Chinese 'whistleblower' freed
-10.0430920075 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-4.56734869391 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.30046238193 ['government', 'times', 'down', 'shuts', 'budget', 'york']
+4.21000128225 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.72516377152 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.72025348222 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 6 arrested in official's death
-3.18851397289 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.72914065768 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.721196824463 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
+0.670230635632 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.656789327248 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.646254799459 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 Malala's voice stronger, not silenced
-8.37737581863 ['world', 'more', 'your', 'than', 'girls', 'make']
-5.59135853635 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.83831812944 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+6.48931551403 ['with', 'china', 'cleric', 'women', 'their', 'could']
+5.81479086028 ['world', 'your', 'make', 'girls', 'education', 'around']
+4.66265277262 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 What happened to Malala's friend?
-0.992964084995 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.746815834575 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.738566889126 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
+0.732109519707 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.709831910004 ['light', 'have', 'like', 'they', 'just', 'when']
+0.528152073251 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 Things I wish I'd known at 15
-0.793221795699 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-0.727181561978 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.604786332058 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+0.995137937663 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.850014626479 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.190229319418 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Impact Your World: How to help
-23.8904227207 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.80267778265 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-0.550869004403 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+28.2317395383 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.409702545298 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
+0.330152435352 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
 
 New shoes for 10,000 homeless kids
-3.0755147395 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.563049169994 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.350690851751 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+5.98175143006 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.000577947022913 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+2.63306562085e-14 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Deadbeat dads get a second chance
-3.10424133232 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.988660863413 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-0.173038307272 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+2.73255532239 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
+1.03799526797 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+1.01963399311 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 A homegrown fix for 'food deserts'
-3.50664548943 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.48992788714 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.04395451603 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+7.90100572473 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.44037830121 ['light', 'have', 'like', 'they', 'just', 'when']
+0.652803631847 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Life's a blur -- literally -- for these kids
-0.601432995119 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.337484140447 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.157837124403 ['world', 'more', 'your', 'than', 'girls', 'make']
+0.642680589655 ['light', 'have', 'like', 'they', 'just', 'when']
+0.386844382733 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.386362794093 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Girls flee bombs, start over in U.S.
-2.90189814031 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.78528314063 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.688375807276 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+3.19825824022 ['world', 'your', 'make', 'girls', 'education', 'around']
+2.17105601874 ['light', 'have', 'like', 'they', 'just', 'when']
+0.791571872644 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 He does the dirty work for charities
-0.482323385059 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-0.252634065132 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.189933706125 ['world', 'more', 'your', 'than', 'girls', 'make']
+0.45135827702 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
+0.428625120813 ['more', 'than', 'climate', 'population', 'that', 'history']
+5.17558702618e-06 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Doctor gives free weekend surgeries
-3.93519468379 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.9351244854 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-2.24332512565 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+5.80785486316 ['world', 'your', 'make', 'girls', 'education', 'around']
+2.90380175235 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+1.37897092976 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 Dozens killed in building collapse
-2.75291721135 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-1.3209087486 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.699684044326 ['world', 'more', 'your', 'than', 'girls', 'make']
+4.65796547566 ['light', 'have', 'like', 'they', 'just', 'when']
+3.09507734601 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.513530583836 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Indonesia confronts its dark past
-1.81692716453 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.474591414134 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.281361547761 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+1.24909751297 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.772068549307 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.577299173177 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Philippines military frees last hostages
-3.01989241745 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-0.820778123478 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.703894822168 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+2.8362491957 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.856810409198 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+0.826674959927 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Central America Independence Day
-3.39418662657 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-3.14170700034 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.25525630293 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+6.71497390518 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.33679544581 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.445111834035 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 The simple pleasures of Eid
-5.35333473204 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.66796400343 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.993347485163 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+5.64312011113 ['world', 'your', 'make', 'girls', 'education', 'around']
+5.06271711194 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.830473588798 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 World's best fireworks displays
-8.00245853824 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.926628226455 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.202556962285 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+9.88267693498 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.90908072673e-07 ['more', 'than', 'climate', 'population', 'that', 'history']
+2.44527102083e-11 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 Your solstice traditions
-3.50125410438 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.862363769322 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.675012537158 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+5.9665413805 ['light', 'have', 'like', 'they', 'just', 'when']
+2.78010389179 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.648760664461 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Meet the new Miss World
-4.42870157363 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.43596623473 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-6.17959340226e-06 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+4.75854168511 ['world', 'your', 'make', 'girls', 'education', 'around']
+4.05636216175 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+3.23638064938e-07 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Jewels turn up atop French glacier
-0.61166407765 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.581703450916 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.380399608484 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+1.93062132086 ['light', 'have', 'like', 'they', 'just', 'when']
+0.527327028587 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.0607496441632 ['with', 'china', 'cleric', 'women', 'their', 'could']
 
 India's obsession with lighter skin
-7.69640756702 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.14733510855 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.834162269684 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+10.1663498385 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.877080652772 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.0292190335236 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 A new sense of optimism in Iran
-14.9638389917 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.81265215656 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-1.65089817026 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+5.40820697345 ['with', 'china', 'cleric', 'women', 'their', 'could']
+4.8354195971 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+3.34895984074 ['light', 'have', 'like', 'they', 'just', 'when']
 
 'Pink Star' might go for $60 million
-3.56759880353 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.41495011683 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.683496465447 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+6.97423526234 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.65033769857 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.66074765415 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 The best of African street art
-5.54297191031 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-3.1170531233 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.00759916944706 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+5.25451561156 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+4.00219214075 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+3.01397195734 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Photos: Pandas artificially bred
-3.62280930451 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.384366153e-165 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.70880776439e-245 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+1.60876431176 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.0948261559517 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.0216918044956 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 Venezuela's toilet paper takeover
-0.77988732652 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.492282723228 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.360921177983 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+0.496753371404 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.225387985921 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.0357498108136 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 Austen ring bought back from singer
-1.50792087939 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.21702633807 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-1.21348352357 ['world', 'more', 'your', 'than', 'girls', 'make']
+10.1483289342 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.853325007338 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.457875100643 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 Wrecked cruise ship pulled upright
-0.972916507734 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-0.327818353511 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-0.196747463508 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+0.980664162772 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.312058304352 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+0.0625101228389 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Cute dogs sniff out poachers
-3.66920996664 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.85759007807e-12 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-3.30768537855e-32 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+1.5367173735 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+3.39446897209e-25 ['light', 'have', 'like', 'they', 'just', 'when']
+3.31759881173e-25 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
 
 Dissecting the pope's interview
-0.638078201151 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.210867251338 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.179180950714 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+0.600567054267 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.496310442942 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.407399431282 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 Saving orphans or child trafficking?
-5.0596967775 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.7856592835 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.581310876672 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+3.84830759265 ['more', 'than', 'climate', 'population', 'that', 'history']
+3.13895901523 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.0475022246841 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
 
 'Wall of trees' to save wildlife
-5.71244518742 ['that', 'what', 'place', 'attacks', 'only', 'city']
-4.74541798358 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
-1.25008509182 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+5.47321327806 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
+3.70522322284 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.171405104928 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 1.3 tons of cocaine found on flight
-4.42369260488 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.64763093545 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-1.54974032872 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+4.26687383957 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+4.23164935783 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+2.61330225907 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 How do child refugees cope?
-5.04716567669 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-1.28876364316 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-1.28564959973 ['that', 'what', 'place', 'attacks', 'only', 'city']
+5.65914157629 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+2.76947622457 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+1.33844351861 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 East Germany's secret police
-4.09335051563 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.18805209627 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.23155327937 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+7.74789066792 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.69539225754 ['light', 'have', 'like', 'they', 'just', 'when']
+1.41057482258 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Syrian minister: 'There is no civil war'
-26.8350163686 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-1.76099739986 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.0372887331982 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+8.87135696268 ['world', 'your', 'make', 'girls', 'education', 'around']
+6.4104113246 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+1.38781465472 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 Rio's 'Big brother' tech
-4.13688716135 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.2432288298 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-0.708902651895 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+4.06727957848 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.88663905608 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.265963742 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 Bloomberg on climate change
-15.4322377288 ['world', 'more', 'your', 'than', 'girls', 'make']
-4.52457018365 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.32810895204 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+20.6453373523 ['more', 'than', 'climate', 'population', 'that', 'history']
+3.35337162688 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.106157390375 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 Sent back to N. Korean nightmare
-7.4222325209 ['korea', 'south', 'news', 'military', 'talks', 'korean']
-2.29869900901 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.15476785098 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+7.02764304703 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+2.88051885604 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.1773742221 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 A gift of U.S. diplomacy to Iran?
-6.70686419878 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-4.56466827345 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.29144911026 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+7.36187031904 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+3.31127754083 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.412594318172 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 How mall attack changed Kenya
-8.15284497444 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-4.20525717876 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.56597385393e-05 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+5.73878212297 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+3.8945558152e-12 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+1.05717257666e-12 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Cleric: Driving could harm ovaries
-12.7909681503 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-2.94534389486 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.34965284665 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+8.07495321553 ['with', 'china', 'cleric', 'women', 'their', 'could']
+6.9594707784 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.88470560022 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Report: Drug war is failing
-7.38537856661 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.338439062605 ['world', 'more', 'your', 'than', 'girls', 'make']
-7.39822275406e-11 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+2.7171347454 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.494387058524 ['more', 'than', 'climate', 'population', 'that', 'history']
+3.27673644582e-10 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Venezuela expels top U.S. diplomat
-6.94700869532 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-3.98917027942 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-3.77861876474 ['that', 'what', 'place', 'attacks', 'only', 'city']
+8.47339764862 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.45605157132 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.71266823022 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Syria's secret hospitals
-3.43456715034 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-3.38859489189 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-6.55343017504e-45 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+4.72154960209 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+0.04202897829 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.0106541037047 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 How to nominate a CNN Hero
-6.09373477259 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.824518535872 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.511752452393 ['world', 'more', 'your', 'than', 'girls', 'make']
+5.06207431667 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.25321789998 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.415933655735 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Last year's top ten
-3.69848343513 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.35066987819 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.219619215975 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+1.91463263717 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.245087735026 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.000233752676689 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Venezuela expels top U.S. diplomat, 2 other embassy officials
-7.07566955344 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-4.05886082365 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-3.75560052503 ['that', 'what', 'place', 'attacks', 'only', 'city']
+8.65411790421 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.55196880094 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.70773563361 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Report: Global war on drugs is failing
-8.81303755025 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.933675078651 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.0138349085779 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+3.06983552844 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.915403060216 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.0470855340811 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 58 fishermen still missing after typhoon
-4.5550728025 ['that', 'what', 'place', 'attacks', 'only', 'city']
-3.56725746514 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.50163740881 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+5.56679295119 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+4.15393560942 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.45628628403 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 Sources: Kenya was warned before mall attack
-24.7372033757 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-3.77153391383 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.000321108890655 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+14.1000842372 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.349497151308 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+0.338289116494 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 Australia, Indonesia united on asylum seekers
-7.4564574751 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-2.91933931006 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-1.46455188732 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+6.68632984837 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+2.02340279445 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.14137159364 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Car bombings highlight rising concern about Iraq security
-4.08720101807 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-2.63072673927 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.73731332362 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+2.1839573052 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+2.10003542431 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.15538346692 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 Amanda Knox not in court as retrial begins
-5.77499517069 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.98779890016 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.84024299496 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+6.77531707147 ['with', 'china', 'cleric', 'women', 'their', 'could']
+6.29854927785 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.234763818878 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Witness to Pakistan blast: 'Women and children were burning'
-12.2905846015 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-2.75337861082 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-2.02241338849 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+4.61344195643 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.39789695399 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+1.79000432916 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 2 popes to be declared saints at same time
-2.3271150366 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-1.58337497675 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.600960340134 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+1.40442563718 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.04388252159 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.632843862367 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 Far-right Greek politicians arrested
-1.97940001144 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.23671458339 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.18246529944 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+4.19862615182 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.22340817947 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.177381153565 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 2 plead not guilty to killing soldier
-2.17720412311 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.0428248717549 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-6.9296487133e-10 ['world', 'more', 'your', 'than', 'girls', 'make']
+2.97398441539 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+1.06569537586e-07 ['with', 'china', 'cleric', 'women', 'their', 'could']
+9.5092799456e-13 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Captain shifts blame for Concordia
-0.993179147245 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.564566950515 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.133384195864 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+5.29633794722 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+2.77224542682e-07 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.08332838295e-21 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Cuba to allow athletes abroad
-3.64617474381 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.5118126792 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.535417052415 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+6.72579875871 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.82992752864 ['light', 'have', 'like', 'they', 'just', 'when']
+0.111898914995 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
 
 Several killed as bus, train collide
-2.37116593363 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-2.26625390017 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-1.85624178962 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+2.59479543076 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+1.50193370252 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.257593707796 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
 Report: Shoe thrown at Rouhani
-8.78344956657 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-1.9082978287 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-1.6251455976 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+9.60107043564 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.86951511812 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+1.37782364515 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Israel accuses man of spying for Iran
-2.83975616084 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.294294717484 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.00750863868245 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+2.92942190584 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+0.362346301092 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.09777370415e-15 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Now comes the real test in Syria
-8.98567780426 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
-1.13375358831 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.468725269541 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+9.98258097308 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
+1.05932533215 ['light', 'have', 'like', 'they', 'just', 'when']
+0.0500889927772 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Child shepherds in 'Sky Kingdom'
-1.09435758119 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.998866745549 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.718342634268 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+2.28975619011 ['light', 'have', 'like', 'they', 'just', 'when']
+0.796742934989 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.681456924088 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 Gunmen fire on sleeping students
-3.20941287597 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.0915336914508 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-6.37187163743e-12 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+0.494562301204 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.278782463006 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+0.217313494675 ['with', 'china', 'cleric', 'women', 'their', 'could']
 
 Official: Poachers poison 87 elephants
-2.58172058224 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-2.29168236791 ['world', 'more', 'your', 'than', 'girls', 'make']
-2.24899063177 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+4.72771713083 ['with', 'china', 'cleric', 'women', 'their', 'could']
+3.39632543117 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.59286828042 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Smell of fall in the air in parts of U.S.
-4.59878133899 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.921215608389 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.917938640037 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+2.83750642026 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.23918618819 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.30375430907 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Colorado flooding fallout continues
-5.8404430605 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-4.05088981301 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.7887540608 ['world', 'more', 'your', 'than', 'girls', 'make']
+9.46865914418 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+3.5916253408 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+3.3359300327 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Where have all the hurricanes gone?
-5.14055517797 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.15352840913 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.98752025223 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+3.94098652323 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.78677165257 ['light', 'have', 'like', 'they', 'just', 'when']
+0.948119982208 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Balloon to study Comet ISON
-2.06328659905 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.855902562588 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.781950274266 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+4.32886966378 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.49666877183 ['light', 'have', 'like', 'they', 'just', 'when']
+0.671771838311 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Vader's saber inspires light-matter
-8.84262852701 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.651046428506 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.642253861389 ['world', 'more', 'your', 'than', 'girls', 'make']
+25.5338834026 ['light', 'have', 'like', 'they', 'just', 'when']
+0.124695702585 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.00196964476817 ['government', 'down', 'some', 'obama', 'boston', 'country']
 
 What if 'E.T.' finds Voyager 1?
-5.41217946852 ['that', 'what', 'place', 'attacks', 'only', 'city']
-4.04477572558 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.448428322687 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
+4.61779752256 ['world', 'your', 'make', 'girls', 'education', 'around']
+2.83138557711 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.674803447295 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Food stamp myths abound
-3.77756062412 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.76002240102 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-1.01232043469 ['world', 'more', 'your', 'than', 'girls', 'make']
+1.81178861855 ['more', 'than', 'climate', 'population', 'that', 'history']
+1.69569036569 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.811949432744 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Shutdown shock therapy?
-28.1284966749 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.116665811569 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.0382932628018 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
+28.9561024968 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.0397554957104 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.000197984992976 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
 
 'Bad': Why can't we look away?
-1.77662723778 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-1.69129189033 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.628348074487 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+1.85165876977 ['light', 'have', 'like', 'they', 'just', 'when']
+1.7097420406 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+1.64299866932 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Why we still love Archie
-5.99332976041 ['that', 'what', 'place', 'attacks', 'only', 'city']
-0.969344208906 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.402478998669 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+3.1200792927 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.0387608865 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.507041164837 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 The Latino footprint in America
-3.20985666554 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.81911290261 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-1.22005449179 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+3.75038828589 ['light', 'have', 'like', 'they', 'just', 'when']
+1.86737162348 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.659757096835 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Stop demonizing the needy
-4.7673980836 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.99857096914 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.64363953272 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+4.16905665772 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.54374057732 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.677493985832 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 Shutdown threat getting old, fast
-3.96742498587 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.97112303902 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.8580753122 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+7.30051090924 ['more', 'than', 'climate', 'population', 'that', 'history']
+2.04933236568 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.840244033945 ['light', 'have', 'like', 'they', 'just', 'when']
 
 Alicia Keys: Let's fight HIV
-1.56483487687 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.860667996163 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.0589127191081 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+1.23125787965 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.0934752206241 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.0734218628489 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Black men in pain need help
-2.57550381193 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-1.80961453129 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.760499413675 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+3.83045380144 ['more', 'than', 'climate', 'population', 'that', 'history']
+2.12825737234 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.752123804848 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Mucking with climate change
-3.5967491235 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.18852368424 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.998368936312 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+5.21445989895 ['more', 'than', 'climate', 'population', 'that', 'history']
+4.31853832893 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.235011823621 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Oops! Kids can scrub online posts
-9.07418060718 ['that', 'what', 'place', 'attacks', 'only', 'city']
-4.12433987057 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-1.47942198994 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+9.35487380415 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+1.70608519723 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.26391263934 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 CEO clueless till food stamp diet
-5.56757585906 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.32643345839 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.491487272274 ['world', 'more', 'your', 'than', 'girls', 'make']
+3.60851887176 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.28075225329 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.532075698252 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
 
 Shooter thought wife, pastor had sex?
-1.74834500288 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.826180488527 ['something', 'doing', 'stupid', 'could', 'into', 'says']
-0.607280768519 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+1.807432542 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+0.828272912128 ['something', 'doing', 'stupid', 'could', 'says', 'going']
+0.589864716605 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 Sheriff: Girl rescued in rockslide
-4.48151359973 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-3.23856813175 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.61393718729 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+4.78025625743 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+1.05557178342 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.786431333795 ['world', 'your', 'make', 'girls', 'education', 'around']
 
 
-2.15339913781 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.681780781315 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-0.378150202536 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+9.72403713857 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.24768715725e-10 ['light', 'have', 'like', 'they', 'just', 'when']
+1.0772102799e-23 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Police: 5 killed in rockslide
-5.68044439248 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-3.23990414262 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-0.555958603898 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+6.14097782778 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+1.10551268793 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.449553894221 ['middot', 'says', 'president', 'died', 'company', 'seattle']
 
 UC Berkeley campus evacuated
-9.29102267708 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-5.97912546964 ['that', 'what', 'place', 'attacks', 'only', 'city']
-2.3510733756 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+7.71355903684 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+4.91448849802 ['with', 'china', 'cleric', 'women', 'their', 'could']
+3.47110325204 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Police: Gang attacks driver
-19.5908074657 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-0.175979057033 ['government', 'times', 'down', 'shuts', 'budget', 'york']
-2.81311784476e-07 ['world', 'more', 'your', 'than', 'girls', 'make']
+20.0473595679 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.0271040951965 ['government', 'times', 'nbsp', 'shuts', 'budget', 'york']
+1.2479120228e-05 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
 
 Teachers train to face shooter
-1.65920046649 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-0.540481645407 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-0.373296651544 ['world', 'more', 'your', 'than', 'girls', 'make']
+3.58224344096 ['government', 'down', 'some', 'obama', 'boston', 'country']
+1.55989147092 ['light', 'have', 'like', 'they', 'just', 'when']
+0.15928995506 ['with', 'china', 'cleric', 'women', 'their', 'could']
 
 Bikers chase SUV driver, video shows
-20.4714158869 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-1.1405378312e-09 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-3.14919569227e-12 ['world', 'more', 'your', 'than', 'girls', 'make']
+20.911289916 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+0.0585428053178 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+1.97801608369e-06 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
 
 UC Berkeley campus cleared after explosion
-10.1811090423 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
-5.89789351496 ['that', 'what', 'place', 'attacks', 'only', 'city']
-3.6698691867 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+8.50912723626 ['berkeley', 'power', 'restored', 'campus', 'after', 'most']
+5.23191217566 ['with', 'china', 'cleric', 'women', 'their', 'could']
+3.45565045237 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 20 questions: What happens now with shutdown?
-7.27956504154 ['that', 'what', 'place', 'attacks', 'only', 'city']
-3.2246070159 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-1.76442396078 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
+4.512467308 ['with', 'china', 'cleric', 'women', 'their', 'could']
+4.17457555091 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+2.57258358341 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Pandas, goats and asteroids: The shutdown's other effects
-1.53449983529 ['government', 'shutdown', 'obama', 'street', 'news', 'nbsp']
-1.47811389278 ['shutdown', 'stocks', 'nbsp', 'news', 'wall', 'street']
-0.619112427545 ['something', 'doing', 'stupid', 'could', 'into', 'says']
+1.92700356495 ['shutdown', 'nbsp', 'stocks', 'news', 'street', 'wall']
+0.91488205223 ['government', 'down', 'some', 'obama', 'boston', 'country']
+0.653815045118 ['something', 'doing', 'stupid', 'could', 'says', 'going']
 
 Parachuters make jump near World Trade Center site
-5.39807919895 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.75157292524 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-0.00157079255364 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
+6.46008473872 ['world', 'your', 'make', 'girls', 'education', 'around']
+1.49760092107 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
+1.92896016691e-11 ['more', 'than', 'climate', 'population', 'that', 'history']
 
 Teen knew 'sextortion' suspect
-0.717267727508 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.648043995868 ['world', 'more', 'your', 'than', 'girls', 'make']
-0.513373746975 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
+1.43532017659 ['with', 'china', 'cleric', 'women', 'their', 'could']
+0.601139895995 ['world', 'your', 'make', 'girls', 'education', 'around']
+0.225689277763 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 NSA mines American Facebook profiles for connections
-1.51565187188 ['park', 'yosemite', 'national', 'google', 'doodle', 'nbsp']
-1.29380965181 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-0.882182017806 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+1.57864929792 ['park', 'yosemite', 'national', 'google', 'doodle', 'shutdown']
+1.22895426168 ['middot', 'says', 'president', 'died', 'company', 'seattle']
+1.05780311209 ['from', 'monday', 'woman', 'knox', 'court', 'after']
 
 2 trains crash in Chicago
-3.88433836528 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.24607372409 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.34833139791 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
+1.29555974405 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.816979649384 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+0.34755305312 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
 
 Police: Estranged daughter kills mother before being killed by father
-4.85612965459 ['were', 'about', 'mall', 'before', 'kenya', 'attack']
-1.75696573318 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
-1.05566319792 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
+4.4430041821 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+1.93869225099 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.984218985807 ['that', 'their', 'said', 'kenya', 'warned', 'about']
 
 Passengers lack info on cruise ship crime
-0.0720731268573 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
-0.0461206642948 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.02860746644e-12 ['korea', 'south', 'news', 'military', 'talks', 'korean']
+1.4471384634 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+0.000392016148201 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
+1.33649248995e-169 ['korea', 'south', 'news', 'military', 'talks', 'korean']
 
 Classes canceled to deal with race issues
-4.87414279843 ['china', 'people', 'chinese', 'after', 'typhoon', 'with']
-1.85902050239 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
-0.81932369896 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+5.72693061746 ['with', 'china', 'cleric', 'women', 'their', 'could']
+1.23318967795 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+1.05218646964 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Watch Tuesday's Show!
-0.710216893858 ['insurance', 'health', 'york', 'times', 'nbsp', 'make']
-0.498998458335 ['obamacare', 'with', 'shutdown', 'about', 'first', 'business']
-0.213831668493 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
+0.630001899212 ['insurance', 'health', 'york', 'nbsp', 'times', 'obama']
+0.481377849611 ['obamacare', 'about', 'shutdown', 'test', 'watch', 'business']
+0.200211625308 ['killed', 'rockslide', 'shielded', 'news', 'nbsp', 'colorado']
 
 One-eyed cat becomes star
-2.90596657639 ['world', 'more', 'your', 'than', 'girls', 'make']
-1.19225225061 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-1.01265522201 ['incident', 'video', 'road', 'gang', 'terrifying', 'rage']
+4.25567782257 ['from', 'monday', 'woman', 'knox', 'court', 'after']
+3.61170603531 ['more', 'than', 'climate', 'population', 'that', 'history']
+0.767205059804 ['incident', 'video', 'gang', 'road', 'terrifying', 'rage']
 
 Bear looks for Dollywood?
-0.225697516347 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
-0.166036445208 ['civil', 'minister', 'there', 'syria', 'syrian', 'country']
-0.0410598131255 ['their', 'with', 'could', 'cleric', 'light', 'drugs']
+0.585072024189 ['light', 'have', 'like', 'they', 'just', 'when']
+0.303667643016 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+0.0823936129794 ['syria', 'chemical', 'weapons', 'news', 'nbsp', 'inspectors']
 
 Dog looks like Putin
-5.28985375852 ['that', 'what', 'place', 'attacks', 'only', 'city']
-1.7064220443 ['middot', 'says', 'president', 'died', 'company', 'seattle']
-1.48774227391 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
+3.56124629085 ['that', 'their', 'said', 'kenya', 'warned', 'about']
+2.84725595466 ['light', 'have', 'like', 'they', 'just', 'when']
+1.87725957914 ['iranian', 'rouhani', 'president', 'obama', 'iran', 'hassan']
 
