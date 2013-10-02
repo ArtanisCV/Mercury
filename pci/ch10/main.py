@@ -1,6 +1,11 @@
 __author__ = 'Artanis'
 
 
-import newsFeatures
+#import newsFeatures
+#
+#newsFeatures.testNewsFeatures()
 
-newsFeatures.testNewsFeatures()
+
+import nmf
+
+nmf.testNMF()

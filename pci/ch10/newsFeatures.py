@@ -144,8 +144,8 @@ def loadNews():
 
 
 def testNewsFeatures():
-    #allWords, articleWords, articleTitles = getArticleWords()
-    #saveNews(allWords, articleWords, articleTitles)
+    # allWords, articleWords, articleTitles = getArticleWords()
+    # saveNews(allWords, articleWords, articleTitles)
     allWords, articleWords, articleTitles = loadNews()
 
     wordMatrix, wordVec = makeMatrix(allWords, articleWords)
@@ -163,7 +163,7 @@ def testNewsFeatures():
     from pci.ch06 import docClass
 
     classifier = docClass.NaiveBayes(wordMatrixFeatures)
-    classifier.setDB('newsTest.db')
+    classifier.setDB('news.db')
 
     print articleTitles[0]
     # Train this as an 'government' story
@@ -176,3 +176,9 @@ def testNewsFeatures():
     print articleTitles[2]
     # How is this story classified?
     print classifier.classify(wordMatrix[2])
+
+    print
+    from pci.ch03 import clusters
+
+    clust = clusters.hCluster(wordMatrix)
+    clusters.drawDendrogram(clust, articleTitles, jpeg='news.jpg')
