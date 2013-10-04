@@ -203,16 +203,19 @@ def getRankFunction(dataset):
     return rankFunction
 
 
-def gridGame(trees, board):
+board = (3, 3)
+
+
+def gridGame(trees):
     # Remember the last move for each player
     lastMove = [-1, -1]
 
     # Remember the player's locations
-    locations = [[randint(0, board[0]), randint(0, board[1])]]
+    locations = [[randint(0, board[0] - 1), randint(0, board[1] - 1)]]
 
     # Put the second player a sufficient distance from the first
-    locations.append([(locations[0][0] + 2) % (board[0] + 1),
-                     (locations[0][1] + 2) % (board[1] + 1)])
+    locations.append([(locations[0][0] + board[0] - 1) % board[0],
+                      (locations[0][1] + board[1] - 1) % board[1]])
 
     # Maximum of 50 moves before a tie
     for m in range(50):
@@ -233,16 +236,16 @@ def gridGame(trees, board):
                     locations[i][0] = 0
             elif move == 1:
                 locations[i][0] += 1
-                if locations[i][0] > board[0]:
-                    locations[i][0] = board[0]
+                if locations[i][0] >= board[0]:
+                    locations[i][0] = board[0] - 1
             elif move == 2:
                 locations[i][1] -= 1
                 if locations[i][1] < 0:
                     locations[i][1] = 0
             else:
                 locations[i][1] += 1
-                if locations[i][1] > board[1]:
-                    locations[i][1] = board[1]
+                if locations[i][1] >= board[1]:
+                    locations[i][1] = board[1] - 1
 
             # If you have captured the other player, you win
             if locations[i] == locations[i - 1]:
@@ -251,7 +254,7 @@ def gridGame(trees, board):
     return -1
 
 
-def tournament(players, board):
+def tournament(players):
     # Count losses
     losses = [0 for player in players]
 
@@ -262,7 +265,7 @@ def tournament(players, board):
                 continue
 
             # Who is the winner?
-            winner = gridGame([players[i], players[j]], board)
+            winner = gridGame([players[i], players[j]])
 
             # Two points for a loss, one point for a tie
             if winner == 0:
@@ -280,17 +283,15 @@ def tournament(players, board):
 
 
 class HumanPlayer:
-    def __init__(self, board):
-        self.board = board
-
     def evaluate(self, locations):
         # Get my location and the location of other players
         me = tuple(locations[0: 2])
         others = [tuple(locations[x: x + 2]) for x in range(2, len(locations) - 1, 2)]
+        print board, locations
 
         # Display the board
-        for i in range(self.board[0]):
-            for j in range(self.board[1]):
+        for i in range(board[0]):
+            for j in range(board[1]):
                 if (i, j) == me:
                     print '0',
                 elif (i, j) in others:
@@ -361,14 +362,13 @@ def testGP():
     cross = crossOver(random1, random2)
     cross.display()
 
-    #print
-    #rankFunction = getRankFunction(buildHiddenSet())
-    #evolve(2, 500, rankFunction, mutateProb=0.2, crossProb=0.1, expThred=0.7, newProb=0.1)
+    print
+    rankFunction = getRankFunction(buildHiddenSet())
+    evolve(2, 500, rankFunction, mutateProb=0.2, crossProb=0.1, expThred=0.7, newProb=0.1)
 
     print
-    board = (3, 3)
     p1 = makeRandomTree(5)
     p2 = makeRandomTree(5)
-    print gridGame([p1, p2], board)
-    winner = evolve(5, 100, lambda players: tournament(players, board), maxGen=50)
-    gridGame([winner, HumanPlayer(board)], board)
+    print gridGame([p1, p2])
+    winner = evolve(5, 100, tournament, maxGen=50)
+    print gridGame([winner, HumanPlayer()])
