@@ -1,7 +1,7 @@
 __author__ = "Artanis"
 
 
-from .Token import *
+from Token import *
 
 
 class Lexer(object):
@@ -14,7 +14,7 @@ class Lexer(object):
         self.current_idx = 0
 
     def has_next(self):
-        return self.current_idx >= len(self.code)
+        return self.current_idx < len(self.code)
 
     def next(self):
         if not self.has_next():
@@ -32,6 +32,9 @@ class Lexer(object):
         return None
 
     def try_char(self, condition):
+        if not self.has_next():
+            return None
+
         start_idx = self.current_idx
 
         char = self.next()
@@ -48,14 +51,12 @@ class Lexer(object):
         start_idx = self.current_idx
 
         # [a-zA-Z]
-        char = self.try_char(str.isalpha)
-        if char is None:
+        if self.try_char(str.isalpha) is None:
             return self.restore(start_idx)
 
         # [a-zA-Z0-9]*
-        char = self.try_char(str.isalnum)
-        while char is not None:
-            char = self.try_char(str.isalnum)
+        while self.try_char(str.isalnum) is not None:
+            pass
 
         token_name = self.retrieve(start_idx)
         token = KeywordValidator.is_keyword(token_name)
@@ -69,23 +70,17 @@ class Lexer(object):
         start_idx = self.current_idx
 
         # [0-9]*
-        char = self.try_char(str.isdigit)
-        if char is not None:
-            char = self.try_char(str.isdigit)
-            while char is not None:
-                char = self.try_char(str.isdigit)
+        while self.try_char(str.isdigit) is not None:
+            pass
 
         # (.[0-9]+)?
-        char = self.try_char(lambda c: c == '.')
-        if char is not None:
-            char = self.try_char(str.isdigit)
-            if char is None:
+        if self.try_char(lambda c: c == '.') is not None:
+            if self.try_char(str.isdigit) is None:
                 # no digit follows '.'
                 return self.restore(start_idx)
             else:
-                char = self.try_char(str.isdigit)
-                while char is not None:
-                    char = self.try_char(str.isdigit)
+                while self.try_char(str.isdigit) is not None:
+                    pass
 
         token_name = self.retrieve(start_idx)
         if len(token_name) != 0:
@@ -136,3 +131,31 @@ class Lexer(object):
         tokens.append(EOFToken())
 
         return tokens
+
+
+if __name__ == "__main__":
+    code = \
+        """
+        # Compute the x'th fibonacci number.
+        def fib(x)
+            if x < 3 then
+                1
+            else
+                fib(x - 1) + fib(x - 2)
+
+        fib(40)
+
+        # Compute the sum of two numbers.
+        def sum(x1, x2)
+            x1 + x2
+
+        sum(.1, 10.1)
+        """
+
+    for token in Lexer().get_token(code):
+        print "Type: " + token.__class__.__name__, "|", "Name: " + token.name,
+
+        if token.__class__ == NumberToken:
+            print "|", "Value: " + str(token.value)
+        else:
+            print

@@ -17,17 +17,17 @@ class IdentifierToken(Token):
 
 
 class DefToken(Token):
-    def __init__(self):
-        Token.__init__(self, "def")
+    keyword = "def"
 
-        self.keyword = "def"
+    def __init__(self):
+        Token.__init__(self, DefToken.keyword)
 
 
 class ExternToken(Token):
-    def __init__(self):
-        Token.__init__(self, "extern")
+    keyword = "extern"
 
-        self.keyword = "extern"
+    def __init__(self):
+        Token.__init__(self, ExternToken.keyword)
 
 
 class NumberToken(Token):
