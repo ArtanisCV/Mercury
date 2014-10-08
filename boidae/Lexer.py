@@ -2,63 +2,59 @@ __author__ = "Artanis"
 
 
 from Token import *
+from Iterator import ForwardIterator
 
 
 class Lexer(object):
     def __init__(self):
-        self.code = ""
-        self.current_idx = 0
+        self.codes = ""
+        self.current = ForwardIterator(self.codes)
 
-    def redo(self, code):
-        self.code = code
-        self.current_idx = 0
+    def redo(self, code_str):
+        self.codes = code_str
+        self.current = ForwardIterator(self.codes)
 
-    def has_next(self):
-        return self.current_idx < len(self.code)
+    def get_current(self):
+        return self.current.clone()
 
-    def next(self):
-        if not self.has_next():
-            return None
-
-        char = self.code[self.current_idx]
-        self.current_idx += 1
-        return char
-
-    def retrieve(self, start_idx):
-        return self.code[start_idx: self.current_idx]
-
-    def restore(self, start_idx):
-        self.current_idx = start_idx
+    def reject(self, previous):
+        self.current = previous
         return None
 
-    def try_char(self, condition):
-        if not self.has_next():
-            return None
+    def accept(self, previous):
+        sub_code = []
 
-        start_idx = self.current_idx
+        while previous != self.current:
+            sub_code.append(previous.next())
 
-        char = self.next()
-        if condition(char):
-            return self.retrieve(start_idx)
-        else:
-            return self.restore(start_idx)
+        return ''.join(sub_code)
+
+    def expect(self, condition=None):
+        char = self.current.peek()
+
+        if char is not None:
+            if condition is None or condition(char):
+                self.current.next()
+                return True
+
+        return False
 
     def try_identifier_or_keyword(self):
         """
         identifier: [a-zA-Z][a-zA-Z0-9]*
         """
 
-        start_idx = self.current_idx
+        previous = self.get_current()
 
         # [a-zA-Z]
-        if self.try_char(str.isalpha) is None:
-            return self.restore(start_idx)
+        if not self.expect(str.isalpha):
+            return self.reject(previous)
 
         # [a-zA-Z0-9]*
-        while self.try_char(str.isalnum) is not None:
+        while self.expect(str.isalnum):
             pass
 
-        token_name = self.retrieve(start_idx)
+        token_name = self.accept(previous)
         token = KeywordValidator.is_keyword(token_name)
         return IdentifierToken(token_name) if token is None else token
 
@@ -67,52 +63,69 @@ class Lexer(object):
         number: ([0-9]+(\.[0-9]+)?)|(.[0-9]+)
         """
 
-        start_idx = self.current_idx
+        previous = self.get_current()
 
         # [0-9]*
-        while self.try_char(str.isdigit) is not None:
+        while self.expect(str.isdigit):
             pass
 
         # (.[0-9]+)?
-        if self.try_char(lambda c: c == '.') is not None:
-            if self.try_char(str.isdigit) is None:
+        if self.expect(lambda c: c == '.'):
+            if not self.expect(str.isdigit):
                 # no digit follows '.'
-                return self.restore(start_idx)
+                return self.reject(previous)
             else:
-                while self.try_char(str.isdigit) is not None:
+                while self.expect(str.isdigit):
                     pass
 
-        token_name = self.retrieve(start_idx)
+        token_name = self.accept(previous)
         if len(token_name) != 0:
             return NumberToken(token_name)
         else:
-            return self.restore(start_idx)
+            return self.reject(previous)
 
-    def eat_spaces(self):
-        has_space = False
+    def try_whitespace(self):
+        previous = self.get_current()
 
-        while self.try_char(str.isspace) is not None:
-            has_space = True
+        while self.expect(str.isspace):
+            pass
 
-        return has_space
+        token_name = self.accept(previous)
+        if len(token_name) != 0:
+            return WhitespaceToken(token_name)
+        else:
+            return self.reject(previous)
 
-    def eat_comment(self):
-        if self.try_char(lambda c: c == '#') is not None:
-            while self.next() != '\n':
+    def try_comment(self):
+        """
+        comment: #.*
+        """
+
+        previous = self.get_current()
+
+        if self.expect(lambda c: c == '#'):
+            while self.expect(lambda c: c != '\n'):
                 pass
 
-            return True
+            self.expect()  # eat '\n'
+
+            return CommentToken(self.accept(previous))
         else:
-            return False
+            return self.reject(previous)
 
-    def eat_unknown(self):
-        return UnknownToken(self.next())
+    def try_character(self):
+        previous = self.get_current()
 
-    def get_token(self, code):
-        self.redo(code)
+        if self.expect():
+            return CharacterToken(self.accept(previous))
+        else:
+            return self.reject(previous)
+
+    def tokenize(self, code_str):
+        self.redo(code_str)
         tokens = []
 
-        while self.has_next():
+        while True:
             token = self.try_identifier_or_keyword()
             if token is not None:
                 tokens.append(token)
@@ -123,10 +136,17 @@ class Lexer(object):
                 tokens.append(token)
                 continue
 
-            if self.eat_spaces() or self.eat_comment():
+            if self.try_whitespace() is not None:
                 continue
 
-            tokens.append(self.eat_unknown())
+            if self.try_comment() is not None:
+                continue
+
+            token = self.try_character()
+            if token is not None:
+                tokens.append(token)
+            else:
+                break
 
         tokens.append(EOFToken())
 
@@ -146,16 +166,11 @@ if __name__ == "__main__":
         fib(40)
 
         # Compute the sum of two numbers.
-        def sum(x1, x2)
+        def sum(x1 x2)
             x1 + x2
 
         sum(.1, 10.1)
         """
 
-    for token in Lexer().get_token(code):
-        print "Type: " + token.__class__.__name__, "|", "Name: " + token.name,
-
-        if token.__class__ == NumberToken:
-            print "|", "Value: " + str(token.value)
-        else:
-            print
+    for token in Lexer().tokenize(code):
+        print token
