@@ -1,11 +1,14 @@
 __author__ = 'Artanis'
 
 
+from Token import *
+
+
 class AST:
     pass
 
 
-class Expr(AST):
+class ExprAST(AST):
     """
     Base class for all expression nodes
     """
@@ -13,37 +16,37 @@ class Expr(AST):
     pass
 
 
-class NumberExpr(Expr):
+class NumberExprAST(ExprAST):
     """
     Expression class for numeric literals like "1.0"
     """
 
-    def __init__(self, number_token):
-        self.value = number_token.value
+    def __init__(self, number):
+        self.number = number
 
     def __str__(self):
-        return str(self.value)
+        return str(self.number)
 
 
-class VariableExpr(Expr):
+class VariableExprAST(ExprAST):
     """
     Expression class for referencing a variable like "a"
     """
 
-    def __init__(self, identifier_token):
-        self.name = identifier_token.name
+    def __init__(self, identifier):
+        self.identifier = identifier
 
     def __str__(self):
-        return self.name
+        return str(self.identifier)
 
 
-class BinaryExpr(Expr):
+class BinaryExprAST(ExprAST):
     """
     Expression class for a binary operator
     """
 
     def __init__(self, binop, lhs, rhs):
-        self.op = binop.name
+        self.op = binop
         self.lhs = lhs
         self.rhs = rhs
 
@@ -51,20 +54,20 @@ class BinaryExpr(Expr):
         return str(self.lhs) + str(self.op) + str(self.rhs)
 
 
-class CallExpr(Expr):
+class CallExprAST(ExprAST):
     """
     Expression class for function calls
     """
 
     def __init__(self, identifier, args):
-        self.callee = identifier.name
+        self.callee = identifier
         self.args = args
 
     def __str__(self):
-        return self.callee + "(" + ','.join([str(arg) for arg in self.args]) + ")"
+        return str(self.callee) + "(" + ','.join([str(arg) for arg in self.args]) + ")"
 
 
-class Prototype(AST):
+class PrototypeAST(AST):
     """
     This class represents the "prototype" for a function,
     which captures its name, and its argument names (thus implicitly the number
@@ -72,14 +75,14 @@ class Prototype(AST):
     """
 
     def __init__(self, identifier, args):
-        self.name = identifier.name
-        self.args = [arg.name for arg in args]
+        self.identifier = identifier
+        self.args = args
 
     def __str__(self):
-        return self.name + "(" + ' '.join(self.args) + ")"
+        return str(self.identifier) + "(" + ' '.join([str(arg) for arg in self.args]) + ")"
 
 
-class Function(AST):
+class FunctionAST(AST):
     """
     This class represents a function definition itself
     """
@@ -92,22 +95,18 @@ class Function(AST):
         return str(self.prototype) + " " + str(self.body)
 
 
-class Unknown(AST):
-    """
-    This class represents an unknown token
-    """
+class BinopPrecedence(object):
+    precedence = {
+        '<': 10, '+': 20, '-': 20, '*': 40
+    }
 
-    def __init__(self, token):
-        self.name = token.name
+    @staticmethod
+    def get_precedence(binop):
+        if not isinstance(binop, BinOpToken):
+            return -1
 
-    def __str__(self):
-        return self.name
+        return BinopPrecedence.precedence[binop.name]
 
 
-class Error:
-    """
-    This class provides helper functions for error handling.
-    """
-
-    def __init__(self, msg):
-        print "Error:", msg
+class ParseError(Exception):
+    pass
