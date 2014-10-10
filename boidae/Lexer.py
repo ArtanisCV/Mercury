@@ -9,13 +9,21 @@ class Lexer(object):
     def __init__(self):
         self.codes = ""
         self.current = ForwardIterator(self.codes)
+        self.line = 1
 
     def redo(self, code_str):
         self.codes = code_str
         self.current = ForwardIterator(self.codes)
+        self.line = 1
 
     def get_current(self):
         return self.current.clone()
+
+    def get_line(self):
+        return self.line
+
+    def add_line(self):
+        self.line += 1
 
     def collect(self, previous):
         codes = []
@@ -54,9 +62,9 @@ class Lexer(object):
         while self.expect(str.isalnum):
             pass
 
-        token_name = self.collect(previous)
-        token = KeywordValidator.try_keyword(token_name)
-        return IdentifierToken(token_name) if token is None else token
+        name = self.collect(previous)
+        token = KeywordValidator.try_keyword(name, self.get_line())
+        return IdentifierToken(name, self.get_line()) if token is None else token
 
     def try_number(self):
         """
@@ -79,25 +87,30 @@ class Lexer(object):
             while self.expect(str.isdigit):
                 pass
 
-        token_name = self.collect(previous)
-        if len(token_name) == 0:
+        name = self.collect(previous)
+        if len(name) == 0:
             self.restore(previous)
             return None
 
-        return NumberToken(token_name)
+        return NumberToken(name, self.get_line())
 
     def try_whitespaces(self):
         previous = self.get_current()
+        begin_line = self.get_line()
 
         while self.expect(str.isspace):
             pass
 
-        token_name = self.collect(previous)
-        if len(token_name) == 0:
+        name = self.collect(previous)
+        if len(name) == 0:
             self.restore(previous)
             return None
 
-        return WhitespacesToken(token_name)
+        for char in name:
+            if char == '\n':
+                self.add_line()
+
+        return WhitespacesToken(name, begin_line)
 
     def try_comment(self):
         """
@@ -105,6 +118,7 @@ class Lexer(object):
         """
 
         previous = self.get_current()
+        begin_line = self.get_line()
 
         if not self.expect(lambda c: c == '#'):
             self.restore(previous)
@@ -113,9 +127,11 @@ class Lexer(object):
         while self.expect(lambda c: c != '\n'):
             pass
 
-        self.expect()  # eat '\n'
+        if self.expect():
+            # eat '\n'
+            self.add_line()
 
-        return CommentToken(self.collect(previous))
+        return CommentToken(self.collect(previous), begin_line)
 
     def try_character_or_operator(self):
         previous = self.get_current()
@@ -124,9 +140,9 @@ class Lexer(object):
             self.restore(previous)
             return None
 
-        token_name = self.collect(previous)
-        token = OperatorValidator.try_operator(token_name)
-        return CharacterToken(token_name) if token is None else token
+        name = self.collect(previous)
+        token = OperatorValidator.try_operator(name, self.get_line())
+        return CharacterToken(name, self.get_line()) if token is None else token
 
     def tokenize(self, code_str):
         self.redo(code_str)
@@ -155,14 +171,14 @@ class Lexer(object):
             else:
                 break
 
-        tokens.append(EOFToken())
+        tokens.append(EOFToken(self.get_line()))
 
         return tokens
 
 
 if __name__ == "__main__":
     code = \
-        """
+        """\
         # Compute the x'th fibonacci number.
         def fib(x)
             if x < 3 then
@@ -178,9 +194,9 @@ if __name__ == "__main__":
 
         sum(.1, 10.1)
 
-        extern cos(x);
-        extern print();
+        extern cos(x);  # external function cos
+        extern print();  # external function print\
         """
 
     for token in Lexer().tokenize(code):
-        print token.__class__.__name__ + ":", token
+        print "%s(%d): %s" % (token.__class__.__name__, token.line, token)
