@@ -112,6 +112,34 @@ class CallExprNode(ExprNode):
         return str(self.__callee) + "(" + ','.join([str(arg) for arg in self.__args]) + ")"
 
 
+class IfExprNode(ExprNode):
+    """
+    Expression class for if/then/else
+    """
+
+    def __init__(self, condition, true, false):
+        Node.__init__(self, condition.line)
+
+        self.__condition = condition
+        self.__true = true
+        self.__false = false
+
+    @property
+    def condition(self):
+        return self.__condition
+
+    @property
+    def true(self):
+        return self.__true
+
+    @property
+    def false(self):
+        return self.__false
+
+    def __str__(self):
+        return "if %s then %s else %s" % (self.__condition, self.__true, self.__false)
+
+
 class PrototypeNode(Node):
     """
     This class represents the "prototype" for a function,

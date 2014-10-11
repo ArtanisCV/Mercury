@@ -27,25 +27,28 @@ class EOFToken(Token):
 
 
 class DefToken(Token):
-    keyword = "def"
-
-    @staticmethod
-    def include(name):
-        return name == DefToken.keyword
-
     def __init__(self, line):
-        Token.__init__(self, DefToken.keyword, line)
+        Token.__init__(self, "def", line)
 
 
 class ExternToken(Token):
-    keyword = "extern"
-
-    @staticmethod
-    def include(name):
-        return name == ExternToken.keyword
-
     def __init__(self, line):
-        Token.__init__(self, ExternToken.keyword, line)
+        Token.__init__(self, "extern", line)
+
+
+class IfToken(Token):
+    def __init__(self, line):
+        Token.__init__(self, "if", line)
+
+
+class ThenToken(Token):
+    def __init__(self, line):
+        Token.__init__(self, "then", line)
+
+
+class ElseToken(Token):
+    def __init__(self, line):
+        Token.__init__(self, "else", line)
 
 
 class IdentifierToken(Token):
@@ -99,15 +102,17 @@ class CommentToken(Token):
 
 
 class KeywordValidator(object):
-    keywordTokens = [DefToken, ExternToken]
+    keyword_token_map = {"def": DefToken, "extern": ExternToken,
+                         "if": IfToken, "else": ElseToken, "then": ThenToken}
 
     @staticmethod
     def try_keyword(name, line):
-        for keywordToken in KeywordValidator.keywordTokens:
-            if keywordToken.include(name):
-                return keywordToken(line)
-
-        return None
+        if name in KeywordValidator.keyword_token_map:
+            token = KeywordValidator.keyword_token_map[name](line)
+            assert token.name == name
+            return token
+        else:
+            return None
 
 
 class OperatorValidator(object):

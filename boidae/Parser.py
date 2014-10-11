@@ -11,6 +11,9 @@ class Parser(object):
         self.is_eof = lambda t: isinstance(t, EOFToken)
         self.is_def = lambda t: isinstance(t, DefToken)
         self.is_extern = lambda t: isinstance(t, ExternToken)
+        self.is_if = lambda t: isinstance(t, IfToken)
+        self.is_then = lambda t: isinstance(t, ThenToken)
+        self.is_else = lambda t: isinstance(t, ElseToken)
         self.is_identifer = lambda t: isinstance(t, IdentifierToken)
         self.is_number = lambda t: isinstance(t, NumberToken)
         self.is_binop = lambda t: isinstance(t, BinOpToken)
@@ -124,12 +127,47 @@ class Parser(object):
 
                     return CallExprNode(identifier, args)
 
+    def try_ifexpr(self):
+        """
+        ifexpr ::= 'if' expr 'then' expr 'else' expr
+        """
+
+        previous = self.get_current()
+
+        if_token = self.expect(self.is_if)
+        if if_token is None:
+            self.restore(previous)
+            return None
+
+        condition = self.try_expr()
+        if condition is None:
+            raise ExpectedExpr(if_token.line)
+
+        then_token = self.expect(self.is_then)
+        if then_token is None:
+            raise ExpectedThen(condition.line)
+
+        true = self.try_expr()
+        if true is None:
+            raise ExpectedExpr(then_token.line)
+
+        else_token = self.expect(self.is_else)
+        if else_token is None:
+            raise ExpectedElse(true.line)
+
+        false = self.try_expr()
+        if false is None:
+            raise ExpectedExpr(else_token.line)
+
+        return IfExprNode(condition, true, false)
+
     def try_primary(self):
         """
         primary
             ::= numberexpr
             ::= parenexpr
             ::= identifierexpr
+            ::= ifexpr
         """
 
         expr = self.try_numberexpr()
@@ -140,7 +178,11 @@ class Parser(object):
         if expr is not None:
             return expr
 
-        return self.try_identifierexpr()
+        expr = self.try_identifierexpr()
+        if expr is not None:
+            return expr
+
+        return self.try_ifexpr()
 
     def try_binoprhs(self, lhs, lhs_prec):
         """
@@ -318,6 +360,30 @@ if __name__ == "__main__":
         """\
         def foo(x y)
             x + foo(y, 4.0);
+
+        def bar(x)
+            if
+
+        def bar(x)
+            if x < 2
+
+        def bar(x)
+            if x < 2 then
+
+        def bar(x)
+            if x < 2 then
+                2
+
+        def bar(x)
+            if x < 2 then
+                2
+            else
+
+        def bar(x)
+            if x < 2 then
+                2
+            else
+                x
 
         def sum(x y)
             (x + y

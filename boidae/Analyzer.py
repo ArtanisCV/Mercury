@@ -56,6 +56,8 @@ class Analyzer(object):
             return self.gen_binary_expr(node)
         elif isinstance(node, CallExprNode):
             return self.gen_call_expr(node)
+        elif isinstance(node, IfExprNode):
+            return self.gen_if_expr(node)
         elif isinstance(node, PrototypeNode):
             return self.gen_prototype(node)
         elif isinstance(node, FunctionNode):
@@ -91,8 +93,8 @@ class Analyzer(object):
             raise UndefinedOperator(node)
 
     def gen_call_expr(self, node):
-        # look up the name in the global module table
         try:
+            # look up the name in the global module table
             callee = self.llvm_module.get_function_named(node.name)
         except llvm.LLVMException:
             raise UndefinedFunction(node)
@@ -103,6 +105,46 @@ class Analyzer(object):
         args = [self.generate(arg) for arg in node.args]
 
         return self.llvm_builder.call(callee, args, 'call')
+
+    def gen_if_expr(self, node):
+        condition = self.generate(node.condition)
+
+        # convert condition to a bool by comparing equal to 0.0
+        condition = self.llvm_builder.fcmp(FCMPEnum.FCMP_ONE, condition,
+                                           Constant.real(Type.double(), 0), 'cond')
+
+        function = self.llvm_builder.basic_block.function
+
+        # create blocks for the then and else cases.
+        then_block = function.append_basic_block('then')
+        else_block = function.append_basic_block('else')
+        merge_block = function.append_basic_block('merge')
+
+        self.llvm_builder.cbranch(condition, then_block, else_block)
+
+        # emit 'then' branch
+        self.llvm_builder.position_at_end(then_block)
+        true = self.generate(node.true)
+        self.llvm_builder.branch(merge_block)
+
+        # code generator of 'then' can change the current block;
+        # update then_block for the PHI node
+        then_block = self.llvm_builder.basic_block
+
+        # emit 'else' branch
+        self.llvm_builder.position_at_end(else_block)
+        false = self.generate(node.false)
+        self.llvm_builder.branch(merge_block)
+
+        # code generator of 'else' can change the current block;
+        # update else_block for the PHI node
+        else_block = self.llvm_builder.basic_block
+
+        self.llvm_builder.position_at_end(merge_block)
+        phi = self.llvm_builder.phi(Type.double(), 'if')
+        phi.add_incoming(true, then_block)
+        phi.add_incoming(false, else_block)
+        return phi
 
     def gen_prototype(self, node):
         function_type = Type.function(Type.double(), [Type.double()] * len(node.arg_names), False)
@@ -153,7 +195,7 @@ class Analyzer(object):
             function.verify()
 
             # optimize the function
-            self.llvm_pass_manager.run(function)
+            #self.llvm_pass_manager.run(function)
         except:
             if previous is None:
                 # allow users to redefine a function that they incorrectly typed in before,
@@ -170,6 +212,7 @@ class Analyzer(object):
         for node in node_list:
             try:
                 code = self.generate(node)
+                print code
 
                 if isinstance(node, TopLevelExpr):
                     result = self.llvm_executor.run_function(code, []).as_real(Type.double())
@@ -186,7 +229,10 @@ if __name__ == "__main__":
         """\
         4 + 5
 
-        9 + 10
+        if 1 then
+            1
+        else
+            0
 
         def foo(a b)
             a * a + 2 * a * b + b * b

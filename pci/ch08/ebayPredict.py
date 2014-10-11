@@ -37,7 +37,7 @@ def sendRequest(apiCall, xmlParameters):
     connection.request("POST", '/ws/api.dll', xmlParameters, getHeaders(apiCall))
     response = connection.getresponse()
 
-    if response.status != 200:
+    if response.position != 200:
         print "Error sending request:" + response.reason
     else:
         data = response.read()

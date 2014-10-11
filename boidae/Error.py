@@ -15,6 +15,16 @@ class ExpectedRightParen(BoidaeSyntaxError):
         BoidaeSyntaxError.__init__(self, "Expected ')'", line)
 
 
+class ExpectedThen(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected 'then'", line)
+
+
+class ExpectedElse(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected 'else'", line)
+
+
 class ExpectedPrototype(BoidaeSyntaxError):
     def __init__(self, line):
         BoidaeSyntaxError.__init__(self, "Expected prototype", line)
