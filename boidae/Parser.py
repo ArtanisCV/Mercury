@@ -8,9 +8,6 @@ from Iterator import ForwardIterator
 
 class Parser(object):
     def __init__(self):
-        self.tokens = []
-        self.current = ForwardIterator(self.tokens)
-
         self.is_eof = lambda t: isinstance(t, EOFToken)
         self.is_def = lambda t: isinstance(t, DefToken)
         self.is_extern = lambda t: isinstance(t, ExternToken)
@@ -265,7 +262,7 @@ class Parser(object):
         if expr is None:
             return None
 
-        return FunctionNode(PrototypeNode(Token("", expr.line), []), expr)
+        return TopLevelExpr(expr)
 
     def try_negligible_character(self):
         # ignore top-level semicolons
@@ -282,7 +279,7 @@ class Parser(object):
 
     def parse(self, token_list):
         self.redo(token_list)
-        nodes, syntax_errors = [], []
+        nodes, errors = [], []
 
         while True:
             try:
@@ -309,9 +306,9 @@ class Parser(object):
 
                 self.try_unknown()
             except BoidaeSyntaxError as e:
-                syntax_errors.append(e)
+                errors.append(e)
 
-        return nodes, syntax_errors
+        return nodes, errors
 
 
 if __name__ == "__main__":
@@ -348,5 +345,6 @@ if __name__ == "__main__":
     for node in nodes:
         print '%s(%d): %s' % (node.__class__.__name__, node.line, node)
 
+    print
     for error in errors:
         print error

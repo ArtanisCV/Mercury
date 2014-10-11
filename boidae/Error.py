@@ -72,7 +72,7 @@ class RedefinedFunction(BoidaeSemanticError):
 
 
 class MismatchedDeclaration(BoidaeSemanticError):
-    def __init__(self, previous_size, node):
-        msg = "Mismatched declaration (previous: %d arguments, current: %d)" \
-              % (previous_size, len(node.args))
+    def __init__(self, declared_size, node):
+        msg = "Mismatched declaration (declared: %d arguments, current: %d)" \
+              % (declared_size, len(node.arg_names))
         BoidaeSemanticError.__init__(self, msg, node.line)

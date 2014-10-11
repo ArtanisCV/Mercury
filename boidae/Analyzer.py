@@ -2,14 +2,19 @@ __author__ = 'Artanis'
 
 
 from llvm.core import *
+from llvm.ee import *
+from llvm.passes import *
 from Error import *
 from Node import *
 
 
 class Analyzer(object):
     def __init__(self):
+        self.redo()
+
+    def redo(self):
         # The LLVM module, which holds all the IR code.
-        self.llvm_module = Module.new("jit")
+        self.llvm_module = Module.new("boidae")
 
         # The LLVM instruction builder. Created whenever a new function is entered.
         self.llvm_builder = None
@@ -18,10 +23,29 @@ class Analyzer(object):
         # and what their LLVM representation is.
         self.named_values = {}
 
-    def redo(self):
-        self.llvm_module = Module.new("jit")
-        self.llvm_builder = None
-        self.named_values = {}
+        # The function optimization passes manager.
+        self.llvm_pass_manager = FunctionPassManager.new(self.llvm_module)
+
+        # The LLVM execution engine.
+        self.llvm_executor = ExecutionEngine.new(self.llvm_module)
+
+        # Set up the optimizer pipeline. Start with registering info about how the
+        # target lays out data structures.
+        self.llvm_pass_manager.add(self.llvm_executor.target_data)
+
+        # Do simple "peephole" optimizations and bit-twiddling optimizations.
+        self.llvm_pass_manager.add(PASS_INSTCOMBINE)
+
+        # Reassociate expressions.
+        self.llvm_pass_manager.add(PASS_REASSOCIATE)
+
+        # Eliminate Common SubExpressions.
+        self.llvm_pass_manager.add(PASS_GVN)
+
+        # Simplify the control flow graph (deleting unreachable blocks, etc).
+        self.llvm_pass_manager.add(PASS_SIMPLIFYCFG)
+
+        self.llvm_pass_manager.initialize()
 
     def generate(self, node):
         if isinstance(node, NumberExprNode):
@@ -42,34 +66,34 @@ class Analyzer(object):
     def gen_number_expr(self, node):
         return Constant.real(Type.double(), node.value)
 
-    def gen_variable_expr(self, variable_expr):
-        if variable_expr.name in self.named_values:
-            return self.named_values[variable_expr.name]
+    def gen_variable_expr(self, node):
+        if node.name in self.named_values:
+            return self.named_values[node.name]
         else:
-            raise UndefinedVariable(variable_expr)
+            raise UndefinedVariable(node)
 
     def gen_binary_expr(self, node):
         lhs = self.generate(node.lhs)
         rhs = self.generate(node.rhs)
 
-        if node.op == '+':
+        if node.op_name == '+':
             return self.llvm_builder.fadd(lhs, rhs, 'add')
-        elif node.op == '-':
+        elif node.op_name == '-':
             return self.llvm_builder.fsub(lhs, rhs, 'sub')
-        elif node.op == '*':
+        elif node.op_name == '*':
             return self.llvm_builder.fmul(lhs, rhs, 'mul')
-        elif node.op == '<':
-            res = self.llvm_builder.fcmp(FCMPEnum.FCMP_ULT, lhs, rhs, 'cmp')
+        elif node.op_name == '<':
+            result = self.llvm_builder.fcmp(FCMPEnum.FCMP_ULT, lhs, rhs, 'cmp')
 
             # convert bool 0 or 1 to double 0.0 or 1.0
-            return self.llvm_builder.uitofp(res, Type.double(), 'bool')
+            return self.llvm_builder.uitofp(result, Type.double(), 'bool')
         else:
             raise UndefinedOperator(node)
 
     def gen_call_expr(self, node):
         # look up the name in the global module table
         try:
-            callee = self.llvm_module.get_function_named(node.callee)
+            callee = self.llvm_module.get_function_named(node.name)
         except llvm.LLVMException:
             raise UndefinedFunction(node)
 
@@ -81,24 +105,23 @@ class Analyzer(object):
         return self.llvm_builder.call(callee, args, 'call')
 
     def gen_prototype(self, node):
-        function_type = Type.function(Type.double(), [Type.double()] * len(node.args), False)
+        function_type = Type.function(Type.double(), [Type.double()] * len(node.arg_names), False)
 
-        function = Function.new(self.llvm_module, function_type, node.name)
-
-        if function.name != node.name:
+        try:
+            function = Function.new(self.llvm_module, function_type, node.name)
+        except llvm.LLVMException:
             # if the name conflicted, there was already something with the same name
-            function.delete()
             function = self.llvm_module.get_function_named(node.name)
 
             if not function.is_declaration:
                 # if the function already has a body, don't allow redefinition or reextern
-                raise RedefinedFunction(self)
+                raise RedefinedFunction(node)
 
-            if len(function.args) != len(node.args):
+            if len(function.args) != len(node.arg_names):
                 # if the function has a differnent number of args, reject
                 raise MismatchedDeclaration(len(function.args), node)
 
-        for arg, arg_name in zip(function.args, node.args):
+        for arg, arg_name in zip(function.args, node.arg_names):
             arg.name = arg_name
 
             # add arguments to variable symbol table
@@ -109,6 +132,11 @@ class Analyzer(object):
     def gen_function(self, node):
         # clear scope
         self.named_values.clear()
+
+        try:
+            previous = self.llvm_module.get_function_named(node.name)
+        except llvm.LLVMException:
+            previous = None
 
         # create a function object
         function = self.generate(node.prototype)
@@ -123,7 +151,15 @@ class Analyzer(object):
 
             # validate the generated code, checking for consistency
             function.verify()
+
+            # optimize the function
+            self.llvm_pass_manager.run(function)
         except:
+            if previous is None:
+                # allow users to redefine a function that they incorrectly typed in before,
+                # but don't remove a previously defined forward declaration
+                function.delete()
+
             raise
 
         return function
@@ -133,7 +169,11 @@ class Analyzer(object):
 
         for node in node_list:
             try:
-                print self.generate(node)
+                code = self.generate(node)
+
+                if isinstance(node, TopLevelExpr):
+                    result = self.llvm_executor.run_function(code, []).as_real(Type.double())
+                    print "Result of '%s': %f" % (node, result)
             except BoidaeSemanticError as e:
                 print e
 
@@ -146,23 +186,44 @@ if __name__ == "__main__":
         """\
         4 + 5
 
+        9 + 10
+
         def foo(a b)
             a * a + 2 * a * b + b * b
+
+        def foo(a)
+            a
+
+        def foo(a b)
+            a + b
 
         def bar(a)
             foo(a, 4.0) + bar(31337)
 
         extern cos(x)
 
-        cos(1.234)\
+        cos(1.234)
 
-        def error()
+        cos(1.234, 1.234)
+
+        def identity()
             x
 
-        hello(x)
+        def identity()
+            error(x)
+
+        def identity(x)
+            x
+
+        extern tan(a);
+
+        def tan(a) c;
+
+        def invoke() tan(1);
+
+        def opt(x) (1+2+x)*(x+(1+2))
         """
 
     tokens = Lexer().tokenize(code)
     nodes = Parser().parse(tokens)[0]
-
     Analyzer().analyze(nodes)

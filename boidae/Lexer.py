@@ -6,11 +6,6 @@ from Iterator import ForwardIterator
 
 
 class Lexer(object):
-    def __init__(self):
-        self.codes = ""
-        self.current = ForwardIterator(self.codes)
-        self.line = 1
-
     def redo(self, code_str):
         self.codes = code_str
         self.current = ForwardIterator(self.codes)

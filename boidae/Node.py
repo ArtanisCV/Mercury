@@ -74,7 +74,7 @@ class BinaryExprNode(ExprNode):
         self.__rhs = rhs
 
     @property
-    def op(self):
+    def op_name(self):
         return self.__op.name
 
     @property
@@ -101,7 +101,7 @@ class CallExprNode(ExprNode):
         self.__args = args
 
     @property
-    def callee(self):
+    def name(self):
         return self.__callee.name
 
     @property
@@ -130,7 +130,7 @@ class PrototypeNode(Node):
         return self.__identifier.name
 
     @property
-    def args(self):
+    def arg_names(self):
         return [str(arg) for arg in self.__args]
 
     def __str__(self):
@@ -139,7 +139,7 @@ class PrototypeNode(Node):
 
 class FunctionNode(Node):
     """
-    This class represents a function definition itself
+    This class represents a function definition
     """
 
     def __init__(self, prototype, expr):
@@ -147,6 +147,10 @@ class FunctionNode(Node):
 
         self.__prototype = prototype
         self.__body = expr
+
+    @property
+    def name(self):
+        return self.__prototype.name
 
     @property
     def prototype(self):
@@ -158,6 +162,21 @@ class FunctionNode(Node):
 
     def __str__(self):
         return str(self.__prototype) + " " + str(self.__body)
+
+
+class TopLevelExpr(FunctionNode):
+    """
+    This class represents a top-level expression
+    """
+
+    def __init__(self, expr):
+        # make an anonymous prototype to represent a top-level expr
+        FunctionNode.__init__(self, PrototypeNode(Token("", expr.line), []), expr)
+
+        self.__expr = expr
+
+    def __str__(self):
+        return str(self.__expr)
 
 
 class BinopPrecedence(object):
