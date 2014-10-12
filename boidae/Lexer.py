@@ -1,18 +1,14 @@
 __author__ = "Artanis"
 
 
+from Buffer import Buffer
 from Token import *
-from Iterator import ForwardIterator
 
 
 class Lexer(object):
-    def redo(self, code_str):
-        self.codes = code_str
-        self.current = ForwardIterator(self.codes)
+    def __init__(self, interpreter):
+        self.input = Buffer(interpreter.read())
         self.line = 1
-
-    def get_current(self):
-        return self.current.clone()
 
     def get_line(self):
         return self.line
@@ -20,53 +16,37 @@ class Lexer(object):
     def add_line(self):
         self.line += 1
 
-    def collect(self, previous):
-        codes = []
+    def collect(self):
+        return ''.join(self.input.accept())
 
-        while previous != self.current:
-            codes.append(previous.next())
-
-        return ''.join(codes)
-
-    def restore(self, previous):
-        self.current = previous
+    def restore(self):
+        self.input.reject()
 
     def expect(self, condition=None):
-        char = self.current.peek()
-
-        if char is not None:
-            if condition is None or condition(char):
-                self.current.next()
-                return True
-
-        return False
+        return self.input.move(condition) is not None
 
     def try_identifier_or_keyword(self):
         """
         identifier: [a-zA-Z][a-zA-Z0-9]*
         """
 
-        previous = self.get_current()
-
         # [a-zA-Z]
         if not self.expect(str.isalpha):
-            self.restore(previous)
+            self.restore()
             return None
 
         # [a-zA-Z0-9]*
         while self.expect(str.isalnum):
             pass
 
-        name = self.collect(previous)
-        token = KeywordValidator.try_keyword(name, self.get_line())
+        name = self.collect()
+        token = KeywordManager.try_keyword(name, self.get_line())
         return IdentifierToken(name, self.get_line()) if token is None else token
 
     def try_number(self):
         """
         number: ([0-9]+(\.[0-9]+)?)|(.[0-9]+)
         """
-
-        previous = self.get_current()
 
         # [0-9]*
         while self.expect(str.isdigit):
@@ -76,29 +56,28 @@ class Lexer(object):
         if self.expect(lambda c: c == '.'):
             if not self.expect(str.isdigit):
                 # no digit follows '.'
-                self.restore(previous)
+                self.restore()
                 return None
 
             while self.expect(str.isdigit):
                 pass
 
-        name = self.collect(previous)
+        name = self.collect()
         if len(name) == 0:
-            self.restore(previous)
+            self.restore()
             return None
 
         return NumberToken(name, self.get_line())
 
     def try_whitespaces(self):
-        previous = self.get_current()
         begin_line = self.get_line()
 
         while self.expect(str.isspace):
             pass
 
-        name = self.collect(previous)
+        name = self.collect()
         if len(name) == 0:
-            self.restore(previous)
+            self.restore()
             return None
 
         for char in name:
@@ -112,11 +91,10 @@ class Lexer(object):
         comment: #.*
         """
 
-        previous = self.get_current()
         begin_line = self.get_line()
 
         if not self.expect(lambda c: c == '#'):
-            self.restore(previous)
+            self.restore()
             return None
 
         while self.expect(lambda c: c != '\n'):
@@ -126,32 +104,27 @@ class Lexer(object):
             # eat '\n'
             self.add_line()
 
-        return CommentToken(self.collect(previous), begin_line)
+        return CommentToken(self.collect(), begin_line)
 
     def try_character_or_operator(self):
-        previous = self.get_current()
-
         if not self.expect():
-            self.restore(previous)
+            self.restore()
             return None
 
-        name = self.collect(previous)
-        token = OperatorValidator.try_operator(name, self.get_line())
+        name = self.collect()
+        token = OperatorManager.try_operator(name, self.get_line())
         return CharacterToken(name, self.get_line()) if token is None else token
 
-    def tokenize(self, code_str):
-        self.redo(code_str)
-        tokens = []
-
+    def tokenize(self):
         while True:
             token = self.try_identifier_or_keyword()
             if token is not None:
-                tokens.append(token)
+                yield token
                 continue
 
             token = self.try_number()
             if token is not None:
-                tokens.append(token)
+                yield token
                 continue
 
             if self.try_whitespaces() is not None:
@@ -162,16 +135,16 @@ class Lexer(object):
 
             token = self.try_character_or_operator()
             if token is not None:
-                tokens.append(token)
+                yield token
             else:
                 break
 
-        tokens.append(EOFToken(self.get_line()))
-
-        return tokens
+        yield EOFToken(self.get_line())
 
 
 if __name__ == "__main__":
+    from Interpreter import Interpreter
+
     code = \
         """\
         # Compute the x'th fibonacci number.
@@ -194,8 +167,21 @@ if __name__ == "__main__":
         sum(.1, 10.1)
 
         extern cos(x);  # external function cos
-        extern print();  # external function print\
+        extern print();  # external function print
+
+        # Logical unary not.
+        def unary!(v)
+           if v then
+              0
+           else
+              1
+
+        # Define > with the same precedence as <.
+        def binary> 10 (LHS RHS)
+            RHS < LHS\
         """
 
-    for token in Lexer().tokenize(code):
+    lexer = Lexer(Interpreter(code))
+
+    for token in lexer.tokenize():
         print "%s(%d): %s" % (token.__class__.__name__, token.line, token)

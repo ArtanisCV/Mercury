@@ -12,10 +12,9 @@ load_library_permanently('./putchard.lib')
 
 
 class Analyzer(object):
-    def __init__(self):
-        self.redo()
+    def __init__(self, parser):
+        self.input = parser.parse()
 
-    def redo(self):
         # The LLVM module, which holds all the IR code.
         self.llvm_module = Module.new("boidae")
 
@@ -277,10 +276,8 @@ class Analyzer(object):
 
         return function
 
-    def analyze(self, node_list):
-        self.redo()
-
-        for node in node_list:
+    def analyze(self):
+        for node in self.input:
             try:
                 code = self.generate(node)
                 print code
@@ -293,6 +290,7 @@ class Analyzer(object):
 
 
 if __name__ == "__main__":
+    from Interpreter import Interpreter
     from Lexer import Lexer
     from Parser import Parser
 
@@ -329,6 +327,8 @@ if __name__ == "__main__":
         def opt(x) (1+2+x)*(x+(1+2))
         """
 
-    tokens = Lexer().tokenize(code)
-    nodes = Parser().parse(tokens)[0]
-    Analyzer().analyze(nodes)
+    lexer = Lexer(Interpreter(code))
+    parser = Parser(lexer)
+    analyzer = Analyzer(parser)
+
+    analyzer.analyze()

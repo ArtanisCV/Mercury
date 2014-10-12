@@ -3,11 +3,14 @@ __author__ = 'Artanis'
 from Token import *
 from Node import *
 from Error import *
-from Iterator import ForwardIterator
+from Buffer import Buffer
 
 
 class Parser(object):
-    def __init__(self):
+    def __init__(self, lexer):
+        self.input = Buffer(lexer.tokenize())
+        self.errors = []
+
         self.is_eof = lambda t: isinstance(t, EOFToken)
         self.is_def = lambda t: isinstance(t, DefToken)
         self.is_extern = lambda t: isinstance(t, ExternToken)
@@ -18,96 +21,63 @@ class Parser(object):
         self.is_in = lambda t: isinstance(t, InToken)
         self.is_identifer = lambda t: isinstance(t, IdentifierToken)
         self.is_number = lambda t: isinstance(t, NumberToken)
+        self.is_character = lambda t: isinstance(t, CharacterToken)
+        self.is_binary = lambda t: isinstance(t, BinaryToken)
+        self.is_unary = lambda t: isinstance(t, UnaryToken)
         self.is_binop = lambda t: isinstance(t, BinOpToken)
+        self.is_unop = lambda t: isinstance(t, UnOpToken)
 
-    def redo(self, token_list):
-        self.tokens = token_list
-        self.current = ForwardIterator(self.tokens)
+    @property
+    def syntax_errors(self):
+        return self.errors
 
-    def get_current(self):
-        return self.current.clone()
-
-    def collect(self, previous):
-        tokens = []
-
-        while previous != self.current:
-            tokens.append(previous.next())
-
-        return tokens
-
-    def restore(self, previous):
-        self.current = previous
-
-    def record_error(self, previous):
-        tokens = self.collect(previous)
-        msg = ' '.join([str(token) for token in tokens])
-        print "Error occurs when parsing: " + msg
+    def collect(self):
+        return self.input.accept()
 
     def look(self, condition=None):
-        token = self.current.peek()
-
-        if token is not None:
-            if condition is None or condition(token):
-                return token
-
-        return None
+        return self.input.peek(condition)
 
     def expect(self, condition=None):
-        token = self.look(condition)
+        return self.input.move(condition)
 
-        if token is not None:
-            if condition is None or condition(token):
-                return self.current.next()
-
-        return None
-
-    def try_numberexpr(self):
+    def try_number_expr(self):
         """
-        numberexpr ::= number
+        number_expr ::= number
         """
-
-        previous = self.get_current()
 
         number = self.expect(self.is_number)
         if number is None:
-            self.restore(previous)
             return None
 
         return NumberExprNode(number)
 
-    def try_parenexpr(self):
+    def try_paren_expr(self):
         """
-        parenexpr ::= '(' expr ')'
+        paren_expr ::= '(' expr ')'
         """
-
-        previous = self.get_current()
 
         left_paren = self.expect(lambda t: t.name == '(')
         if left_paren is None:
-            self.restore(previous)
             return None
 
         expr = self.try_expr()
 
         right_paren = self.expect(lambda t: t.name == ')')
         if right_paren is None:
-            raise ExpectedRightParen(left_paren.line)
+            raise ExpectedRightParen(left_paren.line if expr is None else expr.line)
 
         return expr
 
-    def try_identifierexpr(self):
+    def try_identifier_expr(self):
         """
-        identifierexpr
+        identifier_expr
             ::= identifier
             ::= identifier '(' ')'
             ::= identifier '(' expr (',' expr)* ')'
         """
 
-        previous = self.get_current()
-
         identifier = self.expect(self.is_identifer)
         if identifier is None:
-            self.restore(previous)
             return None
 
         left_paren = self.expect(lambda t: t.name == '(')
@@ -125,20 +95,17 @@ class Parser(object):
                 else:
                     right_paren = self.expect(lambda t: t.name == ')')
                     if right_paren is None:
-                        raise ExpectedRightParen(identifier.line)
+                        raise ExpectedRightParen(left_paren.line if len(args) == 0 else args[-1].line)
 
                     return CallExprNode(identifier, args)
 
-    def try_ifexpr(self):
+    def try_if_expr(self):
         """
-        ifexpr ::= 'if' expr 'then' expr 'else' expr
+        if_expr ::= 'if' expr 'then' expr 'else' expr
         """
-
-        previous = self.get_current()
 
         token = self.expect(self.is_if)
         if token is None:
-            self.restore(previous)
             return None
 
         condition = self.try_expr()
@@ -163,16 +130,13 @@ class Parser(object):
 
         return IfExprNode(condition, true, false)
 
-    def try_forexpr(self):
+    def try_for_expr(self):
         """
-        forexpr ::= 'for' identifier '=' expr ',' expr (',' expr)? 'in' expr
+        for_expr ::= 'for' identifier '=' expr ',' expr (',' expr)? 'in' expr
         """
-
-        previous = self.get_current()
 
         token = self.expect(self.is_for)
         if token is None:
-            self.restore(previous)
             return None
 
         variable = self.expect(self.is_identifer)
@@ -213,37 +177,37 @@ class Parser(object):
 
         return ForExprNode(variable, begin, end, step, body)
 
-    def try_primary(self):
+    def try_primary_expr(self):
         """
-        primary
-            ::= numberexpr
-            ::= parenexpr
-            ::= identifierexpr
-            ::= ifexpr
-            ::= forexpr
+        primary_expr
+            ::= number_expr
+            ::= paren_expr
+            ::= identifier_expr
+            ::= if_expr
+            ::= for_expr
         """
 
-        expr = self.try_numberexpr()
+        expr = self.try_number_expr()
         if expr is not None:
             return expr
 
-        expr = self.try_parenexpr()
+        expr = self.try_paren_expr()
         if expr is not None:
             return expr
 
-        expr = self.try_identifierexpr()
+        expr = self.try_identifier_expr()
         if expr is not None:
             return expr
 
-        expr = self.try_ifexpr()
+        expr = self.try_if_expr()
         if expr is not None:
             return expr
 
-        return self.try_forexpr()
+        return self.try_for_expr()
 
-    def try_binoprhs(self, lhs, lhs_prec):
+    def try_binop_rhs(self, lhs, lhs_prec):
         """
-        binoprhs ::= (binop primary)*
+        binop_rhs ::= (binop primary_expr)*
         """
 
         while True:
@@ -257,46 +221,39 @@ class Parser(object):
 
             self.expect(self.is_binop)  # eat binop
 
-            rhs = self.try_primary()
+            rhs = self.try_primary_expr()
             if rhs is None:
-                raise ExpectedPrimaryExpr(lhs.line)
+                raise ExpectedPrimaryExpr(binop.line)
 
             next_binop = self.look(self.is_binop)
             if next_binop is not None and BinopPrecedence.get_precedence(next_binop) > prec:
-                rhs = self.try_binoprhs(rhs, prec + 1)  # +1 for left associativity
+                rhs = self.try_binop_rhs(rhs, prec + 1)  # +1 for left associativity
 
             lhs = BinaryExprNode(binop, lhs, rhs)
 
     def try_expr(self):
         """
-        expr ::= primary binoprhs
+        expr ::= primary_expr binop_rhs
         """
 
-        previous = self.get_current()
-
-        lhs = self.try_primary()
+        lhs = self.try_primary_expr()
         if lhs is None:
-            self.restore(previous)
             return None
 
-        return self.try_binoprhs(lhs, 0)
+        return self.try_binop_rhs(lhs, 0)
 
-    def try_prototype(self):
+    def try_normal_prototype(self):
         """
-        prototype ::= identifier '(' identifier* ')'
+        normal_prototype ::= identifier '(' identifier* ')'
         """
-
-        previous = self.get_current()
 
         identifier = self.expect(self.is_identifer)
         if identifier is None:
-            self.restore(previous)
             return None
 
         left_paren = self.expect(lambda t: t.name == '(')
         if left_paren is None:
-            self.restore(previous)
-            return None
+            raise ExpectedLeftParen(identifier.line)
 
         args = []
         while True:
@@ -306,20 +263,99 @@ class Parser(object):
             else:
                 right_paren = self.expect(lambda t: t.name == ')')
                 if right_paren is None:
-                    raise ExpectedRightParen(identifier.line)
+                    raise ExpectedRightParen(left_paren.line if len(args) == 0 else args[-1].line)
 
                 return PrototypeNode(identifier, args)
 
-    def try_function(self):
+    def try_binary_prototype(self):
         """
-        function ::= 'def' prototype expression
+        binary_prototype ::= binary character number? '(' identifier identifier ')'
         """
 
-        previous = self.get_current()
+        binary = self.expect(self.is_binary)
+        if binary is None:
+            return None
+
+        operator = self.expect(self.is_character)
+        if operator is None:
+            raise ExpectedOperator(binary.line)
+
+        precedence = self.expect(self.is_number)
+
+        left_paren = self.expect(lambda t: t.name == '(')
+        if left_paren is None:
+            raise ExpectedLeftParen(operator.line if precedence is None else precedence.line)
+
+        arg1 = self.expect(self.is_identifer)
+        if arg1 is None:
+            raise ExpectedIdentifier(left_paren.line)
+
+        arg2 = self.expect(self.is_identifer)
+        if arg2 is None:
+            raise ExpectedIdentifier(arg1.line)
+
+        right_paren = self.expect(lambda t: t.name == ')')
+        if right_paren is None:
+            raise ExpectedRightParen(arg2.line)
+
+        return OpPrototypeNode(IdentifierToken(binary.name + operator.name, binary.line),
+                               precedence, [arg1, arg2])
+
+    def try_unary_prototype(self):
+        """
+        unary_prototype ::= unary character '(' identifier ')'
+        """
+
+        unary = self.expect(self.is_unary)
+        if unary is None:
+            return None
+
+        operator = self.expect(self.is_character)
+        if operator is None:
+            raise ExpectedOperator(unary.line)
+
+        left_paren = self.expect(lambda t: t.name == '(')
+        if left_paren is None:
+            raise ExpectedLeftParen(operator.line)
+
+        arg = self.expect(self.is_identifer)
+        if arg is None:
+            raise ExpectedIdentifier(left_paren.line)
+
+        right_paren = self.expect(lambda t: t.name == ')')
+        if right_paren is None:
+            raise ExpectedRightParen(arg.line)
+
+        return OpPrototypeNode(IdentifierToken(unary.name + operator.name, unary.line),
+                               None, [arg])
+
+    def try_prototype(self):
+        """
+        prototype
+            ::= normal_prototype
+            ::= binary_prototype
+            ::= unary_prototype
+        """
+
+        prototype = self.try_normal_prototype()
+        if prototype is not None:
+            return prototype
+
+        prototype = self.try_binary_prototype()
+        if prototype is not None:
+            return prototype
+
+        prototype = self.try_unary_prototype()
+        if prototype is not None:
+            return prototype
+
+    def try_function(self):
+        """
+        function ::= 'def' prototype expr
+        """
 
         keyword = self.expect(self.is_def)
         if keyword is None:
-            self.restore(previous)
             return None
 
         prototype = self.try_prototype()
@@ -328,7 +364,7 @@ class Parser(object):
 
         expr = self.try_expr()
         if expr is None:
-            raise ExpectedExpr(keyword.line)
+            raise ExpectedExpr(prototype.line)
 
         return FunctionNode(prototype, expr)
 
@@ -337,11 +373,8 @@ class Parser(object):
         declaration ::= 'extern' prototype
         """
 
-        previous = self.get_current()
-
         keyword = self.expect(self.is_extern)
         if keyword is None:
-            self.restore(previous)
             return None
 
         prototype = self.try_prototype()
@@ -352,7 +385,7 @@ class Parser(object):
 
     def try_toplevel_expr(self):
         """
-        toplevelexpr ::= expr
+        toplevel_expr ::= expr
 
         we make an anonymous prototype to represent a top-level expr
         """
@@ -376,25 +409,22 @@ class Parser(object):
         if token is not None:
             raise UnknownToken(token)
 
-    def parse(self, token_list):
-        self.redo(token_list)
-        nodes, errors = [], []
-
+    def parse(self):
         while True:
             try:
                 node = self.try_function()
                 if node is not None:
-                    nodes.append(node)
+                    yield node
                     continue
 
                 node = self.try_declaration()
                 if node is not None:
-                    nodes.append(node)
+                    yield node
                     continue
 
                 node = self.try_toplevel_expr()
                 if node is not None:
-                    nodes.append(node)
+                    yield node
                     continue
 
                 if self.try_negligible_character() is not None:
@@ -405,12 +435,11 @@ class Parser(object):
 
                 self.try_unknown()
             except BoidaeSyntaxError as e:
-                errors.append(e)
-
-        return nodes, errors
+                self.errors.append(e)
 
 
 if __name__ == "__main__":
+    from Interpreter import Interpreter
     from Lexer import Lexer
 
     code = \
@@ -453,15 +482,24 @@ if __name__ == "__main__":
         x + + y;
 
         extern sin(x);
-        extern print();\
+        extern print();
+
+        def unary!(v)
+           if v then
+              0
+           else
+              1
+
+        def binary> 10 (LHS RHS)
+            RHS < LHS\
         """
 
-    parser = Parser()
-    nodes, errors = parser.parse(Lexer().tokenize(code))
+    lexer = Lexer(Interpreter(code))
+    parser = Parser(lexer)
 
-    for node in nodes:
+    for node in parser.parse():
         print '%s(%d): %s' % (node.__class__.__name__, node.line, node)
 
     print
-    for error in errors:
+    for error in parser.syntax_errors:
         print error

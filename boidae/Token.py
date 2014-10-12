@@ -61,6 +61,16 @@ class InToken(Token):
         Token.__init__(self, "in", line)
 
 
+class BinaryToken(Token):
+    def __init__(self, line):
+        Token.__init__(self, "binary", line)
+
+
+class UnaryToken(Token):
+    def __init__(self, line):
+        Token.__init__(self, "unary", line)
+
+
 class IdentifierToken(Token):
     def __init__(self, name, line):
         Token.__init__(self, name, line)
@@ -85,14 +95,14 @@ class NumberToken(Token):
 
 
 class BinOpToken(Token):
-    binaryOps = {'<', '+', '-', '*'}
-
-    @staticmethod
-    def include(name):
-        return name in BinOpToken.binaryOps
-
     def __init__(self, name, line):
-        assert BinOpToken.include(name)
+        assert OperatorManager.is_binop(name)
+        Token.__init__(self, name, line)
+
+
+class UnOpToken(Token):
+    def __init__(self, name, line):
+        assert OperatorManager.is_unop(name)
         Token.__init__(self, name, line)
 
 
@@ -111,28 +121,39 @@ class CommentToken(Token):
         Token.__init__(self, name, line)
 
 
-class KeywordValidator(object):
+class KeywordManager(object):
     keyword_token_map = {"def": DefToken, "extern": ExternToken,
                          "if": IfToken, "else": ElseToken, "then": ThenToken,
-                         "for": ForToken, "in": InToken}
+                         "for": ForToken, "in": InToken,
+                         "binary": BinaryToken, "unary": UnaryToken}
 
     @staticmethod
     def try_keyword(name, line):
-        if name in KeywordValidator.keyword_token_map:
-            token = KeywordValidator.keyword_token_map[name](line)
+        if name in KeywordManager.keyword_token_map:
+            token = KeywordManager.keyword_token_map[name](line)
             assert token.name == name
             return token
         else:
             return None
 
 
-class OperatorValidator(object):
-    operatorTokens = [BinOpToken]
+class OperatorManager(object):
+    binaryOps = {'<', '+', '-', '*'}
+    unaryOps = {}
+
+    @staticmethod
+    def is_binop(char):
+        return char in OperatorManager.binaryOps
+
+    @staticmethod
+    def is_unop(char):
+        return char in OperatorManager.unaryOps
 
     @staticmethod
     def try_operator(name, line):
-        for operatorToken in OperatorValidator.operatorTokens:
-            if operatorToken.include(name):
-                return BinOpToken(name, line)
-
-        return None
+        if OperatorManager.is_binop(name):
+            return BinOpToken(name, line)
+        elif OperatorManager.is_unop(name):
+            return UnOpToken(name, line)
+        else:
+            return None

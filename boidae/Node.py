@@ -187,7 +187,7 @@ class PrototypeNode(Node):
     """
     This class represents the "prototype" for a function,
     which captures its name, and its argument names (thus implicitly the number
-    of arguments the function takes).
+    of arguments the function takes)
     """
 
     def __init__(self, identifier, args):
@@ -206,6 +206,40 @@ class PrototypeNode(Node):
 
     def __str__(self):
         return str(self.__identifier) + "(" + ' '.join([str(arg) for arg in self.__args]) + ")"
+
+
+class OpPrototypeNode(PrototypeNode):
+    """
+    This class represents the "prototype" for a user-defined operator
+    """
+
+    def __init__(self, identifier, precedence, args):
+        assert len(args) == 1 or len(args) == 2
+        PrototypeNode.__init__(self, identifier, args)
+
+        self.__precedence = precedence
+
+    @property
+    def op_name(self):
+        return self.name[-1]
+
+    @property
+    def precedence(self):
+        return None if self.__precedence is None else int(self.__precedence.name)
+
+    def is_binop(self):
+        return len(self.arg_names) == 2
+
+    def is_unop(self):
+        return len(self.arg_names) == 1
+
+    def __str__(self):
+        if self.__precedence is None:
+            header = "%s " % self.name
+        else:
+            header = "%s %d " % (self.name, self.precedence)
+
+        return header + "(" + ' '.join([arg_name for arg_name in self.arg_names]) + ")"
 
 
 class FunctionNode(Node):

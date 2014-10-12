@@ -10,6 +10,11 @@ class BoidaeSyntaxError(Exception):
         return "Syntax Error (%d): %s" % (self.line, self.msg)
 
 
+class ExpectedLeftParen(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected '('", line)
+
+
 class ExpectedRightParen(BoidaeSyntaxError):
     def __init__(self, line):
         BoidaeSyntaxError.__init__(self, "Expected ')'", line)
@@ -43,6 +48,11 @@ class ExpectedComma(BoidaeSyntaxError):
 class ExpectedIn(BoidaeSyntaxError):
     def __init__(self, line):
         BoidaeSyntaxError.__init__(self, "Expected 'in'", line)
+
+
+class ExpectedOperator(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected operator", line)
 
 
 class ExpectedPrototype(BoidaeSyntaxError):
