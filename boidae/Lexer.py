@@ -180,13 +180,17 @@ if __name__ == "__main__":
                 1
             else
                 fib(x - 1) + fib(x - 2)
-
         fib(40)
+
+        # Print multiple '*' ('x' indicates the number of '*')
+        def star(x)
+            for i = 1, i < n, 1.0 in
+                putchard(42)
+        star(100)
 
         # Compute the sum of two numbers.
         def sum(x1 x2)
             x1 + x2
-
         sum(.1, 10.1)
 
         extern cos(x);  # external function cos

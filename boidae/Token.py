@@ -51,6 +51,16 @@ class ElseToken(Token):
         Token.__init__(self, "else", line)
 
 
+class ForToken(Token):
+    def __init__(self, line):
+        Token.__init__(self, "for", line)
+
+
+class InToken(Token):
+    def __init__(self, line):
+        Token.__init__(self, "in", line)
+
+
 class IdentifierToken(Token):
     def __init__(self, name, line):
         Token.__init__(self, name, line)
@@ -103,7 +113,8 @@ class CommentToken(Token):
 
 class KeywordValidator(object):
     keyword_token_map = {"def": DefToken, "extern": ExternToken,
-                         "if": IfToken, "else": ElseToken, "then": ThenToken}
+                         "if": IfToken, "else": ElseToken, "then": ThenToken,
+                         "for": ForToken, "in": InToken}
 
     @staticmethod
     def try_keyword(name, line):

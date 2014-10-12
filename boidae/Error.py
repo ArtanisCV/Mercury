@@ -25,6 +25,26 @@ class ExpectedElse(BoidaeSyntaxError):
         BoidaeSyntaxError.__init__(self, "Expected 'else'", line)
 
 
+class ExpectedIdentifier(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected identifier", line)
+
+
+class ExpectedEqualSign(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected '='", line)
+
+
+class ExpectedComma(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected ','", line)
+
+
+class ExpectedIn(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected 'in'", line)
+
+
 class ExpectedPrototype(BoidaeSyntaxError):
     def __init__(self, line):
         BoidaeSyntaxError.__init__(self, "Expected prototype", line)

@@ -14,6 +14,8 @@ class Parser(object):
         self.is_if = lambda t: isinstance(t, IfToken)
         self.is_then = lambda t: isinstance(t, ThenToken)
         self.is_else = lambda t: isinstance(t, ElseToken)
+        self.is_for = lambda t: isinstance(t, ForToken)
+        self.is_in = lambda t: isinstance(t, InToken)
         self.is_identifer = lambda t: isinstance(t, IdentifierToken)
         self.is_number = lambda t: isinstance(t, NumberToken)
         self.is_binop = lambda t: isinstance(t, BinOpToken)
@@ -134,32 +136,82 @@ class Parser(object):
 
         previous = self.get_current()
 
-        if_token = self.expect(self.is_if)
-        if if_token is None:
+        token = self.expect(self.is_if)
+        if token is None:
             self.restore(previous)
             return None
 
         condition = self.try_expr()
         if condition is None:
-            raise ExpectedExpr(if_token.line)
+            raise ExpectedExpr(token.line)
 
-        then_token = self.expect(self.is_then)
-        if then_token is None:
+        token = self.expect(self.is_then)
+        if token is None:
             raise ExpectedThen(condition.line)
 
         true = self.try_expr()
         if true is None:
-            raise ExpectedExpr(then_token.line)
+            raise ExpectedExpr(token.line)
 
-        else_token = self.expect(self.is_else)
-        if else_token is None:
+        token = self.expect(self.is_else)
+        if token is None:
             raise ExpectedElse(true.line)
 
         false = self.try_expr()
         if false is None:
-            raise ExpectedExpr(else_token.line)
+            raise ExpectedExpr(token.line)
 
         return IfExprNode(condition, true, false)
+
+    def try_forexpr(self):
+        """
+        forexpr ::= 'for' identifier '=' expr ',' expr (',' expr)? 'in' expr
+        """
+
+        previous = self.get_current()
+
+        token = self.expect(self.is_for)
+        if token is None:
+            self.restore(previous)
+            return None
+
+        variable = self.expect(self.is_identifer)
+        if variable is None:
+            raise ExpectedIdentifier(token.line)
+
+        token = self.expect(lambda t: t.name == '=')
+        if token is None:
+            raise ExpectedEqualSign(variable.line)
+
+        begin = self.try_expr()
+        if begin is None:
+            raise ExpectedExpr(token.line)
+
+        token = self.expect(lambda t: t.name == ',')
+        if token is None:
+            raise ExpectedComma(begin.line)
+
+        end = self.try_expr()
+        if end is None:
+            raise ExpectedExpr(token.line)
+
+        token = self.expect(lambda t: t.name == ',')
+        if token is not None:
+            step = self.try_expr()
+            if step is None:
+                raise ExpectedExpr(token.line)
+        else:
+            step = None
+
+        token = self.expect(self.is_in)
+        if token is None:
+            raise ExpectedIn(end.line if step is None else step.line)
+
+        body = self.try_expr()
+        if body is None:
+            raise ExpectedExpr(token.line)
+
+        return ForExprNode(variable, begin, end, step, body)
 
     def try_primary(self):
         """
@@ -168,6 +220,7 @@ class Parser(object):
             ::= parenexpr
             ::= identifierexpr
             ::= ifexpr
+            ::= forexpr
         """
 
         expr = self.try_numberexpr()
@@ -182,7 +235,11 @@ class Parser(object):
         if expr is not None:
             return expr
 
-        return self.try_ifexpr()
+        expr = self.try_ifexpr()
+        if expr is not None:
+            return expr
+
+        return self.try_forexpr()
 
     def try_binoprhs(self, lhs, lhs_prec):
         """
@@ -361,29 +418,24 @@ if __name__ == "__main__":
         def foo(x y)
             x + foo(y, 4.0);
 
-        def bar(x)
-            if
+        def cond(x) if
+        def cond(x) if x < 2
+        def cond(x) if x < 2 then
+        def cond(x) if x < 2 then 2
+        def cond(x) if x < 2 then 2 else
+        def cond(x) if x < 2 then 2 else x
 
-        def bar(x)
-            if x < 2
-
-        def bar(x)
-            if x < 2 then
-
-        def bar(x)
-            if x < 2 then
-                2
-
-        def bar(x)
-            if x < 2 then
-                2
-            else
-
-        def bar(x)
-            if x < 2 then
-                2
-            else
-                x
+        def loop(x) for
+        def loop(x) for i
+        def loop(x) for i =
+        def loop(x) for i = 1
+        def loop(x) for i = 1,
+        def loop(x) for i = 1, 10
+        def loop(x) for i = 1, 10 in
+        def loop(x) for i = 1, 10 in cond(10)
+        def loop(x) for i = 1, 10,
+        def loop(x) for i = 1, 10, 1
+        def loop(x) for i = 1, 10, 1 in cond(10)
 
         def sum(x y)
             (x + y
@@ -395,14 +447,13 @@ if __name__ == "__main__":
             1
 
         y;
-
         x + y;
+        empty();
 
         x + + y;
 
-        empty();
-
-        extern sin(a);\
+        extern sin(x);
+        extern print();\
         """
 
     parser = Parser()

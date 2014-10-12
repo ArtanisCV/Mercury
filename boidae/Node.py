@@ -140,6 +140,49 @@ class IfExprNode(ExprNode):
         return "if %s then %s else %s" % (self.__condition, self.__true, self.__false)
 
 
+class ForExprNode(ExprNode):
+    """
+    Expression class for for/in
+    """
+
+    def __init__(self, variable, begin, end, step, body):
+        Node.__init__(self, variable.line)
+
+        self.__variable = variable
+        self.__begin = begin
+        self.__end = end
+        self.__step = step
+        self.__body = body
+
+    @property
+    def variable_name(self):
+        return self.__variable.name
+
+    @property
+    def begin(self):
+        return self.__begin
+
+    @property
+    def end(self):
+        return self.__end
+
+    @property
+    def step(self):
+        return self.__step
+
+    @property
+    def body(self):
+        return self.__body
+
+    def __str__(self):
+        if self.__step is None:
+            return "for %s = %s, %s in %s" % \
+                   (self.__variable, self.__begin, self.__end, self.__body)
+        else:
+            return "for %s = %s, %s, %s in %s" % \
+                   (self.__variable, self.__begin, self.__end, self.__step, self.__body)
+
+
 class PrototypeNode(Node):
     """
     This class represents the "prototype" for a function,

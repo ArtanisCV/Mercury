@@ -8,6 +8,9 @@ from Error import *
 from Node import *
 
 
+load_library_permanently('./putchard.lib')
+
+
 class Analyzer(object):
     def __init__(self):
         self.redo()
@@ -58,6 +61,8 @@ class Analyzer(object):
             return self.gen_call_expr(node)
         elif isinstance(node, IfExprNode):
             return self.gen_if_expr(node)
+        elif isinstance(node, ForExprNode):
+            return self.gen_for_expr(node)
         elif isinstance(node, PrototypeNode):
             return self.gen_prototype(node)
         elif isinstance(node, FunctionNode):
@@ -124,7 +129,7 @@ class Analyzer(object):
 
         # emit 'then' branch
         self.llvm_builder.position_at_end(then_block)
-        true = self.generate(node.true)
+        true_value = self.generate(node.true)
         self.llvm_builder.branch(merge_block)
 
         # code generator of 'then' can change the current block;
@@ -133,7 +138,7 @@ class Analyzer(object):
 
         # emit 'else' branch
         self.llvm_builder.position_at_end(else_block)
-        false = self.generate(node.false)
+        false_value = self.generate(node.false)
         self.llvm_builder.branch(merge_block)
 
         # code generator of 'else' can change the current block;
@@ -142,9 +147,75 @@ class Analyzer(object):
 
         self.llvm_builder.position_at_end(merge_block)
         phi = self.llvm_builder.phi(Type.double(), 'if')
-        phi.add_incoming(true, then_block)
-        phi.add_incoming(false, else_block)
+        phi.add_incoming(true_value, then_block)
+        phi.add_incoming(false_value, else_block)
         return phi
+
+    def gen_for_expr(self, node):
+        function = self.llvm_builder.basic_block.function
+        entry_block = self.llvm_builder.basic_block
+        header_block = function.append_basic_block('header')
+        body_block = function.append_basic_block('body')
+        after_block = function.append_basic_block('after')
+
+        ###############
+        # Entry Block #
+        ###############
+
+        begin_value = self.generate(node.begin)
+
+        self.llvm_builder.branch(header_block)
+
+        ################
+        # Header Block #
+        ################
+
+        self.llvm_builder.position_at_end(header_block)
+
+        variable_phi = self.llvm_builder.phi(Type.double(), node.variable_name)
+        variable_phi.add_incoming(begin_value, entry_block)
+
+        # Within the loop, the variable is defined equal to the PHI node. If it
+        # shadows an existing variable, we have to restore it, so save it now.
+        old_value = self.named_values.get(node.variable_name, None)
+        self.named_values[node.variable_name] = variable_phi
+
+        end_condition = self.generate(node.end)
+        end_condition = self.llvm_builder.fcmp(FCMPEnum.FCMP_ONE, end_condition,
+                                               Constant.real(Type.double(), 0), 'cond')
+
+        self.llvm_builder.cbranch(end_condition, body_block, after_block)
+
+        ##############
+        # Body Block #
+        ##############
+
+        self.llvm_builder.position_at_end(body_block)
+
+        self.generate(node.body)
+
+        step_value = Constant.real(Type.double(), 1) if node.step is None else self.generate(node.step)
+        next_value = self.llvm_builder.fadd(variable_phi, step_value, 'next')
+
+        self.llvm_builder.branch(header_block)
+
+        body_block = self.llvm_builder.basic_block
+        variable_phi.add_incoming(next_value, body_block)
+
+        ###############
+        # After Block #
+        ###############
+
+        self.llvm_builder.position_at_end(after_block)
+
+        # restore the unshadowed variable
+        if old_value is not None:
+            self.named_values[node.variable_name] = old_value
+        else:
+            del self.named_values[node.variable_name]
+
+        # always return 0.0
+        return Constant.real(Type.double(), 0)
 
     def gen_prototype(self, node):
         function_type = Type.function(Type.double(), [Type.double()] * len(node.arg_names), False)
@@ -234,37 +305,25 @@ if __name__ == "__main__":
         else
             0
 
-        def foo(a b)
-            a * a + 2 * a * b + b * b
+        extern putchard(x)
+        for i = 0, i < 10, 2 in
+            putchard(42)  # output a '*' (ASCII 42)
 
-        def foo(a)
-            a
-
-        def foo(a b)
-            a + b
-
-        def bar(a)
-            foo(a, 4.0) + bar(31337)
+        def foo(a b) a * a + 2 * a * b + b * b
+        def foo(a) a
+        def foo(a b) a + b
+        def bar(a) foo(a, 4.0) + bar(31337)
 
         extern cos(x)
-
         cos(1.234)
-
         cos(1.234, 1.234)
 
-        def identity()
-            x
-
-        def identity()
-            error(x)
-
-        def identity(x)
-            x
+        def identity() x
+        def identity() error(x)
+        def identity(x) x
 
         extern tan(a);
-
         def tan(a) c;
-
         def invoke() tan(1);
 
         def opt(x) (1+2+x)*(x+(1+2))
