@@ -48,12 +48,25 @@ class Analyzer(object):
         # Simplify the control flow graph (deleting unreachable blocks, etc).
         self.llvm_pass_manager.add(PASS_SIMPLIFYCFG)
 
+        # Promote allocas to registers.
+        self.llvm_pass_manager.add(PASS_MEM2REG)
+
         self.llvm_pass_manager.initialize()
 
     def pop_sementic_errors(self):
         result = self.errors
         self.errors = []
         return result
+
+    def create_alloca(self, function, variable_name):
+        """
+        creates an alloca instruction in the entry block of the function
+        """
+
+        entry_block = function.entry_basic_block
+        builder = Builder.new(entry_block)
+        builder.position_at_beginning(entry_block)
+        return builder.alloca(ty=Type.double(), name=variable_name)
 
     def generate(self, node):
         if isinstance(node, NumberExprNode):
@@ -82,7 +95,7 @@ class Analyzer(object):
 
     def gen_variable_expr(self, node):
         if node.name in self.named_values:
-            return self.named_values[node.name]
+            return self.llvm_builder.load(self.named_values[node.name], node.name)
         else:
             raise UndefinedVariable(node)
 
@@ -90,7 +103,13 @@ class Analyzer(object):
         lhs = self.generate(node.lhs)
         rhs = self.generate(node.rhs)
 
-        if node.op_name == '+':
+        if node.op_name == '=':
+            if not isinstance(node.lhs, VariableExprNode):
+                raise InvalidAssignmentDestination(node.line)
+
+            self.llvm_builder.store(rhs, self.named_values[node.lhs.name])
+            return rhs
+        elif node.op_name == '+':
             return self.llvm_builder.fadd(lhs, rhs, 'add')
         elif node.op_name == '-':
             return self.llvm_builder.fsub(lhs, rhs, 'sub')
@@ -164,7 +183,6 @@ class Analyzer(object):
 
     def gen_for_expr(self, node):
         function = self.llvm_builder.basic_block.function
-        entry_block = self.llvm_builder.basic_block
         header_block = function.append_basic_block('header')
         body_block = function.append_basic_block('body')
         after_block = function.append_basic_block('after')
@@ -173,7 +191,14 @@ class Analyzer(object):
         # Entry Block #
         ###############
 
+        variable = self.create_alloca(function, node.variable_name)
         begin_value = self.generate(node.begin)
+        self.llvm_builder.store(begin_value, variable)
+
+        # Within the loop, the variable is defined equal to the alloca. If it
+        # shadows an existing variable, we have to restore it, so save it now.
+        old_value = self.named_values.get(node.variable_name, None)
+        self.named_values[node.variable_name] = variable
 
         self.llvm_builder.branch(header_block)
 
@@ -182,14 +207,6 @@ class Analyzer(object):
         ################
 
         self.llvm_builder.position_at_end(header_block)
-
-        variable_phi = self.llvm_builder.phi(Type.double(), node.variable_name)
-        variable_phi.add_incoming(begin_value, entry_block)
-
-        # Within the loop, the variable is defined equal to the PHI node. If it
-        # shadows an existing variable, we have to restore it, so save it now.
-        old_value = self.named_values.get(node.variable_name, None)
-        self.named_values[node.variable_name] = variable_phi
 
         end_condition = self.generate(node.end)
         end_condition = self.llvm_builder.fcmp(FCMPEnum.FCMP_ONE, end_condition,
@@ -205,13 +222,12 @@ class Analyzer(object):
 
         self.generate(node.body)
 
+        cur_value = self.llvm_builder.load(variable)
         step_value = Constant.real(Type.double(), 1) if node.step is None else self.generate(node.step)
-        next_value = self.llvm_builder.fadd(variable_phi, step_value, 'next')
+        next_value = self.llvm_builder.fadd(cur_value, step_value, 'next')
+        self.llvm_builder.store(next_value, variable)
 
         self.llvm_builder.branch(header_block)
-
-        body_block = self.llvm_builder.basic_block
-        variable_phi.add_incoming(next_value, body_block)
 
         ###############
         # After Block #
@@ -253,9 +269,6 @@ class Analyzer(object):
         for arg, arg_name in zip(function.args, node.arg_names):
             arg.name = arg_name
 
-            # add arguments to variable symbol table
-            self.named_values[arg.name] = arg
-
         return function
 
     def gen_function(self, node):
@@ -273,6 +286,12 @@ class Analyzer(object):
         # create a new basic block to start insertion into
         block = function.append_basic_block('entry')
         self.llvm_builder = Builder.new(block)
+
+        # add arguments to variable symbol table
+        for arg in function.args:
+            alloca = self.create_alloca(function, arg.name)
+            self.llvm_builder.store(arg, alloca)
+            self.named_values[arg.name] = alloca
 
         try:
             return_value = self.generate(node.body)
@@ -326,6 +345,13 @@ def test_basic():
         def foo(a) a
         def foo(a b) a + b
         def bar(a) foo(a, 4.0) + bar(31337)
+        foo(1, 2)
+
+        def fib(x)
+            if (x < 3) then
+                1
+            else
+                fib(x - 1) + fib(x - 2)
 
         extern cos(x)
         cos(1.234)
@@ -339,7 +365,7 @@ def test_basic():
         def tan(a) c;
         def invoke() tan(1);
 
-        def opt(x) (1+2+x)*(x+(1+2))
+        def opt(x) (1 + 2 + x) * (x + (1 + 2))
 
         def unary! (v)
            if v then
@@ -347,16 +373,33 @@ def test_basic():
            else
               1
 
-        def binary> 10 (LHS RHS)
-            RHS < LHS
-
         !0
-        10 > 5
 
         extern putchard(x)
         for i = 0, i < 10, 2 in
-            putchard(42)  # output a '*' (ASCII 42)
-        putchard(10)  # output a newline (ASCII 10)
+            putchard(42)  # '*'
+        putchard(10)  # newline
+
+        def binary: 1 (x y)
+            y
+
+        extern printd(x)
+        def test(x)
+            printd(x):
+            putchard(32):  # ' '
+            x = 4:
+            printd(x):
+            putchard(10)  # newline
+
+        test(123)
+
+        def fibi(x)
+           var a = 1, b = 1, c in
+           (for i = 3, i < x in
+              c = a + b :
+              a = b :
+              b = c) :
+           b\
         """
 
     lexer = Lexer(Interpreter(code))
@@ -485,5 +528,5 @@ def test_mandel():
         sys.stdout.flush()
 
 if __name__ == "__main__":
-    test_mandel()
+    test_basic()
 

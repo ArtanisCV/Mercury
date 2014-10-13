@@ -30,11 +30,6 @@ class ExpectedElse(BoidaeSyntaxError):
         BoidaeSyntaxError.__init__(self, "Expected 'else'", line)
 
 
-class ExpectedIdentifier(BoidaeSyntaxError):
-    def __init__(self, line):
-        BoidaeSyntaxError.__init__(self, "Expected identifier", line)
-
-
 class ExpectedEqualSign(BoidaeSyntaxError):
     def __init__(self, line):
         BoidaeSyntaxError.__init__(self, "Expected '='", line)
@@ -58,6 +53,16 @@ class ExpectedOperator(BoidaeSyntaxError):
 class ExpectedOperand(BoidaeSyntaxError):
     def __init__(self, line):
         BoidaeSyntaxError.__init__(self, "Expected operand", line)
+
+
+class ExpectedIdentifier(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected identifier", line)
+
+
+class ExpectedVariableList(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected variable list", line)
 
 
 class ExpectedPrimaryExpr(BoidaeSyntaxError):
@@ -109,6 +114,11 @@ class UndefinedFunction(BoidaeSemanticError):
         BoidaeSemanticError.__init__(self, "Undefined function '%s'" % node, node.line)
 
 
+class RedefinedFunction(BoidaeSemanticError):
+    def __init__(self, node):
+        BoidaeSemanticError.__init__(self, "Redefined function '%s'" % node, node.line)
+
+
 class MismatchedArgument(BoidaeSemanticError):
     def __init__(self, expected_size, node):
         msg = "Mismatched argument list (expect %d arguments, actually get %d)" % \
@@ -116,13 +126,13 @@ class MismatchedArgument(BoidaeSemanticError):
         BoidaeSemanticError.__init__(self, msg, node.line)
 
 
-class RedefinedFunction(BoidaeSemanticError):
-    def __init__(self, node):
-        BoidaeSemanticError.__init__(self, "Redefined function '%s'" % node, node.line)
-
-
 class MismatchedDeclaration(BoidaeSemanticError):
     def __init__(self, declared_size, node):
         msg = "Mismatched declaration (declared: %d arguments, current: %d)" \
               % (declared_size, len(node.arg_names))
         BoidaeSemanticError.__init__(self, msg, node.line)
+
+
+class InvalidAssignmentDestination(BoidaeSemanticError):
+    def __init__(self, line):
+        BoidaeSemanticError.__init__(self, "Destination of '=' must be a variable", line)

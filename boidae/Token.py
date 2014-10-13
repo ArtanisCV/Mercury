@@ -71,6 +71,11 @@ class UnaryToken(Token):
         Token.__init__(self, "unary", line)
 
 
+class VarToken(Token):
+    def __init__(self, line):
+        Token.__init__(self, "var", line)
+
+
 class IdentifierToken(Token):
     def __init__(self, name, line):
         Token.__init__(self, name, line)
@@ -113,7 +118,8 @@ class KeywordManager(object):
     keyword_token_map = {"def": DefToken, "extern": ExternToken,
                          "if": IfToken, "else": ElseToken, "then": ThenToken,
                          "for": ForToken, "in": InToken,
-                         "binary": BinaryToken, "unary": UnaryToken}
+                         "binary": BinaryToken, "unary": UnaryToken,
+                         "var": VarToken}
 
     @staticmethod
     def try_keyword(name, line):
@@ -126,7 +132,7 @@ class KeywordManager(object):
 
 
 class OperatorManager(object):
-    binaryOps = {'<': 10, '+': 20, '-': 20, '*': 40}
+    binaryOps = {'=': 2, '<': 10, '+': 20, '-': 20, '*': 40}
     unaryOps = set()
 
     @staticmethod

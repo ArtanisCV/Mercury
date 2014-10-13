@@ -176,7 +176,14 @@ if __name__ == "__main__":
 
         # Define > with the same precedence as <.
         def binary> 10 (LHS RHS)
-            RHS < LHS\
+            RHS < LHS
+
+        # Perform assignment.
+        def assign(x)
+            x = 4
+
+        # Define a variable.
+        def variable(x) var a = 1 in sin(a * x)\
         """
 
     lexer = Lexer(Interpreter(code))

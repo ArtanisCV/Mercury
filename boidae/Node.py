@@ -109,7 +109,7 @@ class CallExprNode(ExprNode):
         return self.__args
 
     def __str__(self):
-        return str(self.__callee) + "(" + ','.join([str(arg) for arg in self.__args]) + ")"
+        return str(self.__callee) + "(" + ", ".join([str(arg) for arg in self.__args]) + ")"
 
 
 class IfExprNode(ExprNode):
@@ -204,6 +204,33 @@ class UnaryExprNode(ExprNode):
 
     def __str__(self):
         return str(self.__operator) + str(self.__operand)
+
+
+class VarExprNode(ExprNode):
+    """
+    Expression class for var/in
+    """
+
+    def __init__(self, variables, body):
+        ExprNode.__init__(self, min([var.line for var in variables.keys()]))
+
+        self.__variables = variables
+        self.__body = body
+
+    @property
+    def variables(self):
+        return self.__variables
+
+    @property
+    def body(self):
+        return self.__body
+
+    def __str__(self):
+        var_list = []
+        for var, expr in self.__variables.items():
+            var_list.append("%s" % var if expr is None else "%s = %s" % (var, expr))
+
+        return "var " + ", ".join(var_list) + " in " + str(self.__body)
 
 
 class PrototypeNode(Node):

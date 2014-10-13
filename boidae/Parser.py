@@ -19,6 +19,7 @@ class Parser(object):
         self.is_else = lambda t: isinstance(t, ElseToken)
         self.is_for = lambda t: isinstance(t, ForToken)
         self.is_in = lambda t: isinstance(t, InToken)
+        self.is_var = lambda t: isinstance(t, VarToken)
         self.is_identifer = lambda t: isinstance(t, IdentifierToken)
         self.is_number = lambda t: isinstance(t, NumberToken)
         self.is_character = lambda t: isinstance(t, CharacterToken)
@@ -102,7 +103,7 @@ class Parser(object):
 
     def try_if_expr(self):
         """
-        if_expr ::= 'if' expr 'then' expr 'else' expr
+        if_expr ::= if expr then expr else expr
         """
 
         token = self.expect(self.is_if)
@@ -133,7 +134,7 @@ class Parser(object):
 
     def try_for_expr(self):
         """
-        for_expr ::= 'for' identifier '=' expr ',' expr (',' expr)? 'in' expr
+        for_expr ::= for identifier '=' expr ',' expr (',' expr)? in expr
         """
 
         token = self.expect(self.is_for)
@@ -178,6 +179,46 @@ class Parser(object):
 
         return ForExprNode(variable, begin, end, step, body)
 
+    def try_var_expr(self):
+        """
+        var_expr ::= var identifier ('=' expr)? (',' identifier ('=' expr)?)* in expr
+        """
+
+        var_token = self.expect(self.is_var)
+        if var_token is None:
+            return None
+
+        variables = {}
+        while True:
+            identifier = self.expect(self.is_identifer)
+            if identifier is None:
+                break
+
+            assignment = self.expect(lambda t: t.name == '=')
+            if assignment is not None:
+                expr = self.try_expr()
+                if expr is None:
+                    raise ExpectedExpr(assignment.line)
+
+                variables[identifier] = expr
+            else:
+                variables[identifier] = None
+
+            self.expect(lambda t: t.name == ',')
+
+        if len(variables) == 0:
+            raise ExpectedVariableList(var_token.line)
+
+        in_token = self.expect(self.is_in)
+        if in_token is None:
+            raise ExpectedIn(max([var.line for var in variables.keys()]))
+
+        body = self.try_expr()
+        if body is None:
+            raise ExpectedExpr(in_token.line)
+
+        return VarExprNode(variables, body)
+
     def try_primary_expr(self):
         """
         primary_expr
@@ -186,6 +227,7 @@ class Parser(object):
             ::= identifier_expr
             ::= if_expr
             ::= for_expr
+            ::= var_expr
         """
 
         expr = self.try_number_expr()
@@ -204,7 +246,11 @@ class Parser(object):
         if expr is not None:
             return expr
 
-        return self.try_for_expr()
+        expr = self.try_for_expr()
+        if expr is not None:
+            return expr
+
+        return self.try_var_expr()
 
     def try_unary_expr(self):
         """
@@ -369,7 +415,7 @@ class Parser(object):
 
     def try_function(self):
         """
-        function ::= 'def' prototype expr
+        function ::= def prototype expr
         """
 
         keyword = self.expect(self.is_def)
@@ -388,7 +434,7 @@ class Parser(object):
 
     def try_declaration(self):
         """
-        declaration ::= 'extern' prototype
+        declaration ::= extern prototype
         """
 
         keyword = self.expect(self.is_extern)
@@ -520,7 +566,16 @@ if __name__ == "__main__":
         def binary> (LHS RHS
         def binary> (LHS RHS) RHS < LHS
         def binary> 10 (LHS RHS)
-        def binary> 10 (LHS RHS) RHS < LHS\
+        def binary> 10 (LHS RHS) RHS < LHS
+
+        def assign(x)
+            x = 4
+
+        def variable(x) var
+        def variable(x) var a
+        def variable(x) var a in
+        def variable(x) var a in sin(a * x)
+        def variable(x) var a = 1 in sin(a * x)\
         """
 
     lexer = Lexer(Interpreter(code))
