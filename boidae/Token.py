@@ -94,18 +94,6 @@ class NumberToken(Token):
         return isinstance(other, NumberToken) and self.value == other.value
 
 
-class BinOpToken(Token):
-    def __init__(self, name, line):
-        assert OperatorManager.is_binop(name)
-        Token.__init__(self, name, line)
-
-
-class UnOpToken(Token):
-    def __init__(self, name, line):
-        assert OperatorManager.is_unop(name)
-        Token.__init__(self, name, line)
-
-
 class CharacterToken(Token):
     def __init__(self, name, line):
         Token.__init__(self, name, line)
@@ -138,22 +126,35 @@ class KeywordManager(object):
 
 
 class OperatorManager(object):
-    binaryOps = {'<', '+', '-', '*'}
-    unaryOps = {}
+    binaryOps = {'<': 10, '+': 20, '-': 20, '*': 40}
+    unaryOps = set()
 
     @staticmethod
-    def is_binop(char):
-        return char in OperatorManager.binaryOps
-
-    @staticmethod
-    def is_unop(char):
-        return char in OperatorManager.unaryOps
-
-    @staticmethod
-    def try_operator(name, line):
-        if OperatorManager.is_binop(name):
-            return BinOpToken(name, line)
-        elif OperatorManager.is_unop(name):
-            return UnOpToken(name, line)
+    def __extract_name(data):
+        if isinstance(data, Token):
+            return data.name
+        elif isinstance(data, str):
+            return data
         else:
-            return None
+            raise TypeError
+
+    @staticmethod
+    def is_binop(op):
+        return OperatorManager.__extract_name(op) in OperatorManager.binaryOps
+
+    @staticmethod
+    def is_unop(op):
+        return OperatorManager.__extract_name(op) in OperatorManager.unaryOps
+
+    @staticmethod
+    def get_binop_precedence(binop):
+        assert OperatorManager.is_binop(binop)
+        return OperatorManager.binaryOps[OperatorManager.__extract_name(binop)]
+
+    @staticmethod
+    def register_binop(binop, precedence):
+        OperatorManager.binaryOps[OperatorManager.__extract_name(binop)] = precedence
+
+    @staticmethod
+    def register_unop(unop):
+        OperatorManager.unaryOps.add(OperatorManager.__extract_name(unop))

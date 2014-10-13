@@ -111,9 +111,7 @@ class Lexer(object):
             self.restore()
             return None
 
-        name = self.collect()
-        token = OperatorManager.try_operator(name, self.get_line())
-        return CharacterToken(name, self.get_line()) if token is None else token
+        return CharacterToken(self.collect(), self.get_line())
 
     def tokenize(self):
         while True:
@@ -170,7 +168,7 @@ if __name__ == "__main__":
         extern print();  # external function print
 
         # Logical unary not.
-        def unary!(v)
+        def unary! (v)
            if v then
               0
            else

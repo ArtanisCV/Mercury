@@ -86,7 +86,7 @@ class BinaryExprNode(ExprNode):
         return self.__rhs
 
     def __str__(self):
-        return str(self.__lhs) + str(self.__op) + str(self.__rhs)
+        return str(self.__lhs) + " " + str(self.__op) + " " + str(self.__rhs)
 
 
 class CallExprNode(ExprNode):
@@ -118,7 +118,7 @@ class IfExprNode(ExprNode):
     """
 
     def __init__(self, condition, true, false):
-        Node.__init__(self, condition.line)
+        ExprNode.__init__(self, condition.line)
 
         self.__condition = condition
         self.__true = true
@@ -146,7 +146,7 @@ class ForExprNode(ExprNode):
     """
 
     def __init__(self, variable, begin, end, step, body):
-        Node.__init__(self, variable.line)
+        ExprNode.__init__(self, variable.line)
 
         self.__variable = variable
         self.__begin = begin
@@ -183,6 +183,29 @@ class ForExprNode(ExprNode):
                    (self.__variable, self.__begin, self.__end, self.__step, self.__body)
 
 
+class UnaryExprNode(ExprNode):
+    """
+    Expression class for a unary operator
+    """
+
+    def __init__(self, unop, operand):
+        ExprNode.__init__(self, unop.line)
+
+        self.__operator = unop
+        self.__operand = operand
+
+    @property
+    def op_name(self):
+        return self.__operator.name
+
+    @property
+    def operand(self):
+        return self.__operand
+
+    def __str__(self):
+        return str(self.__operator) + str(self.__operand)
+
+
 class PrototypeNode(Node):
     """
     This class represents the "prototype" for a function,
@@ -208,13 +231,13 @@ class PrototypeNode(Node):
         return str(self.__identifier) + "(" + ' '.join([str(arg) for arg in self.__args]) + ")"
 
 
-class OpPrototypeNode(PrototypeNode):
+class BinOpPrototypeNode(PrototypeNode):
     """
-    This class represents the "prototype" for a user-defined operator
+    This class represents the "prototype" for a user-defined binary operator
     """
 
     def __init__(self, identifier, precedence, args):
-        assert len(args) == 1 or len(args) == 2
+        assert len(args) == 2
         PrototypeNode.__init__(self, identifier, args)
 
         self.__precedence = precedence
@@ -225,21 +248,28 @@ class OpPrototypeNode(PrototypeNode):
 
     @property
     def precedence(self):
-        return None if self.__precedence is None else int(self.__precedence.name)
-
-    def is_binop(self):
-        return len(self.arg_names) == 2
-
-    def is_unop(self):
-        return len(self.arg_names) == 1
+        return 0 if self.__precedence is None else int(self.__precedence.name)
 
     def __str__(self):
-        if self.__precedence is None:
-            header = "%s " % self.name
-        else:
-            header = "%s %d " % (self.name, self.precedence)
+        return str(self.name) + " " + str(self.precedence) + " (" + \
+               ' '.join([arg_name for arg_name in self.arg_names]) + ")"
 
-        return header + "(" + ' '.join([arg_name for arg_name in self.arg_names]) + ")"
+
+class UnOpPrototypeNode(PrototypeNode):
+    """
+    This class represents the "prototype" for a user-defined unary operator
+    """
+
+    def __init__(self, identifier, args):
+        assert len(args) == 1
+        PrototypeNode.__init__(self, identifier, args)
+
+    @property
+    def op_name(self):
+        return self.name[-1]
+
+    def __str__(self):
+        return str(self.name) + " (" + ' '.join([arg_name for arg_name in self.arg_names]) + ")"
 
 
 class FunctionNode(Node):
@@ -282,16 +312,3 @@ class TopLevelExpr(FunctionNode):
 
     def __str__(self):
         return str(self.__expr)
-
-
-class BinopPrecedence(object):
-    precedence = {
-        '<': 10, '+': 20, '-': 20, '*': 40
-    }
-
-    @staticmethod
-    def get_precedence(binop):
-        if not isinstance(binop, BinOpToken):
-            return -1
-
-        return BinopPrecedence.precedence[binop.name]

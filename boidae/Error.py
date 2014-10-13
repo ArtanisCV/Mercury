@@ -55,9 +55,9 @@ class ExpectedOperator(BoidaeSyntaxError):
         BoidaeSyntaxError.__init__(self, "Expected operator", line)
 
 
-class ExpectedPrototype(BoidaeSyntaxError):
+class ExpectedOperand(BoidaeSyntaxError):
     def __init__(self, line):
-        BoidaeSyntaxError.__init__(self, "Expected prototype", line)
+        BoidaeSyntaxError.__init__(self, "Expected operand", line)
 
 
 class ExpectedPrimaryExpr(BoidaeSyntaxError):
@@ -65,9 +65,19 @@ class ExpectedPrimaryExpr(BoidaeSyntaxError):
         BoidaeSyntaxError.__init__(self, "Expected primary expression", line)
 
 
+class ExpectedUnaryExpr(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected unary expression", line)
+
+
 class ExpectedExpr(BoidaeSyntaxError):
     def __init__(self, line):
         BoidaeSyntaxError.__init__(self, "Expected expression", line)
+
+
+class ExpectedPrototype(BoidaeSyntaxError):
+    def __init__(self, line):
+        BoidaeSyntaxError.__init__(self, "Expected prototype", line)
 
 
 class UnknownToken(BoidaeSyntaxError):

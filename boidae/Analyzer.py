@@ -8,12 +8,13 @@ from Error import *
 from Node import *
 
 
-load_library_permanently('./putchard.lib')
+load_library_permanently('./cio.lib')
 
 
 class Analyzer(object):
     def __init__(self, parser):
         self.input = parser.parse()
+        self.errors = []
 
         # The LLVM module, which holds all the IR code.
         self.llvm_module = Module.new("boidae")
@@ -49,6 +50,11 @@ class Analyzer(object):
 
         self.llvm_pass_manager.initialize()
 
+    def pop_sementic_errors(self):
+        result = self.errors
+        self.errors = []
+        return result
+
     def generate(self, node):
         if isinstance(node, NumberExprNode):
             return self.gen_number_expr(node)
@@ -62,6 +68,8 @@ class Analyzer(object):
             return self.gen_if_expr(node)
         elif isinstance(node, ForExprNode):
             return self.gen_for_expr(node)
+        elif isinstance(node, UnaryExprNode):
+            return self.gen_unary_expr(node)
         elif isinstance(node, PrototypeNode):
             return self.gen_prototype(node)
         elif isinstance(node, FunctionNode):
@@ -94,7 +102,11 @@ class Analyzer(object):
             # convert bool 0 or 1 to double 0.0 or 1.0
             return self.llvm_builder.uitofp(result, Type.double(), 'bool')
         else:
-            raise UndefinedOperator(node)
+            try:
+                callee = self.llvm_module.get_function_named('binary' + node.op_name)
+                return self.llvm_builder.call(callee, [lhs, rhs], 'binop')
+            except llvm.LLVMException:
+                raise UndefinedOperator(node)
 
     def gen_call_expr(self, node):
         try:
@@ -216,6 +228,11 @@ class Analyzer(object):
         # always return 0.0
         return Constant.real(Type.double(), 0)
 
+    def gen_unary_expr(self, node):
+        operand = self.generate(node.operand)
+        callee = self.llvm_module.get_function_named('unary' + node.op_name)
+        return self.llvm_builder.call(callee, [operand], 'unop')
+
     def gen_prototype(self, node):
         function_type = Type.function(Type.double(), [Type.double()] * len(node.arg_names), False)
 
@@ -265,7 +282,7 @@ class Analyzer(object):
             function.verify()
 
             # optimize the function
-            #self.llvm_pass_manager.run(function)
+            self.llvm_pass_manager.run(function)
         except:
             if previous is None:
                 # allow users to redefine a function that they incorrectly typed in before,
@@ -274,22 +291,29 @@ class Analyzer(object):
 
             raise
 
+        # if this is a binary / unary operator, install it
+        if isinstance(node.prototype, BinOpPrototypeNode):
+            op_name = node.prototype.op_name
+            precedence = node.prototype.precedence
+            OperatorManager.register_binop(op_name, precedence)
+        elif isinstance(node.prototype, UnOpPrototypeNode):
+            OperatorManager.register_unop(node.prototype.op_name)
+
         return function
 
     def analyze(self):
         for node in self.input:
             try:
                 code = self.generate(node)
-                print code
 
                 if isinstance(node, TopLevelExpr):
                     result = self.llvm_executor.run_function(code, []).as_real(Type.double())
-                    print "Result of '%s': %f" % (node, result)
+                    yield (node, result)
             except BoidaeSemanticError as e:
-                print e
+                self.errors.append(e)
 
 
-if __name__ == "__main__":
+def test_basic():
     from Interpreter import Interpreter
     from Lexer import Lexer
     from Parser import Parser
@@ -297,15 +321,6 @@ if __name__ == "__main__":
     code = \
         """\
         4 + 5
-
-        if 1 then
-            1
-        else
-            0
-
-        extern putchard(x)
-        for i = 0, i < 10, 2 in
-            putchard(42)  # output a '*' (ASCII 42)
 
         def foo(a b) a * a + 2 * a * b + b * b
         def foo(a) a
@@ -325,10 +340,150 @@ if __name__ == "__main__":
         def invoke() tan(1);
 
         def opt(x) (1+2+x)*(x+(1+2))
+
+        def unary! (v)
+           if v then
+              0
+           else
+              1
+
+        def binary> 10 (LHS RHS)
+            RHS < LHS
+
+        !0
+        10 > 5
+
+        extern putchard(x)
+        for i = 0, i < 10, 2 in
+            putchard(42)  # output a '*' (ASCII 42)
+        putchard(10)  # output a newline (ASCII 10)
         """
 
     lexer = Lexer(Interpreter(code))
     parser = Parser(lexer)
     analyzer = Analyzer(parser)
 
-    analyzer.analyze()
+    for node, result in analyzer.analyze():
+        print "Result of '%s': %f" % (node, result)
+
+    print
+
+    for error in analyzer.pop_sementic_errors():
+        print error
+
+    print
+
+
+def test_mandel():
+    from Interpreter import Interpreter
+    from Lexer import Lexer
+    from Parser import Parser
+    import sys
+
+    code = \
+        """
+        # low-precedence operator that ignores operands
+        def binary: 1 (x y)
+            y
+
+        # logical unary not
+        def unary!(v)
+            if v then
+                0
+            else
+                1
+
+        # unary negate
+        def unary-(v)
+            0 - v
+
+        # define > with the same precedence as <
+        def binary> 10 (LHS RHS)
+            RHS < LHS
+
+        # binary logical or, which does not short circuit
+        def binary| 5 (LHS RHS)
+            if LHS then
+                1
+            else if RHS then
+                1
+            else
+                0
+
+        # binary logical and, which does not short circuit
+        def binary& 6 (LHS RHS)
+            if !LHS then
+                0
+            else
+                !!RHS
+
+        # define = with slightly lower precedence than relationals
+        def binary= 9 (LHS RHS)
+            !(LHS < RHS | LHS > RHS)
+
+        extern putchard(char)
+
+        def printdensity(d)
+            if d > 8 then
+                putchard(32)  # ' '
+            else if d > 4 then
+                putchard(46)  # '.'
+            else if d > 2 then
+                putchard(43)  # '+'
+            else
+                putchard(42)  # '*'
+
+        # determine whether the specific location diverges
+        # solve for z = z^2 + c in the complex plane
+        def iterate(real imag iters creal cimag)
+            if iters > 255 | (real * real + imag * imag > 4) then
+                iters
+            else
+                iterate(real * real - imag * imag + creal,
+                        2 * real * imag + cimag,
+                        iters + 1, creal, cimag)
+
+        # return the number of iterations required for the iteration to escape
+        def getiternum(real imag)
+            iterate(real, imag, 0, real, imag)
+
+        # compute and plot the mandelbrot set with the specified 2 dimensional
+        # range info
+        def plotmandel(xmin xmax xstep ymin ymax ystep)
+            for y = ymin, y < ymax, ystep in (
+                (for x = xmin, x < xmax, xstep in
+                     printdensity(getiternum(x, y))):
+                putchard(10)  # newline
+            )
+
+        # this is a convenient helper function for plotting the mandelbrot set
+        # from the specified position with the specified magnification
+        def mandel(realstart imagstart realmag imagmag)
+            mandelhelper(realstart, realstart + realmag * 78, realmag,
+                         imagstart, imagstart + imagmag * 40, imagmag)
+
+        extern flush()
+
+        mandel(-2.3, -1.3, 0.05, 0.07):
+        flush()
+
+        putchard(10):
+        mandel(-2, -1, 0.02, 0.04):
+        flush()
+
+        putchard(10):
+        mandel(-0.9, -1.4, 0.02, 0.03):
+        flush()
+        """
+
+    lexer = Lexer(Interpreter(code))
+    parser = Parser(lexer)
+    analyzer = Analyzer(parser)
+
+    for node, result in analyzer.analyze():
+        print "Result of '%s': %f" % (node, result)
+        sys.stdout.flush()
+
+if __name__ == "__main__":
+    test_mandel()
+

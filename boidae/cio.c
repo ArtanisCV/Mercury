@@ -5,3 +5,9 @@ double putchard(double c)
     putchar((char)c);
     return 0;
 }
+
+double flush()
+{
+    fflush(stdout);
+    return 0;
+}

@@ -24,12 +24,13 @@ class Parser(object):
         self.is_character = lambda t: isinstance(t, CharacterToken)
         self.is_binary = lambda t: isinstance(t, BinaryToken)
         self.is_unary = lambda t: isinstance(t, UnaryToken)
-        self.is_binop = lambda t: isinstance(t, BinOpToken)
-        self.is_unop = lambda t: isinstance(t, UnOpToken)
+        self.is_binop = lambda t: OperatorManager.is_binop(t)
+        self.is_unop = lambda t: OperatorManager.is_unop(t)
 
-    @property
-    def syntax_errors(self):
-        return self.errors
+    def pop_syntax_errors(self):
+        result = self.errors
+        self.errors = []
+        return result
 
     def collect(self):
         return self.input.accept()
@@ -205,9 +206,26 @@ class Parser(object):
 
         return self.try_for_expr()
 
+    def try_unary_expr(self):
+        """
+        unary_expr
+            ::= primary_expr
+            ::= unop unary_expr
+        """
+
+        unop = self.expect(self.is_unop)
+        if unop is None:
+            return self.try_primary_expr()
+
+        operand = self.try_unary_expr()
+        if operand is None:
+            raise ExpectedOperand(unop.line)
+
+        return UnaryExprNode(unop, operand)
+
     def try_binop_rhs(self, lhs, lhs_prec):
         """
-        binop_rhs ::= (binop primary_expr)*
+        binop_rhs ::= (binop unary_expr)*
         """
 
         while True:
@@ -215,28 +233,29 @@ class Parser(object):
             if binop is None:
                 return lhs
 
-            prec = BinopPrecedence.get_precedence(binop)
+            prec = OperatorManager.get_binop_precedence(binop)
             if prec < lhs_prec:
                 return lhs
 
             self.expect(self.is_binop)  # eat binop
 
-            rhs = self.try_primary_expr()
+            rhs = self.try_unary_expr()
             if rhs is None:
-                raise ExpectedPrimaryExpr(binop.line)
+                raise ExpectedUnaryExpr(binop.line)
 
             next_binop = self.look(self.is_binop)
-            if next_binop is not None and BinopPrecedence.get_precedence(next_binop) > prec:
-                rhs = self.try_binop_rhs(rhs, prec + 1)  # +1 for left associativity
+            if next_binop is not None and \
+               OperatorManager.get_binop_precedence(next_binop) > prec:
+                rhs = self.try_binop_rhs(rhs, prec + 1)
 
             lhs = BinaryExprNode(binop, lhs, rhs)
 
     def try_expr(self):
         """
-        expr ::= primary_expr binop_rhs
+        expr ::= unary_expr binop_rhs
         """
 
-        lhs = self.try_primary_expr()
+        lhs = self.try_unary_expr()
         if lhs is None:
             return None
 
@@ -298,8 +317,8 @@ class Parser(object):
         if right_paren is None:
             raise ExpectedRightParen(arg2.line)
 
-        return OpPrototypeNode(IdentifierToken(binary.name + operator.name, binary.line),
-                               precedence, [arg1, arg2])
+        return BinOpPrototypeNode(IdentifierToken(binary.name + operator.name, binary.line),
+                                  precedence, [arg1, arg2])
 
     def try_unary_prototype(self):
         """
@@ -326,8 +345,7 @@ class Parser(object):
         if right_paren is None:
             raise ExpectedRightParen(arg.line)
 
-        return OpPrototypeNode(IdentifierToken(unary.name + operator.name, unary.line),
-                               None, [arg])
+        return UnOpPrototypeNode(IdentifierToken(unary.name + operator.name, unary.line), [arg])
 
     def try_prototype(self):
         """
@@ -484,14 +502,25 @@ if __name__ == "__main__":
         extern sin(x);
         extern print();
 
+        def unary
+        def unary!
+        def unary!(
+        def unary!(v
+        def unary!(v)
         def unary!(v)
            if v then
               0
            else
               1
 
+        def binary
+        def binary>
+        def binary> (
+        def binary> (LHS
+        def binary> (LHS RHS
+        def binary> (LHS RHS) RHS < LHS
         def binary> 10 (LHS RHS)
-            RHS < LHS\
+        def binary> 10 (LHS RHS) RHS < LHS\
         """
 
     lexer = Lexer(Interpreter(code))
@@ -501,5 +530,6 @@ if __name__ == "__main__":
         print '%s(%d): %s' % (node.__class__.__name__, node.line, node)
 
     print
-    for error in parser.syntax_errors:
+
+    for error in parser.pop_syntax_errors():
         print error
