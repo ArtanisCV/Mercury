@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boidae/Buffer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boidae/Interpreter.py" />
-      <change type="DELETED" beforePath="D:\GitHub\Mercury\boidae\Iterator.py" afterPath="" />
+    <list default="true" id="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" name="Default" comment="Modify Lexer, Parser so as to support interactive interpreter">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Analyzer.py" afterPath="$PROJECT_DIR$/boidae/Analyzer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Error.py" afterPath="$PROJECT_DIR$/boidae/Error.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Lexer.py" afterPath="$PROJECT_DIR$/boidae/Lexer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Interpreter.py" afterPath="$PROJECT_DIR$/boidae/Interpreter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Node.py" afterPath="$PROJECT_DIR$/boidae/Node.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Parser.py" afterPath="$PROJECT_DIR$/boidae/Parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Token.py" afterPath="$PROJECT_DIR$/boidae/Token.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mercury.iws" />
@@ -23,9 +18,9 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mercury$Lexer.coverage" NAME="Lexer Coverage Results" MODIFIED="1413132510133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/boidae" />
-    <SUITE FILE_PATH="coverage/Mercury$Parser.coverage" NAME="Parser Coverage Results" MODIFIED="1413136459407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/boidae" />
-    <SUITE FILE_PATH="coverage/Mercury$Analyzer.coverage" NAME="Analyzer Coverage Results" MODIFIED="1413132473280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/boidae" />
+    <SUITE FILE_PATH="coverage/Mercury$Lexer.coverage" NAME="Lexer Coverage Results" MODIFIED="1413270620861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/boidae" />
+    <SUITE FILE_PATH="coverage/Mercury$Parser.coverage" NAME="Parser Coverage Results" MODIFIED="1413270520658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/boidae" />
+    <SUITE FILE_PATH="coverage/Mercury$Analyzer.coverage" NAME="Analyzer Coverage Results" MODIFIED="1413270514891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/boidae" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -39,10 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Analyzer.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Analyzer.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/boidae/Analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="333" column="21" selection-start="11083" selection-end="11083" vertical-scroll-proportion="0.0" vertical-offset="4396" max-vertical-offset="5085">
+            <state line="561" column="0" selection-start="18216" selection-end="18216" vertical-scroll-proportion="0.56458634" vertical-offset="8026" max-vertical-offset="8715">
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
               </folding>
@@ -50,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Parser.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boidae/Parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="491" column="0" selection-start="13486" selection-end="13486" vertical-scroll-proportion="0.74327123" vertical-offset="7006" max-vertical-offset="7650">
+            <state line="577" column="19" selection-start="15821" selection-end="15821" vertical-scroll-proportion="0.0" vertical-offset="7336" max-vertical-offset="8835">
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -64,7 +59,7 @@
       <file leaf-file-name="Node.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boidae/Node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="239" column="49" selection-start="5070" selection-end="5070" vertical-scroll-proportion="0.0" vertical-offset="3046" max-vertical-offset="4530">
+            <state line="221" column="82" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.0" vertical-offset="3781" max-vertical-offset="5190">
               <folding />
             </state>
           </provider>
@@ -73,7 +68,7 @@
       <file leaf-file-name="Lexer.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boidae/Lexer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="22" selection-start="4008" selection-end="4226" vertical-scroll-proportion="0.0" vertical-offset="1891" max-vertical-offset="2895">
+            <state line="177" column="32" selection-start="4088" selection-end="4088" vertical-scroll-proportion="0.0" vertical-offset="2281" max-vertical-offset="2970">
               <folding>
                 <element signature="e#25#50#0" expanded="true" />
               </folding>
@@ -81,10 +76,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Interpreter.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boidae/Interpreter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="57" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Token.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boidae/Token.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="0" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2475">
+            <state line="75" column="40" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="2580">
               <folding />
             </state>
           </provider>
@@ -93,7 +97,7 @@
       <file leaf-file-name="Error.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boidae/Error.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="59" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1845">
+            <state line="64" column="72" selection-start="1773" selection-end="1773" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="2145">
               <folding />
             </state>
           </provider>
@@ -117,22 +121,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$USER_HOME$/Desktop/Vectorization/src/refineXByLike.py" />
-        <option value="$USER_HOME$/Desktop/Vectorization/src/fitBezier.py" />
         <option value="$PROJECT_DIR$/boidae/Container.py" />
         <option value="$PROJECT_DIR$/boidae/Iterator.py" />
         <option value="$PROJECT_DIR$/boidae/AST.py" />
         <option value="$PROJECT_DIR$/boidae/SemanticParser.py" />
         <option value="$PROJECT_DIR$/boidae/put_character.c" />
         <option value="$PROJECT_DIR$/boidae/put_char.c" />
-        <option value="$PROJECT_DIR$/boidae/Token.py" />
-        <option value="$PROJECT_DIR$/boidae/Interpreter.py" />
         <option value="$PROJECT_DIR$/boidae/Buffer.py" />
-        <option value="$PROJECT_DIR$/boidae/Analyzer.py" />
-        <option value="$PROJECT_DIR$/boidae/Lexer.py" />
+        <option value="$PROJECT_DIR$/boidae/putchard.c" />
+        <option value="$PROJECT_DIR$/boidae/cio.c" />
+        <option value="$PROJECT_DIR$/boidae/Token.py" />
         <option value="$PROJECT_DIR$/boidae/Error.py" />
+        <option value="$PROJECT_DIR$/boidae/Lexer.py" />
         <option value="$PROJECT_DIR$/boidae/Node.py" />
         <option value="$PROJECT_DIR$/boidae/Parser.py" />
+        <option value="$PROJECT_DIR$/boidae/Interpreter.py" />
+        <option value="$PROJECT_DIR$/boidae/Analyzer.py" />
       </list>
     </option>
   </component>
@@ -240,7 +244,7 @@
       <PyConsoleSettings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.Parser">
+  <component name="RunManager" selected="Python.Lexer">
     <configuration default="false" name="Lexer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -461,8 +465,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.Parser" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Lexer" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Lexer" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Parser" />
         <item index="2" class="java.lang.String" itemvalue="Python.Analyzer" />
       </list>
     </recent_temporary>
@@ -531,7 +535,19 @@
       <created>1413095178771</created>
       <updated>1413095178771</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Modify Lexer, Parser so as to support interactive interpreter">
+      <created>1413136537351</created>
+      <updated>1413136537351</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add user-defined operators">
+      <created>1413211048772</created>
+      <updated>1413211048772</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add mutable variables">
+      <created>1413223085016</created>
+      <updated>1413223085016</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -565,11 +581,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32033426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19394329" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1636598" sideWeight="0.7130919" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1636598" sideWeight="0.67827296" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39693594" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25766018" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2869081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="24" y="354" width="1552" height="152" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2869081" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.321727" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="19" y="593" width="1552" height="220" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -584,17 +600,17 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32033426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32033426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39693594" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25766018" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2869081" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19394329" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1636598" sideWeight="0.7130919" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1636598" sideWeight="0.67966574" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2869081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="24" y="354" width="1552" height="152" />
@@ -617,19 +633,17 @@
     <MESSAGE value="Improve Analyzer, Add JIT" />
     <MESSAGE value="Add If" />
     <MESSAGE value="Add For" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add For" />
+    <MESSAGE value="Modify Lexer, Parser so as to support interactive interpreter" />
+    <MESSAGE value="Add user-defined operators" />
+    <MESSAGE value="Add mutable variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add mutable variables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="73" />
+      <option name="time" value="90" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvmpy/api/llvm/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3706" column="0" selection-start="138029" selection-end="138029" vertical-scroll-proportion="0.33168316" vertical-offset="55291" max-vertical-offset="103710" />
-      </provider>
-    </entry>
     <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="6" selection-start="237" selection-end="237" vertical-scroll-proportion="0.21770681" vertical-offset="0" max-vertical-offset="885">
@@ -642,46 +656,6 @@
         <state line="190" column="8" selection-start="6623" selection-end="6623" vertical-scroll-proportion="0.33236575" vertical-offset="2621" max-vertical-offset="4050" />
       </provider>
     </entry>
-    <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/passes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="8" selection-start="5864" selection-end="5864" vertical-scroll-proportion="0.0" vertical-offset="2502" max-vertical-offset="6525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boidae/putchard.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-347824807/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2393" column="8" selection-start="82013" selection-end="82013" vertical-scroll-proportion="0.33236575" vertical-offset="35666" max-vertical-offset="76485">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2202" column="8" selection-start="69875" selection-end="69875" vertical-scroll-proportion="-1.5616837" vertical-offset="34091" max-vertical-offset="38685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boidae/Interpreter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="85" selection-end="85" vertical-scroll-proportion="0.08708273" vertical-offset="0" max-vertical-offset="689">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boidae/Buffer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="8" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pci/ch03/blogData.txt">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -692,50 +666,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boidae/Error.py">
+    <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/passes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="59" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1845">
+        <state line="172" column="8" selection-start="5735" selection-end="5735" vertical-scroll-proportion="0.33236575" vertical-offset="2351" max-vertical-offset="6525">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boidae/Analyzer.py">
+    <entry file="file://$PROJECT_DIR$/boidae/Buffer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="333" column="21" selection-start="11083" selection-end="11083" vertical-scroll-proportion="0.0" vertical-offset="4602" max-vertical-offset="5085">
-          <folding>
-            <element signature="e#25#48#0" expanded="true" />
-          </folding>
+        <state line="28" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="181" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1645" column="8" selection-start="52443" selection-end="52443" vertical-scroll-proportion="0.0" vertical-offset="24431" max-vertical-offset="38685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boidae/cio.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boidae/Error.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="72" selection-start="1773" selection-end="1773" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="2145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boidae/Node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="82" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.0" vertical-offset="3090" max-vertical-offset="5190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-347824807/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="6" selection-start="6827" selection-end="6827" vertical-scroll-proportion="0.33236575" vertical-offset="3086" max-vertical-offset="12045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-347824807/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="468" column="4" selection-start="15441" selection-end="15441" vertical-scroll-proportion="0.33236575" vertical-offset="6791" max-vertical-offset="76485">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Token.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.0" vertical-offset="1096" max-vertical-offset="2475">
+        <state line="75" column="40" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="2580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boidae/Interpreter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="57" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Lexer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="22" selection-start="4008" selection-end="4226" vertical-scroll-proportion="0.0" vertical-offset="2206" max-vertical-offset="2895">
+        <state line="177" column="32" selection-start="4088" selection-end="4088" vertical-scroll-proportion="0.0" vertical-offset="2281" max-vertical-offset="2970">
           <folding>
             <element signature="e#25#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boidae/Node.py">
+    <entry file="file://$PROJECT_DIR$/boidae/Parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="49" selection-start="5070" selection-end="5070" vertical-scroll-proportion="0.0" vertical-offset="3046" max-vertical-offset="4530">
-          <folding />
+        <state line="577" column="19" selection-start="15821" selection-end="15821" vertical-scroll-proportion="0.0" vertical-offset="8146" max-vertical-offset="8835">
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boidae/Parser.py">
+    <entry file="file://$PROJECT_DIR$/boidae/Analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="491" column="0" selection-start="13486" selection-end="13486" vertical-scroll-proportion="0.74327123" vertical-offset="7006" max-vertical-offset="7650">
+        <state line="561" column="0" selection-start="18216" selection-end="18216" vertical-scroll-proportion="0.56458634" vertical-offset="8026" max-vertical-offset="8715">
           <folding>
-            <element signature="e#24#43#0" expanded="true" />
+            <element signature="e#25#48#0" expanded="true" />
           </folding>
         </state>
       </provider>

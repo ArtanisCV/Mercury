@@ -12,51 +12,46 @@ load_library_permanently('./cio.lib')
 
 
 class Analyzer(object):
-    def __init__(self, parser):
+    def __init__(self, parser, error_handler=None):
         self.input = parser.parse()
-        self.errors = []
+        self.error_handler = error_handler
 
-        # The LLVM module, which holds all the IR code.
+        # the LLVM module, which holds all the IR code
         self.llvm_module = Module.new("boidae")
 
-        # The LLVM instruction builder. Created whenever a new function is entered.
+        # the LLVM instruction builder. Created whenever a new function is entered
         self.llvm_builder = None
 
-        # A dictionary that keeps track of which values are defined in the current scope
-        # and what their LLVM representation is.
-        self.named_values = {}
+        # a dictionary that keeps track of which variables are defined in the current scope
+        # and what their LLVM representation is
+        self.named_variables = {}
 
-        # The function optimization passes manager.
+        # the function optimization passes manager
         self.llvm_pass_manager = FunctionPassManager.new(self.llvm_module)
 
-        # The LLVM execution engine.
+        # the LLVM execution engine
         self.llvm_executor = ExecutionEngine.new(self.llvm_module)
 
-        # Set up the optimizer pipeline. Start with registering info about how the
-        # target lays out data structures.
+        # set up the optimizer pipeline
+        # start with registering info about how the target lays out data structures
         self.llvm_pass_manager.add(self.llvm_executor.target_data)
 
-        # Do simple "peephole" optimizations and bit-twiddling optimizations.
+        # do simple "peephole" optimizations and bit-twiddling optimizations
         self.llvm_pass_manager.add(PASS_INSTCOMBINE)
 
-        # Reassociate expressions.
+        # reassociate expressions
         self.llvm_pass_manager.add(PASS_REASSOCIATE)
 
-        # Eliminate Common SubExpressions.
+        # eliminate common sub-expressions
         self.llvm_pass_manager.add(PASS_GVN)
 
-        # Simplify the control flow graph (deleting unreachable blocks, etc).
+        # simplify the control flow graph (deleting unreachable blocks, etc)
         self.llvm_pass_manager.add(PASS_SIMPLIFYCFG)
 
-        # Promote allocas to registers.
+        # promote allocas to registers
         self.llvm_pass_manager.add(PASS_MEM2REG)
 
         self.llvm_pass_manager.initialize()
-
-    def pop_sementic_errors(self):
-        result = self.errors
-        self.errors = []
-        return result
 
     def create_alloca(self, function, variable_name):
         """
@@ -81,6 +76,8 @@ class Analyzer(object):
             return self.gen_if_expr(node)
         elif isinstance(node, ForExprNode):
             return self.gen_for_expr(node)
+        elif isinstance(node, VarExprNode):
+            return self.gen_var_expr(node)
         elif isinstance(node, UnaryExprNode):
             return self.gen_unary_expr(node)
         elif isinstance(node, PrototypeNode):
@@ -94,8 +91,8 @@ class Analyzer(object):
         return Constant.real(Type.double(), node.value)
 
     def gen_variable_expr(self, node):
-        if node.name in self.named_values:
-            return self.llvm_builder.load(self.named_values[node.name], node.name)
+        if node.name in self.named_variables:
+            return self.llvm_builder.load(self.named_variables[node.name], node.name)
         else:
             raise UndefinedVariable(node)
 
@@ -107,7 +104,7 @@ class Analyzer(object):
             if not isinstance(node.lhs, VariableExprNode):
                 raise InvalidAssignmentDestination(node.line)
 
-            self.llvm_builder.store(rhs, self.named_values[node.lhs.name])
+            self.llvm_builder.store(rhs, self.named_variables[node.lhs.name])
             return rhs
         elif node.op_name == '+':
             return self.llvm_builder.fadd(lhs, rhs, 'add')
@@ -197,8 +194,8 @@ class Analyzer(object):
 
         # Within the loop, the variable is defined equal to the alloca. If it
         # shadows an existing variable, we have to restore it, so save it now.
-        old_value = self.named_values.get(node.variable_name, None)
-        self.named_values[node.variable_name] = variable
+        old_value = self.named_variables.get(node.variable_name, None)
+        self.named_variables[node.variable_name] = variable
 
         self.llvm_builder.branch(header_block)
 
@@ -237,12 +234,43 @@ class Analyzer(object):
 
         # restore the unshadowed variable
         if old_value is not None:
-            self.named_values[node.variable_name] = old_value
+            self.named_variables[node.variable_name] = old_value
         else:
-            del self.named_values[node.variable_name]
+            del self.named_variables[node.variable_name]
 
         # always return 0.0
         return Constant.real(Type.double(), 0)
+
+    def gen_var_expr(self, node):
+        old_variables = {}
+        function = self.llvm_builder.basic_block.function
+
+        for var_name, expr in node.variable_names.iteritems():
+            # emit the initializer before adding the variable to scope, this prevents
+            # the initializer from referencing the variable itself, and permits stuff
+            # like this:
+            #  var a = 1 in
+            #    var a = a in ...   # refers to outer 'a'
+            if expr is not None:
+                var_value = self.generate(expr)
+            else:
+                var_value = Constant.real(Type.double(), 0)
+
+            variable = self.create_alloca(function, var_name)
+            self.llvm_builder.store(var_value, variable)
+
+            old_variables[var_name] = self.named_variables.get(var_name, None)
+            self.named_variables[var_name] = variable
+
+        body = self.generate(node.body)
+
+        for var_name in node.variable_names:
+            if old_variables[var_name] is not None:
+                self.named_variables[var_name] = old_variables[var_name]
+            else:
+                del self.named_variables[var_name]
+
+        return body
 
     def gen_unary_expr(self, node):
         operand = self.generate(node.operand)
@@ -273,7 +301,7 @@ class Analyzer(object):
 
     def gen_function(self, node):
         # clear scope
-        self.named_values.clear()
+        self.named_variables.clear()
 
         try:
             previous = self.llvm_module.get_function_named(node.name)
@@ -291,7 +319,7 @@ class Analyzer(object):
         for arg in function.args:
             alloca = self.create_alloca(function, arg.name)
             self.llvm_builder.store(arg, alloca)
-            self.named_values[arg.name] = alloca
+            self.named_variables[arg.name] = alloca
 
         try:
             return_value = self.generate(node.body)
@@ -329,7 +357,8 @@ class Analyzer(object):
                     result = self.llvm_executor.run_function(code, []).as_real(Type.double())
                     yield (node, result)
             except BoidaeSemanticError as e:
-                self.errors.append(e)
+                if self.error_handler is not None:
+                    self.error_handler(e)
 
 
 def test_basic():
@@ -347,12 +376,6 @@ def test_basic():
         def bar(a) foo(a, 4.0) + bar(31337)
         foo(1, 2)
 
-        def fib(x)
-            if (x < 3) then
-                1
-            else
-                fib(x - 1) + fib(x - 2)
-
         extern cos(x)
         cos(1.234)
         cos(1.234, 1.234)
@@ -363,65 +386,70 @@ def test_basic():
 
         extern tan(a);
         def tan(a) c;
-        def invoke() tan(1);
+        tan(1);
 
         def opt(x) (1 + 2 + x) * (x + (1 + 2))
 
         def unary! (v)
-           if v then
-              0
-           else
-              1
-
+            if v then
+                0
+            else
+                1
         !0
-
-        extern putchard(x)
-        for i = 0, i < 10, 2 in
-            putchard(42)  # '*'
-        putchard(10)  # newline
 
         def binary: 1 (x y)
             y
 
+        extern flush()
+        extern putchard(x)
         extern printd(x)
         def test(x)
             printd(x):
             putchard(32):  # ' '
             x = 4:
             printd(x):
-            putchard(10)  # newline
-
+            putchard(10):  # newline
+            flush()
         test(123)
+
+        def invalid(x)
+            (x + 1) = 2
+
+        1 = 2
+
+        def fibr(x)
+            if (x < 3) then
+                1
+            else
+                fibr(x - 1) + fibr(x - 2)
 
         def fibi(x)
            var a = 1, b = 1, c in
-           (for i = 3, i < x in
-              c = a + b :
-              a = b :
-              b = c) :
-           b\
+           (for i = 2, i < x in
+              c = a + b:
+              a = b:
+              b = c):
+           b
+
+        fibr(10)
+        fibi(10)\
         """
 
+    def error_handler(error):
+        print error
+
     lexer = Lexer(Interpreter(code))
-    parser = Parser(lexer)
-    analyzer = Analyzer(parser)
+    parser = Parser(lexer, error_handler)
+    analyzer = Analyzer(parser, error_handler)
 
     for node, result in analyzer.analyze():
         print "Result of '%s': %f" % (node, result)
-
-    print
-
-    for error in analyzer.pop_sementic_errors():
-        print error
-
-    print
 
 
 def test_mandel():
     from Interpreter import Interpreter
     from Lexer import Lexer
     from Parser import Parser
-    import sys
 
     code = \
         """
@@ -502,8 +530,8 @@ def test_mandel():
         # this is a convenient helper function for plotting the mandelbrot set
         # from the specified position with the specified magnification
         def mandel(realstart imagstart realmag imagmag)
-            mandelhelper(realstart, realstart + realmag * 78, realmag,
-                         imagstart, imagstart + imagmag * 40, imagmag)
+            plotmandel(realstart, realstart + realmag * 78, realmag,
+                       imagstart, imagstart + imagmag * 40, imagmag)
 
         extern flush()
 
@@ -519,14 +547,29 @@ def test_mandel():
         flush()
         """
 
+    def error_handler(error):
+        print error
+
     lexer = Lexer(Interpreter(code))
-    parser = Parser(lexer)
-    analyzer = Analyzer(parser)
+    parser = Parser(lexer, error_handler)
+    analyzer = Analyzer(parser, error_handler)
 
     for node, result in analyzer.analyze():
         print "Result of '%s': %f" % (node, result)
-        sys.stdout.flush()
+
 
 if __name__ == "__main__":
-    test_basic()
+    from Interpreter import Interpreter
+    from Lexer import Lexer
+    from Parser import Parser
+
+    def error_handler(error):
+        print error
+
+    lexer = Lexer(Interpreter())
+    parser = Parser(lexer, error_handler)
+    analyzer = Analyzer(parser, error_handler)
+
+    for node, result in analyzer.analyze():
+        print result
 

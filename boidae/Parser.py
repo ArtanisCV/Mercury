@@ -7,9 +7,9 @@ from Buffer import Buffer
 
 
 class Parser(object):
-    def __init__(self, lexer):
+    def __init__(self, lexer, error_handler=None):
         self.input = Buffer(lexer.tokenize())
-        self.errors = []
+        self.error_handler = error_handler
 
         self.is_eof = lambda t: isinstance(t, EOFToken)
         self.is_def = lambda t: isinstance(t, DefToken)
@@ -27,11 +27,6 @@ class Parser(object):
         self.is_unary = lambda t: isinstance(t, UnaryToken)
         self.is_binop = lambda t: OperatorManager.is_binop(t)
         self.is_unop = lambda t: OperatorManager.is_unop(t)
-
-    def pop_syntax_errors(self):
-        result = self.errors
-        self.errors = []
-        return result
 
     def collect(self):
         return self.input.accept()
@@ -499,7 +494,8 @@ class Parser(object):
 
                 self.try_unknown()
             except BoidaeSyntaxError as e:
-                self.errors.append(e)
+                if self.error_handler is not None:
+                    self.error_handler(e)
 
 
 if __name__ == "__main__":
@@ -578,13 +574,11 @@ if __name__ == "__main__":
         def variable(x) var a = 1 in sin(a * x)\
         """
 
+    def error_handler(error):
+        print error
+
     lexer = Lexer(Interpreter(code))
-    parser = Parser(lexer)
+    parser = Parser(lexer, error_handler)
 
     for node in parser.parse():
         print '%s(%d): %s' % (node.__class__.__name__, node.line, node)
-
-    print
-
-    for error in parser.pop_syntax_errors():
-        print error

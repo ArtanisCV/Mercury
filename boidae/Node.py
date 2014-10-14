@@ -218,8 +218,8 @@ class VarExprNode(ExprNode):
         self.__body = body
 
     @property
-    def variables(self):
-        return self.__variables
+    def variable_names(self):
+        return dict([(var.name, expr) for var, expr in self.__variables.iteritems()])
 
     @property
     def body(self):
