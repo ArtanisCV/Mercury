@@ -36,7 +36,7 @@ def __post(request, host, path, port=80):
                         "Content-type": "application/x-www-form-urlencoded"})
     response = connection.getresponse()
 
-    return response.read(), response.position
+    return response.read(), response.status
 
 
 def verify_key(key, blog):

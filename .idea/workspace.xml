@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" name="Default" comment="Modify Lexer, Parser so as to support interactive interpreter">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Analyzer.py" afterPath="$PROJECT_DIR$/boidae/Analyzer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Interpreter.py" afterPath="$PROJECT_DIR$/boidae/Interpreter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Node.py" afterPath="$PROJECT_DIR$/boidae/Node.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boidae/Parser.py" afterPath="$PROJECT_DIR$/boidae/Parser.py" />
+    <list default="true" id="9fdc8c1d-98cc-42ff-b43b-d39fba50086e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pci/ch06/akismet.py" afterPath="$PROJECT_DIR$/pci/ch06/akismet.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pci/ch08/ebayPredict.py" afterPath="$PROJECT_DIR$/pci/ch08/ebayPredict.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mercury.iws" />
@@ -33,77 +31,7 @@
     <favorites_list name="Mercury" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Analyzer.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/boidae/Analyzer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="561" column="0" selection-start="18216" selection-end="18216" vertical-scroll-proportion="0.56458634" vertical-offset="8026" max-vertical-offset="8715">
-              <folding>
-                <element signature="e#25#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/boidae/Parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="577" column="19" selection-start="15821" selection-end="15821" vertical-scroll-proportion="0.0" vertical-offset="7336" max-vertical-offset="8835">
-              <folding>
-                <element signature="e#24#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/boidae/Node.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="221" column="82" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.0" vertical-offset="3781" max-vertical-offset="5190">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lexer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/boidae/Lexer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="177" column="32" selection-start="4088" selection-end="4088" vertical-scroll-proportion="0.0" vertical-offset="2281" max-vertical-offset="2970">
-              <folding>
-                <element signature="e#25#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Interpreter.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/boidae/Interpreter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="57" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Token.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/boidae/Token.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="40" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="2580">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Error.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/boidae/Error.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="72" selection-start="1773" selection-end="1773" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="2145">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -200,30 +128,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mercury" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mercury" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mercury" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mercury" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="boidae" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -231,13 +135,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -392,6 +296,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -413,9 +320,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -547,7 +451,11 @@
       <created>1413223085016</created>
       <updated>1413223085016</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Finish mutable variables, Improve interpreter">
+      <created>1413270859973</created>
+      <updated>1413270859973</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -574,14 +482,12 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259053" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32033426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19394329" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1636598" sideWeight="0.67827296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16559279" sideWeight="0.67827296" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39693594" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2869081" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -590,6 +496,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32033426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -611,9 +519,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19394329" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1636598" sideWeight="0.67966574" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2869081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="24" y="354" width="1552" height="152" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -636,7 +544,8 @@
     <MESSAGE value="Modify Lexer, Parser so as to support interactive interpreter" />
     <MESSAGE value="Add user-defined operators" />
     <MESSAGE value="Add mutable variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add mutable variables" />
+    <MESSAGE value="Finish mutable variables, Improve interpreter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish mutable variables, Improve interpreter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -646,9 +555,7 @@
   <component name="editorHistoryManager">
     <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="237" selection-end="237" vertical-scroll-proportion="0.21770681" vertical-offset="0" max-vertical-offset="885">
-          <folding />
-        </state>
+        <state line="11" column="6" selection-start="237" selection-end="237" vertical-scroll-proportion="0.21770681" vertical-offset="0" max-vertical-offset="885" />
       </provider>
     </entry>
     <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/ee.py">
@@ -661,106 +568,72 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.8038278" vertical-offset="1172" max-vertical-offset="1590">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.8038278" vertical-offset="1172" max-vertical-offset="1590" />
       </provider>
     </entry>
     <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/passes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="8" selection-start="5735" selection-end="5735" vertical-scroll-proportion="0.33236575" vertical-offset="2351" max-vertical-offset="6525">
-          <folding />
-        </state>
+        <state line="172" column="8" selection-start="5735" selection-end="5735" vertical-scroll-proportion="0.33236575" vertical-offset="2351" max-vertical-offset="6525" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Buffer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="181" max-vertical-offset="870">
-          <folding />
-        </state>
+        <state line="28" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="181" max-vertical-offset="870" />
       </provider>
     </entry>
     <entry file="file://D:/Develop/Anaconda/Lib/site-packages/llvm/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1645" column="8" selection-start="52443" selection-end="52443" vertical-scroll-proportion="0.0" vertical-offset="24431" max-vertical-offset="38685">
-          <folding />
-        </state>
+        <state line="1645" column="8" selection-start="52443" selection-end="52443" vertical-scroll-proportion="0.0" vertical-offset="24431" max-vertical-offset="38685" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/cio.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="9" column="23" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Error.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="72" selection-start="1773" selection-end="1773" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="2145">
-          <folding />
-        </state>
+        <state line="64" column="72" selection-start="1773" selection-end="1773" vertical-scroll-proportion="0.47750363" vertical-offset="631" max-vertical-offset="2145" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="82" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.0" vertical-offset="3090" max-vertical-offset="5190">
-          <folding />
-        </state>
+        <state line="221" column="82" selection-start="4480" selection-end="4480" vertical-scroll-proportion="-0.67634255" vertical-offset="3781" max-vertical-offset="5190" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-347824807/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="6" selection-start="6827" selection-end="6827" vertical-scroll-proportion="0.33236575" vertical-offset="3086" max-vertical-offset="12045">
-          <folding />
-        </state>
+        <state line="221" column="6" selection-start="6827" selection-end="6827" vertical-scroll-proportion="0.33236575" vertical-offset="3086" max-vertical-offset="12045" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-347824807/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="468" column="4" selection-start="15441" selection-end="15441" vertical-scroll-proportion="0.33236575" vertical-offset="6791" max-vertical-offset="76485">
-          <folding />
-        </state>
+        <state line="468" column="4" selection-start="15441" selection-end="15441" vertical-scroll-proportion="0.33236575" vertical-offset="6791" max-vertical-offset="76485" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Token.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="40" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="2580">
-          <folding />
-        </state>
+        <state line="75" column="40" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.2597968" vertical-offset="946" max-vertical-offset="2580" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Interpreter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="57" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
+        <state line="17" column="57" selection-start="447" selection-end="447" vertical-scroll-proportion="0.3701016" vertical-offset="0" max-vertical-offset="689" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Lexer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="32" selection-start="4088" selection-end="4088" vertical-scroll-proportion="0.0" vertical-offset="2281" max-vertical-offset="2970">
-          <folding>
-            <element signature="e#25#50#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="177" column="32" selection-start="4088" selection-end="4088" vertical-scroll-proportion="0.5428157" vertical-offset="2281" max-vertical-offset="2970" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="577" column="19" selection-start="15821" selection-end="15821" vertical-scroll-proportion="0.0" vertical-offset="8146" max-vertical-offset="8835">
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="577" column="19" selection-start="15821" selection-end="15821" vertical-scroll-proportion="1.9143686" vertical-offset="7336" max-vertical-offset="8835" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boidae/Analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="561" column="0" selection-start="18216" selection-end="18216" vertical-scroll-proportion="0.56458634" vertical-offset="8026" max-vertical-offset="8715">
-          <folding>
-            <element signature="e#25#48#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="563" column="29" selection-start="18313" selection-end="18313" vertical-scroll-proportion="0.6081277" vertical-offset="8026" max-vertical-offset="8715" />
       </provider>
     </entry>
   </component>
